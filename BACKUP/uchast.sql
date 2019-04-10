@@ -88,7 +88,7 @@ CREATE TABLE `kafedra` (
   `K_name` varchar(50) NOT NULL,
   `K_nomer` varchar(10) NOT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -97,7 +97,7 @@ CREATE TABLE `kafedra` (
 
 LOCK TABLES `kafedra` WRITE;
 /*!40000 ALTER TABLE `kafedra` DISABLE KEYS */;
-INSERT INTO `kafedra` VALUES (2,'Радиотехника','0682221111'),(3,'Программная инженерия','1132323123');
+INSERT INTO `kafedra` VALUES (1,'Программирование','101'),(2,'Языки и литература','102'),(3,'Математика','103'),(4,'Физ. воспитание','104'),(5,'Общественные науки','105');
 /*!40000 ALTER TABLE `kafedra` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -112,12 +112,12 @@ CREATE TABLE `prepod` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
   `K_id` int(11) NOT NULL,
   `P_fio` varchar(50) NOT NULL,
-  `P_phone` varchar(10) NOT NULL,
+  `P_kategory` varchar(10) NOT NULL,
   `P_skill` int(11) NOT NULL,
   PRIMARY KEY (`Id`),
   KEY `O_id_idx` (`K_id`),
   CONSTRAINT `K_id` FOREIGN KEY (`K_id`) REFERENCES `kafedra` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -126,6 +126,7 @@ CREATE TABLE `prepod` (
 
 LOCK TABLES `prepod` WRITE;
 /*!40000 ALTER TABLE `prepod` DISABLE KEYS */;
+INSERT INTO `prepod` VALUES (1,1,'Стяглик Н.И','1',5),(2,1,'Ахмедзянова О.А','2',6),(3,1,'Правдина Е. М.','1',10),(4,1,'Сосновский В.В','3',23),(5,1,'Радченко Е. П.','2',12),(6,1,'Федосеева А. И.','1',23),(7,1,'Архипцева Н. А.','2',12),(8,1,'Сериков В. И.','3',17),(9,1,'Колычева Л. Е.','3',1),(10,1,'Романовская И. А.','3',2);
 /*!40000 ALTER TABLE `prepod` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -207,7 +208,7 @@ CREATE TABLE `yspeh` (
   KEY `P_id_idx` (`P_id`),
   KEY `D_id_idx` (`D_id`),
   CONSTRAINT `D_id` FOREIGN KEY (`D_id`) REFERENCES `disp` (`id`),
-  CONSTRAINT `P_id` FOREIGN KEY (`P_id`) REFERENCES `prepod` (`id`),
+  CONSTRAINT `P_id` FOREIGN KEY (`P_id`) REFERENCES `prepod` (`Id`),
   CONSTRAINT `St_id` FOREIGN KEY (`St_id`) REFERENCES `stydent` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -238,4 +239,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-04-10 19:39:48
+-- Dump completed on 2019-04-10 21:00:44
