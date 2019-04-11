@@ -37,9 +37,17 @@
             this.BtnFncDrop = new System.Windows.Forms.Button();
             this.BtnFncSearch = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.LabelPoisk = new System.Windows.Forms.Label();
+            this.LabelSort = new System.Windows.Forms.Label();
+            this.KafedraSortirovka = new System.Windows.Forms.ComboBox();
+            this.KafedraPoisk = new System.Windows.Forms.TextBox();
+            this.KafedraGrid = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.K_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.K_nomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PanelFnc.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.KafedraGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelFnc
@@ -82,6 +90,7 @@
             this.BtnFncChange.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnFncChange.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnFncChange.UseVisualStyleBackColor = false;
+            this.BtnFncChange.Click += new System.EventHandler(this.BtnFncChange_Click);
             // 
             // BtnFncAdd
             // 
@@ -98,6 +107,7 @@
             this.BtnFncAdd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnFncAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnFncAdd.UseVisualStyleBackColor = false;
+            this.BtnFncAdd.Click += new System.EventHandler(this.BtnFncAdd_Click);
             // 
             // BtnFncDelete
             // 
@@ -114,6 +124,7 @@
             this.BtnFncDelete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnFncDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnFncDelete.UseVisualStyleBackColor = false;
+            this.BtnFncDelete.Click += new System.EventHandler(this.BtnFncDelete_Click);
             // 
             // BtnFncDrop
             // 
@@ -130,6 +141,7 @@
             this.BtnFncDrop.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnFncDrop.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnFncDrop.UseVisualStyleBackColor = false;
+            this.BtnFncDrop.Click += new System.EventHandler(this.BtnFncDrop_Click);
             // 
             // BtnFncSearch
             // 
@@ -151,21 +163,104 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.LabelPoisk);
+            this.panel2.Controls.Add(this.LabelSort);
+            this.panel2.Controls.Add(this.KafedraSortirovka);
+            this.panel2.Controls.Add(this.KafedraPoisk);
+            this.panel2.Controls.Add(this.KafedraGrid);
             this.panel2.Controls.Add(this.PanelFnc);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(875, 410);
             this.panel2.TabIndex = 10;
             // 
-            // button2
+            // LabelPoisk
             // 
-            this.button2.Location = new System.Drawing.Point(180, 152);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(285, 152);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "asdasdASDASDASDASD\r\nKAFEDRA?";
-            this.button2.UseVisualStyleBackColor = true;
+            this.LabelPoisk.AutoSize = true;
+            this.LabelPoisk.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LabelPoisk.Location = new System.Drawing.Point(124, 15);
+            this.LabelPoisk.Name = "LabelPoisk";
+            this.LabelPoisk.Size = new System.Drawing.Size(55, 20);
+            this.LabelPoisk.TabIndex = 15;
+            this.LabelPoisk.Text = "Поиск:";
+            // 
+            // LabelSort
+            // 
+            this.LabelSort.AutoSize = true;
+            this.LabelSort.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LabelSort.Location = new System.Drawing.Point(297, 55);
+            this.LabelSort.Name = "LabelSort";
+            this.LabelSort.Size = new System.Drawing.Size(106, 20);
+            this.LabelSort.TabIndex = 16;
+            this.LabelSort.Text = "Сортировка:";
+            // 
+            // KafedraSortirovka
+            // 
+            this.KafedraSortirovka.Font = new System.Drawing.Font("Comfortaa", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.KafedraSortirovka.FormattingEnabled = true;
+            this.KafedraSortirovka.Items.AddRange(new object[] {
+            "От А до Я",
+            "От Я до А"});
+            this.KafedraSortirovka.Location = new System.Drawing.Point(409, 52);
+            this.KafedraSortirovka.Name = "KafedraSortirovka";
+            this.KafedraSortirovka.Size = new System.Drawing.Size(174, 23);
+            this.KafedraSortirovka.TabIndex = 13;
+            this.KafedraSortirovka.SelectedIndexChanged += new System.EventHandler(this.KafedraSortirovka_SelectedIndexChanged);
+            // 
+            // KafedraPoisk
+            // 
+            this.KafedraPoisk.Location = new System.Drawing.Point(185, 10);
+            this.KafedraPoisk.Multiline = true;
+            this.KafedraPoisk.Name = "KafedraPoisk";
+            this.KafedraPoisk.Size = new System.Drawing.Size(398, 25);
+            this.KafedraPoisk.TabIndex = 14;
+            // 
+            // KafedraGrid
+            // 
+            this.KafedraGrid.AllowUserToAddRows = false;
+            this.KafedraGrid.AllowUserToDeleteRows = false;
+            this.KafedraGrid.AllowUserToResizeColumns = false;
+            this.KafedraGrid.AllowUserToResizeRows = false;
+            this.KafedraGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(115)))));
+            this.KafedraGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.KafedraGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.KafedraGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
+            this.K_name,
+            this.K_nomer});
+            this.KafedraGrid.Location = new System.Drawing.Point(133, 81);
+            this.KafedraGrid.Name = "KafedraGrid";
+            this.KafedraGrid.RowHeadersVisible = false;
+            this.KafedraGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.KafedraGrid.Size = new System.Drawing.Size(450, 300);
+            this.KafedraGrid.TabIndex = 9;
+            // 
+            // Id
+            // 
+            this.Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Id.Visible = false;
+            // 
+            // K_name
+            // 
+            this.K_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.K_name.HeaderText = "Название";
+            this.K_name.Name = "K_name";
+            this.K_name.ReadOnly = true;
+            this.K_name.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.K_name.Width = 63;
+            // 
+            // K_nomer
+            // 
+            this.K_nomer.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.K_nomer.HeaderText = "Номер";
+            this.K_nomer.Name = "K_nomer";
+            this.K_nomer.ReadOnly = true;
+            this.K_nomer.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.K_nomer.Width = 47;
             // 
             // KafedraControl
             // 
@@ -176,6 +271,8 @@
             this.Size = new System.Drawing.Size(875, 410);
             this.PanelFnc.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.KafedraGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -190,6 +287,13 @@
         private System.Windows.Forms.Button BtnFncDrop;
         private System.Windows.Forms.Button BtnFncSearch;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridView KafedraGrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn K_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn K_nomer;
+        private System.Windows.Forms.Label LabelPoisk;
+        private System.Windows.Forms.Label LabelSort;
+        private System.Windows.Forms.ComboBox KafedraSortirovka;
+        private System.Windows.Forms.TextBox KafedraPoisk;
     }
 }
