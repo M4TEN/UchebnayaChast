@@ -105,6 +105,45 @@ namespace UchebnayaChast
                 return new List<Dictionary<string, string>>();
         }//возвр всё с именами столбцов
 
+        public List<string> GetColumn(Tables table,string columnName,bool isDictionary=true)
+        {
+            if (Connection != null)
+            {
+                string text = $"select {(isDictionary?"distinct":"")} `{columnName}` from " + table.ToString() + " ";
+                MySqlCommand command = new MySqlCommand(text, Connection);
+                var s=GetQueryDate(command);
+                List<string> res = new List<string>();
+                foreach(var i in s)
+                {
+                    res.Add(i[0]);
+                }
+                return res;
+            }
+            else
+                return new List<string>();
+
+        }
+
+        public List<string> GetColumn(Tables table, string columnName,string where, bool isDictionary = true)
+        {
+            if (Connection != null)
+            {
+                string text = $"select {(isDictionary ? "distinct" : "")} `{columnName}` from " + table.ToString() + " where "+where;
+                MySqlCommand command = new MySqlCommand(text, Connection);
+                var s = GetQueryDate(command);
+                List<string> res = new List<string>();
+                foreach (var i in s)
+                {
+                    res.Add(i[0]);
+                }
+                return res;
+            }
+            else
+                return new List<string>();
+
+        }
+
+
         public bool InsertIn(Tables table,List<string> values,string startAfter="Id",bool removeLast=false)
         {
             if (Connection != null)

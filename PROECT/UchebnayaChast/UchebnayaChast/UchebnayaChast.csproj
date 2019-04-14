@@ -32,9 +32,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <ApplicationIcon>classroom.ico</ApplicationIcon>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Google.Protobuf, Version=3.5.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
       <HintPath>..\packages\Google.Protobuf.3.5.1\lib\net45\Google.Protobuf.dll</HintPath>
@@ -69,85 +66,94 @@
       <DependentUpon>Chast.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DispControl.cs">
+    <Compile Include="Controls\DispControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="DispControl.Designer.cs">
+    <Compile Include="Controls\DispControl.Designer.cs">
       <DependentUpon>DispControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormAddChange.cs">
+    <Compile Include="FormAddChange\FormAddChange.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAddChange.Designer.cs">
+    <Compile Include="FormAddChange\FormAddChange.Designer.cs">
       <DependentUpon>FormAddChange.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAddChange\FormAddChangeSpecly.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddChange\FormAddChangeSpecly.Designer.cs">
+      <DependentUpon>FormAddChangeSpecly.cs</DependentUpon>
+    </Compile>
     <Compile Include="Functional.cs" />
-    <Compile Include="GrypControl.cs">
+    <Compile Include="Controls\GrypControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GrypControl.Designer.cs">
+    <Compile Include="Controls\GrypControl.Designer.cs">
       <DependentUpon>GrypControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="KafedraControl.cs">
+    <Compile Include="Controls\KafedraControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="KafedraControl.Designer.cs">
+    <Compile Include="Controls\KafedraControl.Designer.cs">
       <DependentUpon>KafedraControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainMenuControl.cs">
+    <Compile Include="Controls\MainMenuControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MainMenuControl.Designer.cs">
+    <Compile Include="Controls\MainMenuControl.Designer.cs">
       <DependentUpon>MainMenuControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="PrepodControl.cs">
+    <Compile Include="Controls\PrepodControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="PrepodControl.Designer.cs">
+    <Compile Include="Controls\PrepodControl.Designer.cs">
       <DependentUpon>PrepodControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SpecialSqlController.cs" />
-    <Compile Include="SpeclyControl.cs">
+    <Compile Include="Controls\SpeclyControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SpeclyControl.Designer.cs">
+    <Compile Include="Controls\SpeclyControl.Designer.cs">
       <DependentUpon>SpeclyControl.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlController.cs" />
-    <Compile Include="StydentControl.cs">
+    <Compile Include="Controls\StydentControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="StydentControl.Designer.cs">
+    <Compile Include="Controls\StydentControl.Designer.cs">
       <DependentUpon>StydentControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="YspehControl.cs">
+    <Compile Include="Controls\YspehControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="YspehControl.Designer.cs">
+    <Compile Include="Controls\YspehControl.Designer.cs">
       <DependentUpon>YspehControl.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Chast.resx">
       <DependentUpon>Chast.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DispControl.resx">
+    <EmbeddedResource Include="Controls\DispControl.resx">
       <DependentUpon>DispControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormAddChange.resx">
+    <EmbeddedResource Include="FormAddChange\FormAddChange.resx">
       <DependentUpon>FormAddChange.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GrypControl.resx">
+    <EmbeddedResource Include="Controls\GrypControl.resx">
       <DependentUpon>GrypControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="KafedraControl.resx">
+    <EmbeddedResource Include="Controls\KafedraControl.resx">
       <DependentUpon>KafedraControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainMenuControl.resx">
+    <EmbeddedResource Include="Controls\MainMenuControl.resx">
       <DependentUpon>MainMenuControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PrepodControl.resx">
+    <EmbeddedResource Include="Controls\PrepodControl.resx">
       <DependentUpon>PrepodControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddChange\FormAddChangeSpecly.resx">
+      <DependentUpon>FormAddChangeSpecly.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -158,13 +164,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="SpeclyControl.resx">
+    <EmbeddedResource Include="Controls\SpeclyControl.resx">
       <DependentUpon>SpeclyControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StydentControl.resx">
+    <EmbeddedResource Include="Controls\StydentControl.resx">
       <DependentUpon>StydentControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="YspehControl.resx">
+    <EmbeddedResource Include="Controls\YspehControl.resx">
       <DependentUpon>YspehControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -180,9 +186,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="classroom.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

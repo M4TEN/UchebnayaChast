@@ -91,7 +91,7 @@ CREATE TABLE `kafedra` (
   `K_name` varchar(50) NOT NULL,
   `K_nomer` varchar(10) NOT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -100,7 +100,7 @@ CREATE TABLE `kafedra` (
 
 LOCK TABLES `kafedra` WRITE;
 /*!40000 ALTER TABLE `kafedra` DISABLE KEYS */;
-INSERT INTO `kafedra` VALUES (1,'Программирование','101'),(2,'Языки и литература','102'),(3,'Математика','103'),(4,'Физ. воспитание','104'),(5,'Общественные науки','105');
+INSERT INTO `kafedra` VALUES (1,'Программирование','0683830505'),(2,'Языки и литература','0573840567'),(3,'Математика','0572938600'),(4,'Физ. воспитание','0577728880'),(5,'Общественные науки','0683098999');
 /*!40000 ALTER TABLE `kafedra` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -143,8 +143,11 @@ CREATE TABLE `specly` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
   `Sp_name` varchar(50) NOT NULL,
   `Sp_nazv` varchar(2) NOT NULL,
-  PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `P_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`Id`),
+  KEY `Prepod_id_idx` (`P_id`),
+  CONSTRAINT `Prepod_id` FOREIGN KEY (`P_id`) REFERENCES `prepod` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -153,7 +156,7 @@ CREATE TABLE `specly` (
 
 LOCK TABLES `specly` WRITE;
 /*!40000 ALTER TABLE `specly` DISABLE KEYS */;
-INSERT INTO `specly` VALUES (1,'Инженерия программного обеспечения','ПИ'),(2,'Компьютерная инженерия','КИ'),(3,'Телекомуникации и радиотехника','РТ'),(4,'Отраслевое машиностроение','ОМ'),(5,'Прикладная механика','ПМ'),(6,'Электроника','ЕТ');
+INSERT INTO `specly` VALUES (1,'Инженерия программного обеспечения','ПИ',1),(2,'Компьютерная инженерия','КИ',3),(3,'Телекомуникации и радиотехника','РТ',NULL),(4,'Отраслевое машиностроение','ОМ',7),(5,'Прикладная механика','ПМ',NULL),(6,'Электроника','ЕТ',NULL);
 /*!40000 ALTER TABLE `specly` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -241,4 +244,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-04-11 21:37:57
+-- Dump completed on 2019-04-14 15:22:09
