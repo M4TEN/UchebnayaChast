@@ -31,6 +31,7 @@
             this.PanelTop = new System.Windows.Forms.Panel();
             this.LabelTop = new System.Windows.Forms.Label();
             this.PanelMain = new System.Windows.Forms.Panel();
+            this.LabelZav = new System.Windows.Forms.Label();
             this.ADShifr = new System.Windows.Forms.TextBox();
             this.ADCombo = new System.Windows.Forms.ComboBox();
             this.ADName = new System.Windows.Forms.TextBox();
@@ -38,7 +39,6 @@
             this.LabelName = new System.Windows.Forms.Label();
             this.ADCancel = new System.Windows.Forms.Button();
             this.ADAdd = new System.Windows.Forms.Button();
-            this.LabelZav = new System.Windows.Forms.Label();
             this.PanelTop.SuspendLayout();
             this.PanelMain.SuspendLayout();
             this.SuspendLayout();
@@ -79,6 +79,16 @@
             this.PanelMain.Size = new System.Drawing.Size(363, 226);
             this.PanelMain.TabIndex = 3;
             // 
+            // LabelZav
+            // 
+            this.LabelZav.AutoSize = true;
+            this.LabelZav.Font = new System.Drawing.Font("Comfortaa", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LabelZav.Location = new System.Drawing.Point(33, 130);
+            this.LabelZav.Name = "LabelZav";
+            this.LabelZav.Size = new System.Drawing.Size(91, 18);
+            this.LabelZav.TabIndex = 15;
+            this.LabelZav.Text = "Заведующий";
+            // 
             // ADShifr
             // 
             this.ADShifr.Location = new System.Drawing.Point(183, 94);
@@ -91,7 +101,7 @@
             this.ADCombo.FormattingEnabled = true;
             this.ADCombo.Location = new System.Drawing.Point(183, 130);
             this.ADCombo.Name = "ADCombo";
-            this.ADCombo.Size = new System.Drawing.Size(121, 21);
+            this.ADCombo.Size = new System.Drawing.Size(155, 21);
             this.ADCombo.TabIndex = 13;
             this.ADCombo.Text = "              ";
             // 
@@ -144,16 +154,6 @@
             this.ADAdd.Text = "Добавить";
             this.ADAdd.UseVisualStyleBackColor = true;
             this.ADAdd.Click += new System.EventHandler(this.ADAdd_Click);
-            // 
-            // LabelZav
-            // 
-            this.LabelZav.AutoSize = true;
-            this.LabelZav.Font = new System.Drawing.Font("Comfortaa", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LabelZav.Location = new System.Drawing.Point(33, 130);
-            this.LabelZav.Name = "LabelZav";
-            this.LabelZav.Size = new System.Drawing.Size(91, 18);
-            this.LabelZav.TabIndex = 15;
-            this.LabelZav.Text = "Заведующий";
             // 
             // FormAddChangeSpecly
             // 

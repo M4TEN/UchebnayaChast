@@ -36,6 +36,7 @@ namespace UchebnayaChast
             List<Functional.TestValid> test = new List<Functional.TestValid>();
             test.Add(delegate () { if (ADName.Text.Length < 3) { Functional.Error("Слишком короткое название, думайте лучше!"); return true; } else return false; });
             test.Add(delegate () { if (ADNomer.Text.Any(x=>!int.TryParse(x.ToString(),out int b))) { Functional.Error("Слишком короткий номер, ну что вы!"); return true; } else return false; });
+            //test.Add(delegate () { if ((ADNomer.TextLength) < 10) { Functional.Error("Слишком короткий номер, ну что вы!"); return true; } else return false; });
             if (Functional.CheckTest(test.ToArray()))
             {
                 if (id == 0)

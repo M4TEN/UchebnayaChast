@@ -44,6 +44,10 @@
             this.LabelSort = new System.Windows.Forms.Label();
             this.PrepodPoisk = new System.Windows.Forms.TextBox();
             this.PrepodGrid = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.P_fio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.P_kategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.K_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PanelFnc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PrepodGrid)).BeginInit();
             this.SuspendLayout();
@@ -88,6 +92,7 @@
             this.BtnFncChange.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnFncChange.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnFncChange.UseVisualStyleBackColor = false;
+            this.BtnFncChange.Click += new System.EventHandler(this.BtnFncChange_Click);
             // 
             // BtnFncAdd
             // 
@@ -104,6 +109,7 @@
             this.BtnFncAdd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnFncAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnFncAdd.UseVisualStyleBackColor = false;
+            this.BtnFncAdd.Click += new System.EventHandler(this.BtnFncAdd_Click);
             // 
             // BtnFncDelete
             // 
@@ -120,6 +126,7 @@
             this.BtnFncDelete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnFncDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnFncDelete.UseVisualStyleBackColor = false;
+            this.BtnFncDelete.Click += new System.EventHandler(this.BtnFncDelete_Click);
             // 
             // BtnFncDrop
             // 
@@ -136,6 +143,7 @@
             this.BtnFncDrop.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnFncDrop.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnFncDrop.UseVisualStyleBackColor = false;
+            this.BtnFncDrop.Click += new System.EventHandler(this.BtnFncDrop_Click);
             // 
             // BtnFncSearch
             // 
@@ -152,15 +160,20 @@
             this.BtnFncSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnFncSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnFncSearch.UseVisualStyleBackColor = false;
+            this.BtnFncSearch.Click += new System.EventHandler(this.BtnFncSearch_Click);
             // 
             // PrepodSortirovka
             // 
             this.PrepodSortirovka.Font = new System.Drawing.Font("Comfortaa", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.PrepodSortirovka.FormattingEnabled = true;
+            this.PrepodSortirovka.Items.AddRange(new object[] {
+            "От А до Я",
+            "От Я до А"});
             this.PrepodSortirovka.Location = new System.Drawing.Point(305, 47);
             this.PrepodSortirovka.Name = "PrepodSortirovka";
             this.PrepodSortirovka.Size = new System.Drawing.Size(174, 23);
             this.PrepodSortirovka.TabIndex = 25;
+            this.PrepodSortirovka.SelectedIndexChanged += new System.EventHandler(this.PrepodSortirovka_SelectedIndexChanged);
             // 
             // LabelPoisk
             // 
@@ -185,10 +198,9 @@
             // PrepodPoisk
             // 
             this.PrepodPoisk.Font = new System.Drawing.Font("Comfortaa", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.PrepodPoisk.Location = new System.Drawing.Point(86, 12);
-            this.PrepodPoisk.Multiline = true;
+            this.PrepodPoisk.Location = new System.Drawing.Point(86, 16);
             this.PrepodPoisk.Name = "PrepodPoisk";
-            this.PrepodPoisk.Size = new System.Drawing.Size(393, 25);
+            this.PrepodPoisk.Size = new System.Drawing.Size(393, 21);
             this.PrepodPoisk.TabIndex = 22;
             // 
             // PrepodGrid
@@ -208,6 +220,11 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.PrepodGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.PrepodGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.PrepodGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
+            this.P_fio,
+            this.P_kategory,
+            this.K_id});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Comfortaa", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -231,6 +248,42 @@
             this.PrepodGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.PrepodGrid.Size = new System.Drawing.Size(450, 300);
             this.PrepodGrid.TabIndex = 21;
+            // 
+            // Id
+            // 
+            this.Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Id.Visible = false;
+            // 
+            // P_fio
+            // 
+            this.P_fio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.P_fio.HeaderText = "ФИО";
+            this.P_fio.Name = "P_fio";
+            this.P_fio.ReadOnly = true;
+            this.P_fio.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.P_fio.Width = 45;
+            // 
+            // P_kategory
+            // 
+            this.P_kategory.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.P_kategory.HeaderText = "Категория";
+            this.P_kategory.Name = "P_kategory";
+            this.P_kategory.ReadOnly = true;
+            this.P_kategory.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.P_kategory.Width = 85;
+            // 
+            // K_id
+            // 
+            this.K_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.K_id.HeaderText = "Кафедра";
+            this.K_id.Name = "K_id";
+            this.K_id.ReadOnly = true;
+            this.K_id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.K_id.Width = 93;
             // 
             // PrepodControl
             // 
@@ -266,5 +319,9 @@
         private System.Windows.Forms.Label LabelSort;
         private System.Windows.Forms.TextBox PrepodPoisk;
         private System.Windows.Forms.DataGridView PrepodGrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn P_fio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn P_kategory;
+        private System.Windows.Forms.DataGridViewTextBoxColumn K_id;
     }
 }

@@ -78,15 +78,16 @@
             // ADNomer
             // 
             this.ADNomer.Location = new System.Drawing.Point(183, 85);
-            this.ADNomer.Mask = "(000) 000-0000";
+            this.ADNomer.Mask = "0000000000";
             this.ADNomer.Name = "ADNomer";
-            this.ADNomer.Size = new System.Drawing.Size(80, 20);
+            this.ADNomer.Size = new System.Drawing.Size(67, 20);
             this.ADNomer.TabIndex = 13;
             this.ADNomer.Click += new System.EventHandler(this.ADNomer_Click);
             // 
             // ADName
             // 
             this.ADName.Location = new System.Drawing.Point(183, 46);
+            this.ADName.MaxLength = 100;
             this.ADName.Name = "ADName";
             this.ADName.Size = new System.Drawing.Size(155, 20);
             this.ADName.TabIndex = 12;

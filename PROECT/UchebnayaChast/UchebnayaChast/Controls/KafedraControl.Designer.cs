@@ -213,9 +213,8 @@
             // KafedraPoisk
             // 
             this.KafedraPoisk.Location = new System.Drawing.Point(185, 10);
-            this.KafedraPoisk.Multiline = true;
             this.KafedraPoisk.Name = "KafedraPoisk";
-            this.KafedraPoisk.Size = new System.Drawing.Size(398, 25);
+            this.KafedraPoisk.Size = new System.Drawing.Size(398, 20);
             this.KafedraPoisk.TabIndex = 14;
             // 
             // KafedraGrid

@@ -81,11 +81,23 @@
     <Compile Include="FormAddChange\FormAddChange.Designer.cs">
       <DependentUpon>FormAddChange.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAddChange\FormAddChangePrepod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddChange\FormAddChangePrepod.Designer.cs">
+      <DependentUpon>FormAddChangePrepod.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAddChange\FormAddChangeSpecly.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormAddChange\FormAddChangeSpecly.Designer.cs">
       <DependentUpon>FormAddChangeSpecly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEnter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEnter.Designer.cs">
+      <DependentUpon>FormEnter.cs</DependentUpon>
     </Compile>
     <Compile Include="Functional.cs" />
     <Compile Include="Controls\GrypControl.cs">
@@ -155,8 +167,14 @@
     <EmbeddedResource Include="Controls\PrepodControl.resx">
       <DependentUpon>PrepodControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormAddChange\FormAddChangePrepod.resx">
+      <DependentUpon>FormAddChangePrepod.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAddChange\FormAddChangeSpecly.resx">
       <DependentUpon>FormAddChangeSpecly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEnter.resx">
+      <DependentUpon>FormEnter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

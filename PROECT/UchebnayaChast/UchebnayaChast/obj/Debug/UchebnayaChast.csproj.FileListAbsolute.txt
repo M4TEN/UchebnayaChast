@@ -30,7 +30,6 @@ D:\KYRSOVAYA\PROECT\UchebnayaChast\UchebnayaChast\obj\Debug\UchebnayaChast.Styde
 C:\Users\M4TEN\Documents\GitHub\UchebnayaChast\PROECT\UchebnayaChast\UchebnayaChast\bin\Debug\UchebnayaChast.exe.config
 C:\Users\M4TEN\Documents\GitHub\UchebnayaChast\PROECT\UchebnayaChast\UchebnayaChast\bin\Debug\UchebnayaChast.exe
 C:\Users\M4TEN\Documents\GitHub\UchebnayaChast\PROECT\UchebnayaChast\UchebnayaChast\bin\Debug\UchebnayaChast.pdb
-C:\Users\M4TEN\Documents\GitHub\UchebnayaChast\PROECT\UchebnayaChast\UchebnayaChast\obj\Debug\UchebnayaChast.csprojAssemblyReference.cache
 C:\Users\M4TEN\Documents\GitHub\UchebnayaChast\PROECT\UchebnayaChast\UchebnayaChast\obj\Debug\UchebnayaChast.MainForm.resources
 C:\Users\M4TEN\Documents\GitHub\UchebnayaChast\PROECT\UchebnayaChast\UchebnayaChast\obj\Debug\UchebnayaChast.DispControl.resources
 C:\Users\M4TEN\Documents\GitHub\UchebnayaChast\PROECT\UchebnayaChast\UchebnayaChast\obj\Debug\UchebnayaChast.GrypControl.resources
@@ -52,3 +51,6 @@ C:\Users\M4TEN\Documents\GitHub\UchebnayaChast\PROECT\UchebnayaChast\UchebnayaCh
 C:\Users\M4TEN\Documents\GitHub\UchebnayaChast\PROECT\UchebnayaChast\UchebnayaChast\obj\Debug\UchebnayaChast.csproj.CopyComplete
 C:\Users\M4TEN\Documents\GitHub\UchebnayaChast\PROECT\UchebnayaChast\UchebnayaChast\obj\Debug\UchebnayaChast.FormAddChange.FormAddChangeSpecly.resources
 C:\Users\M4TEN\Documents\GitHub\UchebnayaChast\PROECT\UchebnayaChast\UchebnayaChast\obj\Debug\UchebnayaChast.FormAddChangeKafedra.resources
+C:\Users\M4TEN\Documents\GitHub\UchebnayaChast\PROECT\UchebnayaChast\UchebnayaChast\obj\Debug\UchebnayaChast.FormEnter.resources
+C:\Users\M4TEN\Documents\GitHub\UchebnayaChast\PROECT\UchebnayaChast\UchebnayaChast\obj\Debug\UchebnayaChast.csprojAssemblyReference.cache
+C:\Users\M4TEN\Documents\GitHub\UchebnayaChast\PROECT\UchebnayaChast\UchebnayaChast\obj\Debug\UchebnayaChast.FormAddChange.FormAddChangePrepod.resources

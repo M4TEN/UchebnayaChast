@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.PanelTop = new System.Windows.Forms.Panel();
+            this.BtnLock = new System.Windows.Forms.Button();
             this.BtnExit = new System.Windows.Forms.Button();
             this.LabelName = new System.Windows.Forms.Label();
             this.PanelLeft = new System.Windows.Forms.Panel();
@@ -43,14 +44,15 @@
             this.BtnMainDisp = new System.Windows.Forms.Button();
             this.BtnMainStydent = new System.Windows.Forms.Button();
             this.BtnMainHome = new System.Windows.Forms.Button();
+            this.PanelControlStydent = new UchebnayaChast.StydentControl();
+            this.PanelControlSpecly = new UchebnayaChast.SpeclyControl();
             this.PanelControlPrepod = new UchebnayaChast.PrepodControl();
             this.PanelControlGryp = new UchebnayaChast.GrypControl();
             this.PanelControlYspeh = new UchebnayaChast.YspehControl();
             this.PanelControlDisp = new UchebnayaChast.DispControl();
             this.PanelControlMainMenu = new UchebnayaChast.MainMenuControl();
             this.PanelControlKafedra = new UchebnayaChast.KafedraControl();
-            this.PanelControlSpecly = new UchebnayaChast.SpeclyControl();
-            this.PanelControlStydent = new UchebnayaChast.StydentControl();
+            this.PanelVisible = new System.Windows.Forms.Panel();
             this.PanelTop.SuspendLayout();
             this.PanelLeft.SuspendLayout();
             this.SuspendLayout();
@@ -58,6 +60,8 @@
             // PanelTop
             // 
             this.PanelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(64)))));
+            this.PanelTop.Controls.Add(this.PanelVisible);
+            this.PanelTop.Controls.Add(this.BtnLock);
             this.PanelTop.Controls.Add(this.BtnExit);
             this.PanelTop.Controls.Add(this.LabelName);
             this.PanelTop.Dock = System.Windows.Forms.DockStyle.Top;
@@ -65,6 +69,18 @@
             this.PanelTop.Name = "PanelTop";
             this.PanelTop.Size = new System.Drawing.Size(1080, 40);
             this.PanelTop.TabIndex = 0;
+            // 
+            // BtnLock
+            // 
+            this.BtnLock.FlatAppearance.BorderSize = 0;
+            this.BtnLock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnLock.Image = ((System.Drawing.Image)(resources.GetObject("BtnLock.Image")));
+            this.BtnLock.Location = new System.Drawing.Point(927, 2);
+            this.BtnLock.Name = "BtnLock";
+            this.BtnLock.Size = new System.Drawing.Size(31, 35);
+            this.BtnLock.TabIndex = 2;
+            this.BtnLock.UseVisualStyleBackColor = true;
+            this.BtnLock.Click += new System.EventHandler(this.BtnLock_Click);
             // 
             // BtnExit
             // 
@@ -253,6 +269,22 @@
             this.BtnMainHome.UseVisualStyleBackColor = false;
             this.BtnMainHome.Click += new System.EventHandler(this.BtnMainHome_Click);
             // 
+            // PanelControlStydent
+            // 
+            this.PanelControlStydent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.PanelControlStydent.Location = new System.Drawing.Point(205, 45);
+            this.PanelControlStydent.Name = "PanelControlStydent";
+            this.PanelControlStydent.Size = new System.Drawing.Size(875, 410);
+            this.PanelControlStydent.TabIndex = 17;
+            // 
+            // PanelControlSpecly
+            // 
+            this.PanelControlSpecly.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.PanelControlSpecly.Location = new System.Drawing.Point(205, 45);
+            this.PanelControlSpecly.Name = "PanelControlSpecly";
+            this.PanelControlSpecly.Size = new System.Drawing.Size(875, 410);
+            this.PanelControlSpecly.TabIndex = 16;
+            // 
             // PanelControlPrepod
             // 
             this.PanelControlPrepod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -300,21 +332,12 @@
             this.PanelControlKafedra.Size = new System.Drawing.Size(875, 410);
             this.PanelControlKafedra.TabIndex = 10;
             // 
-            // PanelControlSpecly
+            // PanelVisible
             // 
-            this.PanelControlSpecly.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.PanelControlSpecly.Location = new System.Drawing.Point(205, 45);
-            this.PanelControlSpecly.Name = "PanelControlSpecly";
-            this.PanelControlSpecly.Size = new System.Drawing.Size(875, 410);
-            this.PanelControlSpecly.TabIndex = 16;
-            // 
-            // PanelControlStydent
-            // 
-            this.PanelControlStydent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.PanelControlStydent.Location = new System.Drawing.Point(205, 45);
-            this.PanelControlStydent.Name = "PanelControlStydent";
-            this.PanelControlStydent.Size = new System.Drawing.Size(875, 410);
-            this.PanelControlStydent.TabIndex = 17;
+            this.PanelVisible.Location = new System.Drawing.Point(913, 0);
+            this.PanelVisible.Name = "PanelVisible";
+            this.PanelVisible.Size = new System.Drawing.Size(57, 40);
+            this.PanelVisible.TabIndex = 3;
             // 
             // MainForm
             // 
@@ -368,6 +391,8 @@
         private PrepodControl PanelControlPrepod;
         private SpeclyControl PanelControlSpecly;
         private StydentControl PanelControlStydent;
+        private System.Windows.Forms.Button BtnLock;
+        private System.Windows.Forms.Panel PanelVisible;
     }
 }
 

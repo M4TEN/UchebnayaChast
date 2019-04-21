@@ -15,10 +15,31 @@ namespace UchebnayaChast
         public MainForm()
         {
             InitializeComponent();
+
+            PanelControlMainMenu.mainButtonEnable = ButtonEnable;
+
             PanelScroll.Height = BtnMainHome.Height;
             PanelScroll.Top = BtnMainHome.Top;
+            ButtonEnable(false);
             PanelControlMainMenu.BringToFront();
         }
+
+        public void ButtonEnable(bool b)
+        {
+            BtnMainHome.Enabled = b;
+            BtnMainKafedra.Enabled = b;
+            BtnMainPrepod.Enabled = b;
+            BtnMainSpecly.Enabled = b;
+            BtnMainStydent.Enabled = b;
+            BtnMainYspeh.Enabled = b;
+            BtnMainDisp.Enabled = b;
+            BtnMainGryp.Enabled = b;
+            if (b)
+                PanelVisible.Visible = false;
+            else
+                PanelVisible.Visible = true;
+        }
+
         private void BtnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -78,6 +99,15 @@ namespace UchebnayaChast
             PanelScroll.Height = BtnMainSpecly.Height;
             PanelScroll.Top = BtnMainSpecly.Top;
             PanelControlSpecly.BringToFront();
+        }
+
+        private void BtnLock_Click(object sender, EventArgs e)
+        {
+            PanelScroll.Height = BtnMainHome.Height;
+            PanelScroll.Top = BtnMainHome.Top;
+            PanelControlMainMenu.BringToFront();
+            PanelControlMainMenu.PanelScrit.Visible = false;
+            ButtonEnable(false);
         }
     }
 }
