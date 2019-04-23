@@ -51,6 +51,5 @@ C:\Users\M4TEN\Documents\GitHub\UchebnayaChast\PROECT\UchebnayaChast\UchebnayaCh
 C:\Users\M4TEN\Documents\GitHub\UchebnayaChast\PROECT\UchebnayaChast\UchebnayaChast\obj\Debug\UchebnayaChast.csproj.CopyComplete
 C:\Users\M4TEN\Documents\GitHub\UchebnayaChast\PROECT\UchebnayaChast\UchebnayaChast\obj\Debug\UchebnayaChast.FormAddChange.FormAddChangeSpecly.resources
 C:\Users\M4TEN\Documents\GitHub\UchebnayaChast\PROECT\UchebnayaChast\UchebnayaChast\obj\Debug\UchebnayaChast.FormAddChangeKafedra.resources
-C:\Users\M4TEN\Documents\GitHub\UchebnayaChast\PROECT\UchebnayaChast\UchebnayaChast\obj\Debug\UchebnayaChast.FormEnter.resources
 C:\Users\M4TEN\Documents\GitHub\UchebnayaChast\PROECT\UchebnayaChast\UchebnayaChast\obj\Debug\UchebnayaChast.csprojAssemblyReference.cache
 C:\Users\M4TEN\Documents\GitHub\UchebnayaChast\PROECT\UchebnayaChast\UchebnayaChast\obj\Debug\UchebnayaChast.FormAddChange.FormAddChangePrepod.resources

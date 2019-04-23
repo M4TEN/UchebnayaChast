@@ -39,13 +39,24 @@
             this.BtnFncDelete = new System.Windows.Forms.Button();
             this.BtnFncDrop = new System.Windows.Forms.Button();
             this.BtnFncSearch = new System.Windows.Forms.Button();
-            this.SpeclySortirovka = new System.Windows.Forms.ComboBox();
-            this.LabelPoisk = new System.Windows.Forms.Label();
-            this.LabelSort = new System.Windows.Forms.Label();
-            this.SpeclyPoisk = new System.Windows.Forms.TextBox();
-            this.SpeclyGrid = new System.Windows.Forms.DataGridView();
+            this.YspehGrid = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.St_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.P_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.D_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Y_data = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Y_ball = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.LabelPoiskDisp = new System.Windows.Forms.Label();
+            this.LabelPoiskPrepod = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.LabelPoiskStydent = new System.Windows.Forms.Label();
+            this.YspehPoiskStydent = new System.Windows.Forms.TextBox();
+            this.YspehPoiskPrepod = new System.Windows.Forms.TextBox();
+            this.YspehPoiskDisp = new System.Windows.Forms.TextBox();
             this.PanelFnc.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SpeclyGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.YspehGrid)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // PanelFnc
@@ -153,52 +164,14 @@
             this.BtnFncSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnFncSearch.UseVisualStyleBackColor = false;
             // 
-            // SpeclySortirovka
+            // YspehGrid
             // 
-            this.SpeclySortirovka.Font = new System.Drawing.Font("Comfortaa", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SpeclySortirovka.FormattingEnabled = true;
-            this.SpeclySortirovka.Location = new System.Drawing.Point(305, 47);
-            this.SpeclySortirovka.Name = "SpeclySortirovka";
-            this.SpeclySortirovka.Size = new System.Drawing.Size(174, 23);
-            this.SpeclySortirovka.TabIndex = 25;
-            // 
-            // LabelPoisk
-            // 
-            this.LabelPoisk.AutoSize = true;
-            this.LabelPoisk.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LabelPoisk.Location = new System.Drawing.Point(25, 17);
-            this.LabelPoisk.Name = "LabelPoisk";
-            this.LabelPoisk.Size = new System.Drawing.Size(55, 20);
-            this.LabelPoisk.TabIndex = 23;
-            this.LabelPoisk.Text = "Поиск:";
-            // 
-            // LabelSort
-            // 
-            this.LabelSort.AutoSize = true;
-            this.LabelSort.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LabelSort.Location = new System.Drawing.Point(193, 50);
-            this.LabelSort.Name = "LabelSort";
-            this.LabelSort.Size = new System.Drawing.Size(106, 20);
-            this.LabelSort.TabIndex = 24;
-            this.LabelSort.Text = "Сортировка:";
-            // 
-            // SpeclyPoisk
-            // 
-            this.SpeclyPoisk.Font = new System.Drawing.Font("Comfortaa", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SpeclyPoisk.Location = new System.Drawing.Point(86, 12);
-            this.SpeclyPoisk.Multiline = true;
-            this.SpeclyPoisk.Name = "SpeclyPoisk";
-            this.SpeclyPoisk.Size = new System.Drawing.Size(393, 25);
-            this.SpeclyPoisk.TabIndex = 22;
-            // 
-            // SpeclyGrid
-            // 
-            this.SpeclyGrid.AllowUserToAddRows = false;
-            this.SpeclyGrid.AllowUserToDeleteRows = false;
-            this.SpeclyGrid.AllowUserToResizeColumns = false;
-            this.SpeclyGrid.AllowUserToResizeRows = false;
-            this.SpeclyGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(115)))));
-            this.SpeclyGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.YspehGrid.AllowUserToAddRows = false;
+            this.YspehGrid.AllowUserToDeleteRows = false;
+            this.YspehGrid.AllowUserToResizeColumns = false;
+            this.YspehGrid.AllowUserToResizeRows = false;
+            this.YspehGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(115)))));
+            this.YspehGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Comfortaa", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -206,8 +179,15 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.SpeclyGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.SpeclyGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.YspehGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.YspehGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.YspehGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
+            this.St_id,
+            this.P_id,
+            this.D_id,
+            this.Y_data,
+            this.Y_ball});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Comfortaa", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -215,10 +195,10 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(152)))), ((int)(((byte)(150)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.SpeclyGrid.DefaultCellStyle = dataGridViewCellStyle2;
-            this.SpeclyGrid.EnableHeadersVisualStyles = false;
-            this.SpeclyGrid.Location = new System.Drawing.Point(29, 81);
-            this.SpeclyGrid.Name = "SpeclyGrid";
+            this.YspehGrid.DefaultCellStyle = dataGridViewCellStyle2;
+            this.YspehGrid.EnableHeadersVisualStyles = false;
+            this.YspehGrid.Location = new System.Drawing.Point(20, 20);
+            this.YspehGrid.Name = "YspehGrid";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Comfortaa", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -226,29 +206,156 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(152)))), ((int)(((byte)(150)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.SpeclyGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.SpeclyGrid.RowHeadersVisible = false;
-            this.SpeclyGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.SpeclyGrid.Size = new System.Drawing.Size(450, 300);
-            this.SpeclyGrid.TabIndex = 21;
+            this.YspehGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.YspehGrid.RowHeadersVisible = false;
+            this.YspehGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.YspehGrid.Size = new System.Drawing.Size(450, 370);
+            this.YspehGrid.TabIndex = 21;
+            // 
+            // Id
+            // 
+            this.Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Id.Visible = false;
+            this.Id.Width = 25;
+            // 
+            // St_id
+            // 
+            this.St_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.St_id.HeaderText = "Студент";
+            this.St_id.Name = "St_id";
+            this.St_id.ReadOnly = true;
+            this.St_id.Width = 94;
+            // 
+            // P_id
+            // 
+            this.P_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.P_id.HeaderText = "Преподаватель";
+            this.P_id.Name = "P_id";
+            this.P_id.ReadOnly = true;
+            this.P_id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.P_id.Width = 118;
+            // 
+            // D_id
+            // 
+            this.D_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.D_id.HeaderText = "Предмет";
+            this.D_id.Name = "D_id";
+            this.D_id.ReadOnly = true;
+            this.D_id.Width = 94;
+            // 
+            // Y_data
+            // 
+            this.Y_data.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Y_data.HeaderText = "Дата";
+            this.Y_data.Name = "Y_data";
+            this.Y_data.ReadOnly = true;
+            this.Y_data.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Y_data.Width = 51;
+            // 
+            // Y_ball
+            // 
+            this.Y_ball.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Y_ball.HeaderText = "Оценка";
+            this.Y_ball.Name = "Y_ball";
+            this.Y_ball.ReadOnly = true;
+            this.Y_ball.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Y_ball.Width = 64;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(152)))), ((int)(((byte)(150)))));
+            this.panel1.Controls.Add(this.YspehPoiskDisp);
+            this.panel1.Controls.Add(this.YspehPoiskPrepod);
+            this.panel1.Controls.Add(this.YspehPoiskStydent);
+            this.panel1.Controls.Add(this.LabelPoiskDisp);
+            this.panel1.Controls.Add(this.LabelPoiskPrepod);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.LabelPoiskStydent);
+            this.panel1.Location = new System.Drawing.Point(490, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(205, 410);
+            this.panel1.TabIndex = 28;
+            // 
+            // LabelPoiskDisp
+            // 
+            this.LabelPoiskDisp.AutoSize = true;
+            this.LabelPoiskDisp.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LabelPoiskDisp.Location = new System.Drawing.Point(3, 87);
+            this.LabelPoiskDisp.Name = "LabelPoiskDisp";
+            this.LabelPoiskDisp.Size = new System.Drawing.Size(79, 20);
+            this.LabelPoiskDisp.TabIndex = 35;
+            this.LabelPoiskDisp.Text = "Предмет";
+            // 
+            // LabelPoiskPrepod
+            // 
+            this.LabelPoiskPrepod.AutoSize = true;
+            this.LabelPoiskPrepod.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LabelPoiskPrepod.Location = new System.Drawing.Point(3, 60);
+            this.LabelPoiskPrepod.Name = "LabelPoiskPrepod";
+            this.LabelPoiskPrepod.Size = new System.Drawing.Size(66, 20);
+            this.LabelPoiskPrepod.TabIndex = 30;
+            this.LabelPoiskPrepod.Text = "Препод:";
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(142)))), ((int)(((byte)(140)))));
+            this.label1.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(0, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(205, 23);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Поиск:";
+            // 
+            // LabelPoiskStydent
+            // 
+            this.LabelPoiskStydent.AutoSize = true;
+            this.LabelPoiskStydent.Font = new System.Drawing.Font("Comfortaa", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LabelPoiskStydent.Location = new System.Drawing.Point(3, 37);
+            this.LabelPoiskStydent.Name = "LabelPoiskStydent";
+            this.LabelPoiskStydent.Size = new System.Drawing.Size(68, 16);
+            this.LabelPoiskStydent.TabIndex = 26;
+            this.LabelPoiskStydent.Text = "Студент:";
+            // 
+            // YspehPoiskStydent
+            // 
+            this.YspehPoiskStydent.Location = new System.Drawing.Point(89, 33);
+            this.YspehPoiskStydent.Name = "YspehPoiskStydent";
+            this.YspehPoiskStydent.Size = new System.Drawing.Size(113, 20);
+            this.YspehPoiskStydent.TabIndex = 36;
+            // 
+            // YspehPoiskPrepod
+            // 
+            this.YspehPoiskPrepod.Location = new System.Drawing.Point(89, 59);
+            this.YspehPoiskPrepod.Name = "YspehPoiskPrepod";
+            this.YspehPoiskPrepod.Size = new System.Drawing.Size(113, 20);
+            this.YspehPoiskPrepod.TabIndex = 37;
+            // 
+            // YspehPoiskDisp
+            // 
+            this.YspehPoiskDisp.Location = new System.Drawing.Point(89, 85);
+            this.YspehPoiskDisp.Name = "YspehPoiskDisp";
+            this.YspehPoiskDisp.Size = new System.Drawing.Size(113, 20);
+            this.YspehPoiskDisp.TabIndex = 38;
             // 
             // YspehControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Controls.Add(this.SpeclySortirovka);
-            this.Controls.Add(this.LabelPoisk);
-            this.Controls.Add(this.LabelSort);
-            this.Controls.Add(this.SpeclyPoisk);
-            this.Controls.Add(this.SpeclyGrid);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.YspehGrid);
             this.Controls.Add(this.PanelFnc);
             this.Name = "YspehControl";
             this.Size = new System.Drawing.Size(875, 410);
             this.PanelFnc.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.SpeclyGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.YspehGrid)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -261,10 +368,20 @@
         private System.Windows.Forms.Button BtnFncDelete;
         private System.Windows.Forms.Button BtnFncDrop;
         private System.Windows.Forms.Button BtnFncSearch;
-        private System.Windows.Forms.ComboBox SpeclySortirovka;
-        private System.Windows.Forms.Label LabelPoisk;
-        private System.Windows.Forms.Label LabelSort;
-        private System.Windows.Forms.TextBox SpeclyPoisk;
-        private System.Windows.Forms.DataGridView SpeclyGrid;
+        private System.Windows.Forms.DataGridView YspehGrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn St_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn P_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn D_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Y_data;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Y_ball;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label LabelPoiskDisp;
+        private System.Windows.Forms.Label LabelPoiskPrepod;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LabelPoiskStydent;
+        private System.Windows.Forms.TextBox YspehPoiskDisp;
+        private System.Windows.Forms.TextBox YspehPoiskPrepod;
+        private System.Windows.Forms.TextBox YspehPoiskStydent;
     }
 }

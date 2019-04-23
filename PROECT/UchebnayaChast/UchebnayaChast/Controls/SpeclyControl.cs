@@ -16,7 +16,7 @@ namespace UchebnayaChast
         public SpeclyControl()
         {
             InitializeComponent();
-            SpeclySortirovka.DropDownStyle = ComboBoxStyle.DropDownList;
+            //SpeclySortirovka.DropDownStyle = ComboBoxStyle.DropDownList;
             Actions();
         }
 
@@ -50,26 +50,27 @@ namespace UchebnayaChast
         {
             MainAction();
             Functional.Print(ref SpeclyGrid);
-            SpeclySortirovka.SelectedIndex = 1;
-            SpeclySortirovka.SelectedIndex = 0;
+            //SpeclySortirovka.SelectedIndex = 1;
+            //SpeclySortirovka.SelectedIndex = 0;
             SpeclyPoisk.Text = "";
+            this.SpeclyGrid.Sort(this.SpeclyGrid.Columns["Sp_name"], ListSortDirection.Ascending);
         }
 
-        private void SpeclySortirovka_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            {
-                switch (SpeclySortirovka.SelectedIndex)
-                {
-                    case 0:
-                        Functional.Sort("Sp_name", 1);
-                        break;
-                    case 1:
-                        Functional.Sort("Sp_name", -1);
-                        break;
-                }
-                Functional.Print(ref SpeclyGrid);
-            }
-        }
+        //private void SpeclySortirovka_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    {
+        //        switch (SpeclySortirovka.SelectedIndex)
+        //        {
+        //            case 0:
+        //                Functional.Sort("Sp_name", 1);
+        //                break;
+        //            case 1:
+        //                Functional.Sort("Sp_name", -1);
+        //                break;
+        //        }
+        //        Functional.Print(ref SpeclyGrid);
+        //    }
+        //}
 
         private void BtnFncSearch_Click(object sender, EventArgs e)
         {
@@ -77,7 +78,7 @@ namespace UchebnayaChast
             tags.Add(delegate (Dictionary<string, string> row) { if (row["Sp_name"].ToLower().Replace(" ", "").Contains(SpeclyPoisk.Text.ToLower().Replace(" ", ""))) return false; else return true; });
             MainAction();
             Functional.Filtres(tags.ToArray(), "Специальности с такими критериями нет");
-            SpeclySortirovka.SelectedIndex = 0;
+            //SpeclySortirovka.SelectedIndex = 0;
             Functional.Print(ref SpeclyGrid);
         }
 

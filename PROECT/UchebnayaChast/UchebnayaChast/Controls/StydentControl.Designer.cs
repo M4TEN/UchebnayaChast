@@ -39,13 +39,28 @@
             this.BtnFncDelete = new System.Windows.Forms.Button();
             this.BtnFncDrop = new System.Windows.Forms.Button();
             this.BtnFncSearch = new System.Windows.Forms.Button();
-            this.StydentSortirovka = new System.Windows.Forms.ComboBox();
-            this.LabelPoisk = new System.Windows.Forms.Label();
-            this.LabelSort = new System.Windows.Forms.Label();
-            this.StydentPoisk = new System.Windows.Forms.TextBox();
+            this.StydentPoiskFio = new System.Windows.Forms.TextBox();
             this.StydentGrid = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.LabelPoiskBK = new System.Windows.Forms.Label();
+            this.StydentPoiskGryp = new System.Windows.Forms.ComboBox();
+            this.StydentPoiskBK = new System.Windows.Forms.ComboBox();
+            this.LabelPoiskKyrs = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.LabelPoiskFio = new System.Windows.Forms.Label();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.G_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.St_fio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.St_data = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.St_town = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.St_adres = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.St_postyp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.St_nomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.St_zach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.St_opl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PanelFnc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StydentGrid)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // PanelFnc
@@ -153,43 +168,13 @@
             this.BtnFncSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnFncSearch.UseVisualStyleBackColor = false;
             // 
-            // StydentSortirovka
+            // StydentPoiskFio
             // 
-            this.StydentSortirovka.Font = new System.Drawing.Font("Comfortaa", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.StydentSortirovka.FormattingEnabled = true;
-            this.StydentSortirovka.Location = new System.Drawing.Point(305, 52);
-            this.StydentSortirovka.Name = "StydentSortirovka";
-            this.StydentSortirovka.Size = new System.Drawing.Size(174, 23);
-            this.StydentSortirovka.TabIndex = 39;
-            // 
-            // LabelPoisk
-            // 
-            this.LabelPoisk.AutoSize = true;
-            this.LabelPoisk.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LabelPoisk.Location = new System.Drawing.Point(25, 15);
-            this.LabelPoisk.Name = "LabelPoisk";
-            this.LabelPoisk.Size = new System.Drawing.Size(55, 20);
-            this.LabelPoisk.TabIndex = 37;
-            this.LabelPoisk.Text = "Поиск:";
-            // 
-            // LabelSort
-            // 
-            this.LabelSort.AutoSize = true;
-            this.LabelSort.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LabelSort.Location = new System.Drawing.Point(193, 55);
-            this.LabelSort.Name = "LabelSort";
-            this.LabelSort.Size = new System.Drawing.Size(106, 20);
-            this.LabelSort.TabIndex = 38;
-            this.LabelSort.Text = "Сортировка:";
-            // 
-            // StydentPoisk
-            // 
-            this.StydentPoisk.Font = new System.Drawing.Font("Comfortaa", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.StydentPoisk.Location = new System.Drawing.Point(86, 10);
-            this.StydentPoisk.Multiline = true;
-            this.StydentPoisk.Name = "StydentPoisk";
-            this.StydentPoisk.Size = new System.Drawing.Size(393, 25);
-            this.StydentPoisk.TabIndex = 36;
+            this.StydentPoiskFio.Font = new System.Drawing.Font("Comfortaa", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.StydentPoiskFio.Location = new System.Drawing.Point(89, 37);
+            this.StydentPoiskFio.Name = "StydentPoiskFio";
+            this.StydentPoiskFio.Size = new System.Drawing.Size(113, 21);
+            this.StydentPoiskFio.TabIndex = 36;
             // 
             // StydentGrid
             // 
@@ -208,6 +193,17 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.StydentGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.StydentGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.StydentGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
+            this.G_id,
+            this.St_fio,
+            this.St_data,
+            this.St_town,
+            this.St_adres,
+            this.St_postyp,
+            this.St_nomer,
+            this.St_zach,
+            this.St_opl});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Comfortaa", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -217,7 +213,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.StydentGrid.DefaultCellStyle = dataGridViewCellStyle2;
             this.StydentGrid.EnableHeadersVisualStyles = false;
-            this.StydentGrid.Location = new System.Drawing.Point(29, 81);
+            this.StydentGrid.Location = new System.Drawing.Point(20, 20);
             this.StydentGrid.Name = "StydentGrid";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
@@ -229,26 +225,187 @@
             this.StydentGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.StydentGrid.RowHeadersVisible = false;
             this.StydentGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.StydentGrid.Size = new System.Drawing.Size(450, 300);
+            this.StydentGrid.Size = new System.Drawing.Size(450, 370);
             this.StydentGrid.TabIndex = 35;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(152)))), ((int)(((byte)(150)))));
+            this.panel1.Controls.Add(this.LabelPoiskBK);
+            this.panel1.Controls.Add(this.StydentPoiskGryp);
+            this.panel1.Controls.Add(this.StydentPoiskBK);
+            this.panel1.Controls.Add(this.LabelPoiskKyrs);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.StydentPoiskFio);
+            this.panel1.Controls.Add(this.LabelPoiskFio);
+            this.panel1.Location = new System.Drawing.Point(490, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(205, 410);
+            this.panel1.TabIndex = 40;
+            // 
+            // LabelPoiskBK
+            // 
+            this.LabelPoiskBK.AutoSize = true;
+            this.LabelPoiskBK.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LabelPoiskBK.Location = new System.Drawing.Point(3, 91);
+            this.LabelPoiskBK.Name = "LabelPoiskBK";
+            this.LabelPoiskBK.Size = new System.Drawing.Size(87, 40);
+            this.LabelPoiskBK.TabIndex = 37;
+            this.LabelPoiskBK.Text = "Бюджет/\r\nКонтракт";
+            // 
+            // StydentPoiskGryp
+            // 
+            this.StydentPoiskGryp.FormattingEnabled = true;
+            this.StydentPoiskGryp.Location = new System.Drawing.Point(89, 64);
+            this.StydentPoiskGryp.Name = "StydentPoiskGryp";
+            this.StydentPoiskGryp.Size = new System.Drawing.Size(113, 21);
+            this.StydentPoiskGryp.TabIndex = 33;
+            // 
+            // StydentPoiskBK
+            // 
+            this.StydentPoiskBK.FormattingEnabled = true;
+            this.StydentPoiskBK.Items.AddRange(new object[] {
+            "Бюджет",
+            "Контракт"});
+            this.StydentPoiskBK.Location = new System.Drawing.Point(89, 91);
+            this.StydentPoiskBK.Name = "StydentPoiskBK";
+            this.StydentPoiskBK.Size = new System.Drawing.Size(113, 21);
+            this.StydentPoiskBK.TabIndex = 32;
+            // 
+            // LabelPoiskKyrs
+            // 
+            this.LabelPoiskKyrs.AutoSize = true;
+            this.LabelPoiskKyrs.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LabelPoiskKyrs.Location = new System.Drawing.Point(3, 65);
+            this.LabelPoiskKyrs.Name = "LabelPoiskKyrs";
+            this.LabelPoiskKyrs.Size = new System.Drawing.Size(65, 20);
+            this.LabelPoiskKyrs.TabIndex = 30;
+            this.LabelPoiskKyrs.Text = "Группа:";
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(142)))), ((int)(((byte)(140)))));
+            this.label1.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(0, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(205, 23);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Поиск:";
+            // 
+            // LabelPoiskFio
+            // 
+            this.LabelPoiskFio.AutoSize = true;
+            this.LabelPoiskFio.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LabelPoiskFio.Location = new System.Drawing.Point(3, 39);
+            this.LabelPoiskFio.Name = "LabelPoiskFio";
+            this.LabelPoiskFio.Size = new System.Drawing.Size(49, 20);
+            this.LabelPoiskFio.TabIndex = 26;
+            this.LabelPoiskFio.Text = "ФИО:";
+            // 
+            // Id
+            // 
+            this.Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Id.Visible = false;
+            this.Id.Width = 25;
+            // 
+            // G_id
+            // 
+            this.G_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.G_id.HeaderText = "Группа";
+            this.G_id.Name = "G_id";
+            this.G_id.ReadOnly = true;
+            this.G_id.Width = 80;
+            // 
+            // St_fio
+            // 
+            this.St_fio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.St_fio.HeaderText = "ФИО";
+            this.St_fio.Name = "St_fio";
+            this.St_fio.ReadOnly = true;
+            this.St_fio.Width = 64;
+            // 
+            // St_data
+            // 
+            this.St_data.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.St_data.HeaderText = "Дата р.";
+            this.St_data.Name = "St_data";
+            this.St_data.ReadOnly = true;
+            this.St_data.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.St_data.Width = 66;
+            // 
+            // St_town
+            // 
+            this.St_town.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.St_town.HeaderText = "Город";
+            this.St_town.Name = "St_town";
+            this.St_town.ReadOnly = true;
+            this.St_town.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.St_town.Width = 54;
+            // 
+            // St_adres
+            // 
+            this.St_adres.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.St_adres.HeaderText = "Адрес";
+            this.St_adres.Name = "St_adres";
+            this.St_adres.ReadOnly = true;
+            this.St_adres.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.St_adres.Width = 54;
+            // 
+            // St_postyp
+            // 
+            this.St_postyp.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.St_postyp.HeaderText = "Дата пост.";
+            this.St_postyp.Name = "St_postyp";
+            this.St_postyp.ReadOnly = true;
+            this.St_postyp.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.St_postyp.Width = 92;
+            // 
+            // St_nomer
+            // 
+            this.St_nomer.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.St_nomer.HeaderText = "Телефон";
+            this.St_nomer.Name = "St_nomer";
+            this.St_nomer.ReadOnly = true;
+            this.St_nomer.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.St_nomer.Width = 74;
+            // 
+            // St_zach
+            // 
+            this.St_zach.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.St_zach.HeaderText = "№ зачётки";
+            this.St_zach.Name = "St_zach";
+            this.St_zach.ReadOnly = true;
+            this.St_zach.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.St_zach.Width = 88;
+            // 
+            // St_opl
+            // 
+            this.St_opl.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.St_opl.HeaderText = "Б/К";
+            this.St_opl.Name = "St_opl";
+            this.St_opl.ReadOnly = true;
+            this.St_opl.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.St_opl.Width = 35;
             // 
             // StydentControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Controls.Add(this.StydentSortirovka);
-            this.Controls.Add(this.LabelPoisk);
-            this.Controls.Add(this.LabelSort);
-            this.Controls.Add(this.StydentPoisk);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.StydentGrid);
             this.Controls.Add(this.PanelFnc);
             this.Name = "StydentControl";
             this.Size = new System.Drawing.Size(875, 410);
             this.PanelFnc.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.StydentGrid)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -261,10 +418,24 @@
         private System.Windows.Forms.Button BtnFncDelete;
         private System.Windows.Forms.Button BtnFncDrop;
         private System.Windows.Forms.Button BtnFncSearch;
-        private System.Windows.Forms.ComboBox StydentSortirovka;
-        private System.Windows.Forms.Label LabelPoisk;
-        private System.Windows.Forms.Label LabelSort;
-        private System.Windows.Forms.TextBox StydentPoisk;
+        private System.Windows.Forms.TextBox StydentPoiskFio;
         private System.Windows.Forms.DataGridView StydentGrid;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ComboBox StydentPoiskGryp;
+        private System.Windows.Forms.ComboBox StydentPoiskBK;
+        private System.Windows.Forms.Label LabelPoiskKyrs;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LabelPoiskFio;
+        private System.Windows.Forms.Label LabelPoiskBK;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn G_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn St_fio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn St_data;
+        private System.Windows.Forms.DataGridViewTextBoxColumn St_town;
+        private System.Windows.Forms.DataGridViewTextBoxColumn St_adres;
+        private System.Windows.Forms.DataGridViewTextBoxColumn St_postyp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn St_nomer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn St_zach;
+        private System.Windows.Forms.DataGridViewTextBoxColumn St_opl;
     }
 }

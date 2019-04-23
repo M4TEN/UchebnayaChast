@@ -39,9 +39,7 @@
             this.BtnFncDelete = new System.Windows.Forms.Button();
             this.BtnFncDrop = new System.Windows.Forms.Button();
             this.BtnFncSearch = new System.Windows.Forms.Button();
-            this.PrepodSortirovka = new System.Windows.Forms.ComboBox();
             this.LabelPoisk = new System.Windows.Forms.Label();
-            this.LabelSort = new System.Windows.Forms.Label();
             this.PrepodPoisk = new System.Windows.Forms.TextBox();
             this.PrepodGrid = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -162,43 +160,20 @@
             this.BtnFncSearch.UseVisualStyleBackColor = false;
             this.BtnFncSearch.Click += new System.EventHandler(this.BtnFncSearch_Click);
             // 
-            // PrepodSortirovka
-            // 
-            this.PrepodSortirovka.Font = new System.Drawing.Font("Comfortaa", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.PrepodSortirovka.FormattingEnabled = true;
-            this.PrepodSortirovka.Items.AddRange(new object[] {
-            "От А до Я",
-            "От Я до А"});
-            this.PrepodSortirovka.Location = new System.Drawing.Point(305, 47);
-            this.PrepodSortirovka.Name = "PrepodSortirovka";
-            this.PrepodSortirovka.Size = new System.Drawing.Size(174, 23);
-            this.PrepodSortirovka.TabIndex = 25;
-            this.PrepodSortirovka.SelectedIndexChanged += new System.EventHandler(this.PrepodSortirovka_SelectedIndexChanged);
-            // 
             // LabelPoisk
             // 
             this.LabelPoisk.AutoSize = true;
             this.LabelPoisk.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LabelPoisk.Location = new System.Drawing.Point(25, 17);
+            this.LabelPoisk.Location = new System.Drawing.Point(16, 17);
             this.LabelPoisk.Name = "LabelPoisk";
             this.LabelPoisk.Size = new System.Drawing.Size(55, 20);
             this.LabelPoisk.TabIndex = 23;
             this.LabelPoisk.Text = "Поиск:";
             // 
-            // LabelSort
-            // 
-            this.LabelSort.AutoSize = true;
-            this.LabelSort.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LabelSort.Location = new System.Drawing.Point(193, 50);
-            this.LabelSort.Name = "LabelSort";
-            this.LabelSort.Size = new System.Drawing.Size(106, 20);
-            this.LabelSort.TabIndex = 24;
-            this.LabelSort.Text = "Сортировка:";
-            // 
             // PrepodPoisk
             // 
             this.PrepodPoisk.Font = new System.Drawing.Font("Comfortaa", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.PrepodPoisk.Location = new System.Drawing.Point(86, 16);
+            this.PrepodPoisk.Location = new System.Drawing.Point(77, 16);
             this.PrepodPoisk.Name = "PrepodPoisk";
             this.PrepodPoisk.Size = new System.Drawing.Size(393, 21);
             this.PrepodPoisk.TabIndex = 22;
@@ -234,7 +209,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.PrepodGrid.DefaultCellStyle = dataGridViewCellStyle2;
             this.PrepodGrid.EnableHeadersVisualStyles = false;
-            this.PrepodGrid.Location = new System.Drawing.Point(29, 81);
+            this.PrepodGrid.Location = new System.Drawing.Point(20, 41);
             this.PrepodGrid.Name = "PrepodGrid";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
@@ -246,7 +221,7 @@
             this.PrepodGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.PrepodGrid.RowHeadersVisible = false;
             this.PrepodGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.PrepodGrid.Size = new System.Drawing.Size(450, 300);
+            this.PrepodGrid.Size = new System.Drawing.Size(450, 347);
             this.PrepodGrid.TabIndex = 21;
             // 
             // Id
@@ -257,6 +232,7 @@
             this.Id.ReadOnly = true;
             this.Id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.Id.Visible = false;
+            this.Id.Width = 25;
             // 
             // P_fio
             // 
@@ -264,8 +240,7 @@
             this.P_fio.HeaderText = "ФИО";
             this.P_fio.Name = "P_fio";
             this.P_fio.ReadOnly = true;
-            this.P_fio.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.P_fio.Width = 45;
+            this.P_fio.Width = 64;
             // 
             // P_kategory
             // 
@@ -290,9 +265,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Controls.Add(this.PrepodSortirovka);
             this.Controls.Add(this.LabelPoisk);
-            this.Controls.Add(this.LabelSort);
             this.Controls.Add(this.PrepodPoisk);
             this.Controls.Add(this.PrepodGrid);
             this.Controls.Add(this.PanelFnc);
@@ -314,9 +287,7 @@
         private System.Windows.Forms.Button BtnFncDelete;
         private System.Windows.Forms.Button BtnFncDrop;
         private System.Windows.Forms.Button BtnFncSearch;
-        private System.Windows.Forms.ComboBox PrepodSortirovka;
         private System.Windows.Forms.Label LabelPoisk;
-        private System.Windows.Forms.Label LabelSort;
         private System.Windows.Forms.TextBox PrepodPoisk;
         private System.Windows.Forms.DataGridView PrepodGrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;

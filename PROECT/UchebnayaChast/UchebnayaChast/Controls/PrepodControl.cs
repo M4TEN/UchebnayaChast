@@ -16,9 +16,9 @@ namespace UchebnayaChast
         public PrepodControl()
         {
             InitializeComponent();
-            PrepodSortirovka.DropDownStyle = ComboBoxStyle.DropDownList;
             Actions();
         }
+
 
         protected void OpenForm(Form form, bool show = true, bool hide = false, bool close = false, bool dialog = true)
         {
@@ -44,32 +44,35 @@ namespace UchebnayaChast
                         i["K_id"] = Functional.Controller.TakeRowWithNamesById(SpecialSqlController.Tables.kafedra, int.Parse(i["K_id"]))["K_name"];
                 }
             });
+
+
         }
 
         public virtual void Actions()
         {
             MainAction();
             Functional.Print(ref PrepodGrid);
-            PrepodSortirovka.SelectedIndex = 1;
-            PrepodSortirovka.SelectedIndex = 0;
+            //PrepodSortirovka.SelectedIndex = 1;
+            //PrepodSortirovka.SelectedIndex = 0;
             PrepodPoisk.Text = "";
+            this.PrepodGrid.Sort(this.PrepodGrid.Columns["P_fio"], ListSortDirection.Ascending);
         }
 
-        private void PrepodSortirovka_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            {
-                switch (PrepodSortirovka.SelectedIndex)
-                {
-                    case 0:
-                        Functional.Sort("P_fio", 1);
-                        break;
-                    case 1:
-                        Functional.Sort("P_fio", -1);
-                        break;
-                }
-                Functional.Print(ref PrepodGrid);
-            }
-        }
+        //private void PrepodSortirovka_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    {
+        //        switch (PrepodSortirovka.SelectedIndex)
+        //        {
+        //            case 0:
+        //                Functional.Sort("P_fio", 1);
+        //                break;
+        //            case 1:
+        //                Functional.Sort("P_fio", -1);
+        //                break;
+        //        }
+        //        Functional.Print(ref PrepodGrid);
+        //    }
+        //}
 
         private void BtnFncSearch_Click(object sender, EventArgs e)
         {
@@ -77,7 +80,7 @@ namespace UchebnayaChast
             tags.Add(delegate (Dictionary<string, string> row) { if (row["P_fio"].ToLower().Replace(" ", "").Contains(PrepodPoisk.Text.ToLower().Replace(" ", ""))) return false; else return true; });
             MainAction();
             Functional.Filtres(tags.ToArray(), "Преподавателя с такими критериями нет");
-            PrepodSortirovka.SelectedIndex = 0;
+            //PrepodSortirovka.SelectedIndex = 0;
             Functional.Print(ref PrepodGrid);
         }
 
@@ -98,8 +101,8 @@ namespace UchebnayaChast
             {
                 if (Functional.Controller.GetAllFrom(SpecialSqlController.Tables.gryp, "`P_id`=" + Functional.GetId(PrepodGrid)).Count == 0)
                 {
-                        Functional.Delete(PrepodGrid, SpecialSqlController.Tables.prepod);
-                        Actions();
+                    Functional.Delete(PrepodGrid, SpecialSqlController.Tables.prepod);
+                    Actions();
                 }
                 else
                 {
@@ -116,5 +119,6 @@ namespace UchebnayaChast
                 Actions();
             }
         }
+
     }
 }

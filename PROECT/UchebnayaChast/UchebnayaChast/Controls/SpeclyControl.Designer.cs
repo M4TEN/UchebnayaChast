@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SpeclyControl));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.PanelFnc = new System.Windows.Forms.Panel();
             this.LabelRight = new System.Windows.Forms.Label();
             this.BtnFncChange = new System.Windows.Forms.Button();
@@ -40,14 +40,12 @@
             this.BtnFncDrop = new System.Windows.Forms.Button();
             this.BtnFncSearch = new System.Windows.Forms.Button();
             this.SpeclyGrid = new System.Windows.Forms.DataGridView();
+            this.LabelPoisk = new System.Windows.Forms.Label();
+            this.SpeclyPoisk = new System.Windows.Forms.TextBox();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sp_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sp_nazv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.P_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LabelPoisk = new System.Windows.Forms.Label();
-            this.LabelSort = new System.Windows.Forms.Label();
-            this.SpeclyPoisk = new System.Windows.Forms.TextBox();
-            this.SpeclySortirovka = new System.Windows.Forms.ComboBox();
             this.PanelFnc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SpeclyGrid)).BeginInit();
             this.SuspendLayout();
@@ -116,7 +114,7 @@
             this.BtnFncDelete.FlatAppearance.BorderSize = 0;
             this.BtnFncDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnFncDelete.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.BtnFncDelete.ForeColor = System.Drawing.Color.Maroon;
+            this.BtnFncDelete.ForeColor = System.Drawing.Color.Black;
             this.BtnFncDelete.Image = ((System.Drawing.Image)(resources.GetObject("BtnFncDelete.Image")));
             this.BtnFncDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnFncDelete.Location = new System.Drawing.Point(5, 170);
@@ -171,43 +169,61 @@
             this.SpeclyGrid.AllowUserToResizeRows = false;
             this.SpeclyGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(115)))));
             this.SpeclyGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Comfortaa", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.SpeclyGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Comfortaa", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.SpeclyGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.SpeclyGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.SpeclyGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
             this.Sp_name,
             this.Sp_nazv,
             this.P_id});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Comfortaa", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(152)))), ((int)(((byte)(150)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.SpeclyGrid.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Comfortaa", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(152)))), ((int)(((byte)(150)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.SpeclyGrid.DefaultCellStyle = dataGridViewCellStyle5;
             this.SpeclyGrid.EnableHeadersVisualStyles = false;
-            this.SpeclyGrid.Location = new System.Drawing.Point(29, 81);
+            this.SpeclyGrid.Location = new System.Drawing.Point(20, 36);
             this.SpeclyGrid.Name = "SpeclyGrid";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Comfortaa", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(152)))), ((int)(((byte)(150)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.SpeclyGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Comfortaa", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(152)))), ((int)(((byte)(150)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.SpeclyGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.SpeclyGrid.RowHeadersVisible = false;
             this.SpeclyGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.SpeclyGrid.Size = new System.Drawing.Size(450, 300);
+            this.SpeclyGrid.Size = new System.Drawing.Size(450, 354);
             this.SpeclyGrid.TabIndex = 12;
+            // 
+            // LabelPoisk
+            // 
+            this.LabelPoisk.AutoSize = true;
+            this.LabelPoisk.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LabelPoisk.Location = new System.Drawing.Point(16, 10);
+            this.LabelPoisk.Name = "LabelPoisk";
+            this.LabelPoisk.Size = new System.Drawing.Size(55, 20);
+            this.LabelPoisk.TabIndex = 18;
+            this.LabelPoisk.Text = "Поиск:";
+            // 
+            // SpeclyPoisk
+            // 
+            this.SpeclyPoisk.Font = new System.Drawing.Font("Comfortaa", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SpeclyPoisk.Location = new System.Drawing.Point(77, 9);
+            this.SpeclyPoisk.Name = "SpeclyPoisk";
+            this.SpeclyPoisk.Size = new System.Drawing.Size(393, 21);
+            this.SpeclyPoisk.TabIndex = 17;
             // 
             // Id
             // 
@@ -217,6 +233,7 @@
             this.Id.ReadOnly = true;
             this.Id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.Id.Visible = false;
+            this.Id.Width = 25;
             // 
             // Sp_name
             // 
@@ -224,8 +241,7 @@
             this.Sp_name.HeaderText = "Название";
             this.Sp_name.Name = "Sp_name";
             this.Sp_name.ReadOnly = true;
-            this.Sp_name.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Sp_name.Width = 74;
+            this.Sp_name.Width = 93;
             // 
             // Sp_nazv
             // 
@@ -245,55 +261,12 @@
             this.P_id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             this.P_id.Width = 116;
             // 
-            // LabelPoisk
-            // 
-            this.LabelPoisk.AutoSize = true;
-            this.LabelPoisk.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LabelPoisk.Location = new System.Drawing.Point(25, 17);
-            this.LabelPoisk.Name = "LabelPoisk";
-            this.LabelPoisk.Size = new System.Drawing.Size(55, 20);
-            this.LabelPoisk.TabIndex = 18;
-            this.LabelPoisk.Text = "Поиск:";
-            // 
-            // LabelSort
-            // 
-            this.LabelSort.AutoSize = true;
-            this.LabelSort.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LabelSort.Location = new System.Drawing.Point(193, 50);
-            this.LabelSort.Name = "LabelSort";
-            this.LabelSort.Size = new System.Drawing.Size(106, 20);
-            this.LabelSort.TabIndex = 19;
-            this.LabelSort.Text = "Сортировка:";
-            // 
-            // SpeclyPoisk
-            // 
-            this.SpeclyPoisk.Font = new System.Drawing.Font("Comfortaa", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SpeclyPoisk.Location = new System.Drawing.Point(86, 16);
-            this.SpeclyPoisk.Name = "SpeclyPoisk";
-            this.SpeclyPoisk.Size = new System.Drawing.Size(393, 21);
-            this.SpeclyPoisk.TabIndex = 17;
-            // 
-            // SpeclySortirovka
-            // 
-            this.SpeclySortirovka.Font = new System.Drawing.Font("Comfortaa", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SpeclySortirovka.FormattingEnabled = true;
-            this.SpeclySortirovka.Items.AddRange(new object[] {
-            "От А до Я",
-            "От Я до А"});
-            this.SpeclySortirovka.Location = new System.Drawing.Point(305, 47);
-            this.SpeclySortirovka.Name = "SpeclySortirovka";
-            this.SpeclySortirovka.Size = new System.Drawing.Size(174, 23);
-            this.SpeclySortirovka.TabIndex = 20;
-            this.SpeclySortirovka.SelectedIndexChanged += new System.EventHandler(this.SpeclySortirovka_SelectedIndexChanged);
-            // 
             // SpeclyControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Controls.Add(this.SpeclySortirovka);
             this.Controls.Add(this.LabelPoisk);
-            this.Controls.Add(this.LabelSort);
             this.Controls.Add(this.SpeclyPoisk);
             this.Controls.Add(this.SpeclyGrid);
             this.Controls.Add(this.PanelFnc);
@@ -317,9 +290,7 @@
         private System.Windows.Forms.Button BtnFncSearch;
         private System.Windows.Forms.DataGridView SpeclyGrid;
         private System.Windows.Forms.Label LabelPoisk;
-        private System.Windows.Forms.Label LabelSort;
         private System.Windows.Forms.TextBox SpeclyPoisk;
-        private System.Windows.Forms.ComboBox SpeclySortirovka;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sp_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sp_nazv;

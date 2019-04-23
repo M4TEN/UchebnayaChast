@@ -15,6 +15,7 @@ namespace UchebnayaChast.FormAddChange
         int id;
         List<string> saveindexes;
 
+
         public FormAddChangePrepod()
         {
             InitializeComponent();
@@ -34,6 +35,8 @@ namespace UchebnayaChast.FormAddChange
             ADComboKategory.DropDownStyle = ComboBoxStyle.DropDownList;
             ADComboKafedra.DropDownStyle = ComboBoxStyle.DropDownList;
             ADComboKafedra.Items.AddRange(Functional.Controller.GetColumn(SpecialSqlController.Tables.kafedra, "K_name", "(select count(`Id`) from prepod p where p.K_id=kafedra.Id)=0", false).ToArray());
+            //ADComboKategory.Items.AddRange(new string[]{ "1","2","3"});
+            ADComboKategory.SelectedIndex = int.Parse(privet["P_kategory"]) - 1;
             saveindexes = Functional.Controller.GetColumn(SpecialSqlController.Tables.kafedra, "Id", "(select count(`Id`) from prepod p where p.K_id=kafedra.Id)=0", false);
             if (!string.IsNullOrEmpty(privet["K_id"]))
             {
@@ -53,7 +56,7 @@ namespace UchebnayaChast.FormAddChange
             if (Functional.CheckTest(test.ToArray()))
             {
                 if (id == 0)
-                    Functional.Controller.InsertIn(SpecialSqlController.Tables.prepod, new List<string> { ADFio.Text, (Convert.ToInt32(ADComboKategory.SelectedIndex)+1).ToString(), saveindexes[ADComboKafedra.SelectedIndex] });
+                    Functional.Controller.InsertIn(SpecialSqlController.Tables.prepod, new List<string> { ADFio.Text, (Convert.ToInt32(ADComboKategory.SelectedIndex) + 1).ToString(), saveindexes[ADComboKafedra.SelectedIndex] });
                 else
                     Functional.Controller.UpdateIn(SpecialSqlController.Tables.prepod, new List<string> { ADFio.Text, (Convert.ToInt32(ADComboKategory.SelectedIndex) + 1).ToString(), saveindexes[ADComboKafedra.SelectedIndex] }, id.ToString());
                 this.Close();
@@ -64,5 +67,6 @@ namespace UchebnayaChast.FormAddChange
         {
             this.Close();
         }
+
     }
 }

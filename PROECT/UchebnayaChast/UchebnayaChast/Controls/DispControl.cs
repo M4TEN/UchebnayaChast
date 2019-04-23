@@ -15,6 +15,21 @@ namespace UchebnayaChast
         public DispControl()
         {
             InitializeComponent();
+            DispPoiskType.DropDownStyle = ComboBoxStyle.DropDownList;
+            Actions();
+        }
+
+        public virtual void MainAction()
+        {
+            Functional.GetData(SpecialSqlController.Tables.disp, delegate (ref List<Dictionary<string, string>> privet) { });
+        }
+
+        public virtual void Actions()
+        {
+            MainAction();
+            Functional.Print(ref DispGrid);
+            DispPoiskName.Text = "";
+            this.DispGrid.Sort(this.DispGrid.Columns["D_shifr"], ListSortDirection.Ascending);
         }
     }
 }

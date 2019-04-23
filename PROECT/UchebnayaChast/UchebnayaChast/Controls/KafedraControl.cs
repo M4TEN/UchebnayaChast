@@ -15,7 +15,7 @@ namespace UchebnayaChast
         public KafedraControl()
         {
             InitializeComponent();
-            KafedraSortirovka.DropDownStyle = ComboBoxStyle.DropDownList;
+            //KafedraSortirovka.DropDownStyle = ComboBoxStyle.DropDownList;
             Actions();
         }
 
@@ -43,23 +43,24 @@ namespace UchebnayaChast
         {
             MainAction();
             Functional.Print(ref KafedraGrid);
-            KafedraSortirovka.SelectedIndex = 1;
-            KafedraSortirovka.SelectedIndex = 0;
+            //KafedraSortirovka.SelectedIndex = 1;
+            //KafedraSortirovka.SelectedIndex = 0;
             KafedraPoisk.Text = "";
+            this.KafedraGrid.Sort(this.KafedraGrid.Columns["K_name"], ListSortDirection.Ascending);
         }
-        private void KafedraSortirovka_SelectedIndexChanged(object sender, EventArgs e)
-                    {
-                        switch (KafedraSortirovka.SelectedIndex)
-                        {
-                            case 0:
-                    Functional.Sort("K_name", 1);
-                                break;
-                            case 1:
-                    Functional.Sort("K_name", -1);
-                                break;
-                        }
-            Functional.Print(ref KafedraGrid);
-                    }
+        //private void KafedraSortirovka_SelectedIndexChanged(object sender, EventArgs e)
+        //            {
+        //                switch (KafedraSortirovka.SelectedIndex)
+        //                {
+        //                    case 0:
+        //            Functional.Sort("K_name", 1);
+        //                        break;
+        //                    case 1:
+        //            Functional.Sort("K_name", -1);
+        //                        break;
+        //                }
+        //    Functional.Print(ref KafedraGrid);
+        //            }
 
         private void BtnFncSearch_Click(object sender, EventArgs e)
         {
@@ -67,7 +68,7 @@ namespace UchebnayaChast
             tags.Add(delegate (Dictionary<string, string> row) { if (row["K_name"].ToLower().Replace(" ", "").Contains(KafedraPoisk.Text.ToLower().Replace(" ", ""))) return false; else return true; });
             MainAction();
             Functional.Filtres(tags.ToArray(), "Кафедр(-ы) с такими критериями нет");
-            KafedraSortirovka.SelectedIndex = 0;
+            //KafedraSortirovka.SelectedIndex = 0;
             Functional.Print(ref KafedraGrid);
         }
 

@@ -41,8 +41,6 @@
             this.BtnFncSearch = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.LabelPoisk = new System.Windows.Forms.Label();
-            this.LabelSort = new System.Windows.Forms.Label();
-            this.KafedraSortirovka = new System.Windows.Forms.ComboBox();
             this.KafedraPoisk = new System.Windows.Forms.TextBox();
             this.KafedraGrid = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -167,8 +165,6 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel2.Controls.Add(this.LabelPoisk);
-            this.panel2.Controls.Add(this.LabelSort);
-            this.panel2.Controls.Add(this.KafedraSortirovka);
             this.panel2.Controls.Add(this.KafedraPoisk);
             this.panel2.Controls.Add(this.KafedraGrid);
             this.panel2.Controls.Add(this.PanelFnc);
@@ -181,40 +177,17 @@
             // 
             this.LabelPoisk.AutoSize = true;
             this.LabelPoisk.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LabelPoisk.Location = new System.Drawing.Point(124, 15);
+            this.LabelPoisk.Location = new System.Drawing.Point(16, 10);
             this.LabelPoisk.Name = "LabelPoisk";
             this.LabelPoisk.Size = new System.Drawing.Size(55, 20);
             this.LabelPoisk.TabIndex = 15;
             this.LabelPoisk.Text = "Поиск:";
             // 
-            // LabelSort
-            // 
-            this.LabelSort.AutoSize = true;
-            this.LabelSort.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LabelSort.Location = new System.Drawing.Point(297, 55);
-            this.LabelSort.Name = "LabelSort";
-            this.LabelSort.Size = new System.Drawing.Size(106, 20);
-            this.LabelSort.TabIndex = 16;
-            this.LabelSort.Text = "Сортировка:";
-            // 
-            // KafedraSortirovka
-            // 
-            this.KafedraSortirovka.Font = new System.Drawing.Font("Comfortaa", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.KafedraSortirovka.FormattingEnabled = true;
-            this.KafedraSortirovka.Items.AddRange(new object[] {
-            "От А до Я",
-            "От Я до А"});
-            this.KafedraSortirovka.Location = new System.Drawing.Point(409, 52);
-            this.KafedraSortirovka.Name = "KafedraSortirovka";
-            this.KafedraSortirovka.Size = new System.Drawing.Size(174, 23);
-            this.KafedraSortirovka.TabIndex = 13;
-            this.KafedraSortirovka.SelectedIndexChanged += new System.EventHandler(this.KafedraSortirovka_SelectedIndexChanged);
-            // 
             // KafedraPoisk
             // 
-            this.KafedraPoisk.Location = new System.Drawing.Point(185, 10);
+            this.KafedraPoisk.Location = new System.Drawing.Point(90, 10);
             this.KafedraPoisk.Name = "KafedraPoisk";
-            this.KafedraPoisk.Size = new System.Drawing.Size(398, 20);
+            this.KafedraPoisk.Size = new System.Drawing.Size(380, 20);
             this.KafedraPoisk.TabIndex = 14;
             // 
             // KafedraGrid
@@ -247,7 +220,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.KafedraGrid.DefaultCellStyle = dataGridViewCellStyle2;
             this.KafedraGrid.EnableHeadersVisualStyles = false;
-            this.KafedraGrid.Location = new System.Drawing.Point(133, 81);
+            this.KafedraGrid.Location = new System.Drawing.Point(20, 37);
             this.KafedraGrid.Name = "KafedraGrid";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
@@ -259,7 +232,7 @@
             this.KafedraGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.KafedraGrid.RowHeadersVisible = false;
             this.KafedraGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.KafedraGrid.Size = new System.Drawing.Size(450, 300);
+            this.KafedraGrid.Size = new System.Drawing.Size(450, 344);
             this.KafedraGrid.TabIndex = 9;
             // 
             // Id
@@ -270,6 +243,7 @@
             this.Id.ReadOnly = true;
             this.Id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.Id.Visible = false;
+            this.Id.Width = 25;
             // 
             // K_name
             // 
@@ -277,8 +251,7 @@
             this.K_name.HeaderText = "Название";
             this.K_name.Name = "K_name";
             this.K_name.ReadOnly = true;
-            this.K_name.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.K_name.Width = 74;
+            this.K_name.Width = 93;
             // 
             // K_nomer
             // 
@@ -315,12 +288,10 @@
         private System.Windows.Forms.Button BtnFncSearch;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView KafedraGrid;
+        private System.Windows.Forms.Label LabelPoisk;
+        private System.Windows.Forms.TextBox KafedraPoisk;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn K_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn K_nomer;
-        private System.Windows.Forms.Label LabelPoisk;
-        private System.Windows.Forms.Label LabelSort;
-        private System.Windows.Forms.ComboBox KafedraSortirovka;
-        private System.Windows.Forms.TextBox KafedraPoisk;
     }
 }
