@@ -47,13 +47,13 @@
             this.Y_data = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Y_ball = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.YspehPoiskDisp = new System.Windows.Forms.TextBox();
+            this.YspehPoiskPrepod = new System.Windows.Forms.TextBox();
+            this.YspehPoiskStydent = new System.Windows.Forms.TextBox();
             this.LabelPoiskDisp = new System.Windows.Forms.Label();
             this.LabelPoiskPrepod = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.LabelPoiskStydent = new System.Windows.Forms.Label();
-            this.YspehPoiskStydent = new System.Windows.Forms.TextBox();
-            this.YspehPoiskPrepod = new System.Windows.Forms.TextBox();
-            this.YspehPoiskDisp = new System.Windows.Forms.TextBox();
             this.PanelFnc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.YspehGrid)).BeginInit();
             this.panel1.SuspendLayout();
@@ -115,6 +115,7 @@
             this.BtnFncAdd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnFncAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnFncAdd.UseVisualStyleBackColor = false;
+            this.BtnFncAdd.Click += new System.EventHandler(this.BtnFncAdd_Click);
             // 
             // BtnFncDelete
             // 
@@ -147,6 +148,7 @@
             this.BtnFncDrop.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnFncDrop.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnFncDrop.UseVisualStyleBackColor = false;
+            this.BtnFncDrop.Click += new System.EventHandler(this.BtnFncDrop_Click);
             // 
             // BtnFncSearch
             // 
@@ -163,6 +165,7 @@
             this.BtnFncSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnFncSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnFncSearch.UseVisualStyleBackColor = false;
+            this.BtnFncSearch.Click += new System.EventHandler(this.BtnFncSearch_Click);
             // 
             // YspehGrid
             // 
@@ -220,7 +223,6 @@
             this.Id.ReadOnly = true;
             this.Id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.Id.Visible = false;
-            this.Id.Width = 25;
             // 
             // St_id
             // 
@@ -236,8 +238,7 @@
             this.P_id.HeaderText = "Преподаватель";
             this.P_id.Name = "P_id";
             this.P_id.ReadOnly = true;
-            this.P_id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.P_id.Width = 118;
+            this.P_id.Width = 137;
             // 
             // D_id
             // 
@@ -280,6 +281,30 @@
             this.panel1.Size = new System.Drawing.Size(205, 410);
             this.panel1.TabIndex = 28;
             // 
+            // YspehPoiskDisp
+            // 
+            this.YspehPoiskDisp.Location = new System.Drawing.Point(89, 85);
+            this.YspehPoiskDisp.Name = "YspehPoiskDisp";
+            this.YspehPoiskDisp.Size = new System.Drawing.Size(113, 20);
+            this.YspehPoiskDisp.TabIndex = 38;
+            this.YspehPoiskDisp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.YspehPoiskDisp_KeyPress);
+            // 
+            // YspehPoiskPrepod
+            // 
+            this.YspehPoiskPrepod.Location = new System.Drawing.Point(89, 59);
+            this.YspehPoiskPrepod.Name = "YspehPoiskPrepod";
+            this.YspehPoiskPrepod.Size = new System.Drawing.Size(113, 20);
+            this.YspehPoiskPrepod.TabIndex = 37;
+            this.YspehPoiskPrepod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.YspehPoiskPrepod_KeyPress);
+            // 
+            // YspehPoiskStydent
+            // 
+            this.YspehPoiskStydent.Location = new System.Drawing.Point(89, 33);
+            this.YspehPoiskStydent.Name = "YspehPoiskStydent";
+            this.YspehPoiskStydent.Size = new System.Drawing.Size(113, 20);
+            this.YspehPoiskStydent.TabIndex = 36;
+            this.YspehPoiskStydent.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.YspehPoiskStydent_KeyPress);
+            // 
             // LabelPoiskDisp
             // 
             this.LabelPoiskDisp.AutoSize = true;
@@ -320,27 +345,6 @@
             this.LabelPoiskStydent.TabIndex = 26;
             this.LabelPoiskStydent.Text = "Студент:";
             // 
-            // YspehPoiskStydent
-            // 
-            this.YspehPoiskStydent.Location = new System.Drawing.Point(89, 33);
-            this.YspehPoiskStydent.Name = "YspehPoiskStydent";
-            this.YspehPoiskStydent.Size = new System.Drawing.Size(113, 20);
-            this.YspehPoiskStydent.TabIndex = 36;
-            // 
-            // YspehPoiskPrepod
-            // 
-            this.YspehPoiskPrepod.Location = new System.Drawing.Point(89, 59);
-            this.YspehPoiskPrepod.Name = "YspehPoiskPrepod";
-            this.YspehPoiskPrepod.Size = new System.Drawing.Size(113, 20);
-            this.YspehPoiskPrepod.TabIndex = 37;
-            // 
-            // YspehPoiskDisp
-            // 
-            this.YspehPoiskDisp.Location = new System.Drawing.Point(89, 85);
-            this.YspehPoiskDisp.Name = "YspehPoiskDisp";
-            this.YspehPoiskDisp.Size = new System.Drawing.Size(113, 20);
-            this.YspehPoiskDisp.TabIndex = 38;
-            // 
             // YspehControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -369,12 +373,6 @@
         private System.Windows.Forms.Button BtnFncDrop;
         private System.Windows.Forms.Button BtnFncSearch;
         private System.Windows.Forms.DataGridView YspehGrid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn St_id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn P_id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn D_id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Y_data;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Y_ball;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label LabelPoiskDisp;
         private System.Windows.Forms.Label LabelPoiskPrepod;
@@ -383,5 +381,11 @@
         private System.Windows.Forms.TextBox YspehPoiskDisp;
         private System.Windows.Forms.TextBox YspehPoiskPrepod;
         private System.Windows.Forms.TextBox YspehPoiskStydent;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn St_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn P_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn D_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Y_data;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Y_ball;
     }
 }

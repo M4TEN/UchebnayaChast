@@ -177,6 +177,7 @@
             this.PrepodPoisk.Name = "PrepodPoisk";
             this.PrepodPoisk.Size = new System.Drawing.Size(393, 21);
             this.PrepodPoisk.TabIndex = 22;
+            this.PrepodPoisk.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PrepodPoisk_KeyPress);
             // 
             // PrepodGrid
             // 
@@ -232,7 +233,6 @@
             this.Id.ReadOnly = true;
             this.Id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.Id.Visible = false;
-            this.Id.Width = 25;
             // 
             // P_fio
             // 

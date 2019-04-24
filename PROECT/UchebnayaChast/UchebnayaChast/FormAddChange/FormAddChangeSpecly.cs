@@ -48,6 +48,7 @@ namespace UchebnayaChast.FormAddChange
             test.Add(delegate () { if (ADName.Text.Length < 3) { Functional.Error("Слишком короткое название, думайте лучше!"); return true; } else return false; });
             test.Add(delegate () { if (string.IsNullOrWhiteSpace(ADShifr.Text)) { Functional.Error("Слишком короткий Шифр, ну что вы!"); return true; } else return false; });
             test.Add(delegate () { if (ADCombo.SelectedIndex<0) { Functional.Error("Выберите заведующего!"); return true; } else return false; });
+            test.Add(delegate () { if (Functional.Controller.TakeRow(SpecialSqlController.Tables.specly,"Sp_nazv='"+ADShifr.Text+"'").Count!=0) { Functional.Error("Выберите другой шифр!"); return true; } else return false; });
 
             if (Functional.CheckTest(test.ToArray()))
             {
@@ -63,6 +64,24 @@ namespace UchebnayaChast.FormAddChange
         private void ADCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ADName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char l = e.KeyChar;
+            if ((l < 'А' || l > 'я') && l != '\b' && l != '.' && l != 32)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void ADShifr_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char l = e.KeyChar;
+            if ((l < 'А' || l > 'я') && l != '\b' && l != '.' && l != 32)
+            {
+                e.Handled = true;
+            }
         }
     }
 }

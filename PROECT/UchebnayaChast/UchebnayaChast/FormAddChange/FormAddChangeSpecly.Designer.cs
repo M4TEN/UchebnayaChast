@@ -92,14 +92,16 @@
             // ADShifr
             // 
             this.ADShifr.Location = new System.Drawing.Point(183, 94);
+            this.ADShifr.MaxLength = 2;
             this.ADShifr.Name = "ADShifr";
-            this.ADShifr.Size = new System.Drawing.Size(155, 20);
+            this.ADShifr.Size = new System.Drawing.Size(30, 20);
             this.ADShifr.TabIndex = 14;
+            this.ADShifr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ADShifr_KeyPress);
             // 
             // ADCombo
             // 
             this.ADCombo.FormattingEnabled = true;
-            this.ADCombo.Location = new System.Drawing.Point(183, 130);
+            this.ADCombo.Location = new System.Drawing.Point(183, 127);
             this.ADCombo.Name = "ADCombo";
             this.ADCombo.Size = new System.Drawing.Size(155, 21);
             this.ADCombo.TabIndex = 13;
@@ -107,10 +109,12 @@
             // 
             // ADName
             // 
-            this.ADName.Location = new System.Drawing.Point(183, 46);
+            this.ADName.Location = new System.Drawing.Point(183, 62);
+            this.ADName.MaxLength = 50;
             this.ADName.Name = "ADName";
             this.ADName.Size = new System.Drawing.Size(155, 20);
             this.ADName.TabIndex = 12;
+            this.ADName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ADName_KeyPress);
             // 
             // LabelShifr
             // 

@@ -41,13 +41,6 @@
             this.BtnFncSearch = new System.Windows.Forms.Button();
             this.StydentPoiskFio = new System.Windows.Forms.TextBox();
             this.StydentGrid = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.LabelPoiskBK = new System.Windows.Forms.Label();
-            this.StydentPoiskGryp = new System.Windows.Forms.ComboBox();
-            this.StydentPoiskBK = new System.Windows.Forms.ComboBox();
-            this.LabelPoiskKyrs = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.LabelPoiskFio = new System.Windows.Forms.Label();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.G_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.St_fio = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,6 +51,13 @@
             this.St_nomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.St_zach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.St_opl = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.LabelPoiskBK = new System.Windows.Forms.Label();
+            this.StydentPoiskGryp = new System.Windows.Forms.ComboBox();
+            this.StydentPoiskBK = new System.Windows.Forms.ComboBox();
+            this.LabelPoiskKyrs = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.LabelPoiskFio = new System.Windows.Forms.Label();
             this.PanelFnc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StydentGrid)).BeginInit();
             this.panel1.SuspendLayout();
@@ -119,6 +119,7 @@
             this.BtnFncAdd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnFncAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnFncAdd.UseVisualStyleBackColor = false;
+            this.BtnFncAdd.Click += new System.EventHandler(this.BtnFncAdd_Click);
             // 
             // BtnFncDelete
             // 
@@ -151,6 +152,7 @@
             this.BtnFncDrop.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnFncDrop.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnFncDrop.UseVisualStyleBackColor = false;
+            this.BtnFncDrop.Click += new System.EventHandler(this.BtnFncDrop_Click);
             // 
             // BtnFncSearch
             // 
@@ -167,6 +169,7 @@
             this.BtnFncSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnFncSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnFncSearch.UseVisualStyleBackColor = false;
+            this.BtnFncSearch.Click += new System.EventHandler(this.BtnFncSearch_Click);
             // 
             // StydentPoiskFio
             // 
@@ -175,6 +178,7 @@
             this.StydentPoiskFio.Name = "StydentPoiskFio";
             this.StydentPoiskFio.Size = new System.Drawing.Size(113, 21);
             this.StydentPoiskFio.TabIndex = 36;
+            this.StydentPoiskFio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.StydentPoiskFio_KeyPress);
             // 
             // StydentGrid
             // 
@@ -228,80 +232,6 @@
             this.StydentGrid.Size = new System.Drawing.Size(450, 370);
             this.StydentGrid.TabIndex = 35;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(152)))), ((int)(((byte)(150)))));
-            this.panel1.Controls.Add(this.LabelPoiskBK);
-            this.panel1.Controls.Add(this.StydentPoiskGryp);
-            this.panel1.Controls.Add(this.StydentPoiskBK);
-            this.panel1.Controls.Add(this.LabelPoiskKyrs);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.StydentPoiskFio);
-            this.panel1.Controls.Add(this.LabelPoiskFio);
-            this.panel1.Location = new System.Drawing.Point(490, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(205, 410);
-            this.panel1.TabIndex = 40;
-            // 
-            // LabelPoiskBK
-            // 
-            this.LabelPoiskBK.AutoSize = true;
-            this.LabelPoiskBK.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LabelPoiskBK.Location = new System.Drawing.Point(3, 91);
-            this.LabelPoiskBK.Name = "LabelPoiskBK";
-            this.LabelPoiskBK.Size = new System.Drawing.Size(87, 40);
-            this.LabelPoiskBK.TabIndex = 37;
-            this.LabelPoiskBK.Text = "Бюджет/\r\nКонтракт";
-            // 
-            // StydentPoiskGryp
-            // 
-            this.StydentPoiskGryp.FormattingEnabled = true;
-            this.StydentPoiskGryp.Location = new System.Drawing.Point(89, 64);
-            this.StydentPoiskGryp.Name = "StydentPoiskGryp";
-            this.StydentPoiskGryp.Size = new System.Drawing.Size(113, 21);
-            this.StydentPoiskGryp.TabIndex = 33;
-            // 
-            // StydentPoiskBK
-            // 
-            this.StydentPoiskBK.FormattingEnabled = true;
-            this.StydentPoiskBK.Items.AddRange(new object[] {
-            "Бюджет",
-            "Контракт"});
-            this.StydentPoiskBK.Location = new System.Drawing.Point(89, 91);
-            this.StydentPoiskBK.Name = "StydentPoiskBK";
-            this.StydentPoiskBK.Size = new System.Drawing.Size(113, 21);
-            this.StydentPoiskBK.TabIndex = 32;
-            // 
-            // LabelPoiskKyrs
-            // 
-            this.LabelPoiskKyrs.AutoSize = true;
-            this.LabelPoiskKyrs.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LabelPoiskKyrs.Location = new System.Drawing.Point(3, 65);
-            this.LabelPoiskKyrs.Name = "LabelPoiskKyrs";
-            this.LabelPoiskKyrs.Size = new System.Drawing.Size(65, 20);
-            this.LabelPoiskKyrs.TabIndex = 30;
-            this.LabelPoiskKyrs.Text = "Группа:";
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(142)))), ((int)(((byte)(140)))));
-            this.label1.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(0, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(205, 23);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "Поиск:";
-            // 
-            // LabelPoiskFio
-            // 
-            this.LabelPoiskFio.AutoSize = true;
-            this.LabelPoiskFio.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LabelPoiskFio.Location = new System.Drawing.Point(3, 39);
-            this.LabelPoiskFio.Name = "LabelPoiskFio";
-            this.LabelPoiskFio.Size = new System.Drawing.Size(49, 20);
-            this.LabelPoiskFio.TabIndex = 26;
-            this.LabelPoiskFio.Text = "ФИО:";
-            // 
             // Id
             // 
             this.Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
@@ -310,7 +240,6 @@
             this.Id.ReadOnly = true;
             this.Id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.Id.Visible = false;
-            this.Id.Width = 25;
             // 
             // G_id
             // 
@@ -390,6 +319,80 @@
             this.St_opl.ReadOnly = true;
             this.St_opl.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.St_opl.Width = 35;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(152)))), ((int)(((byte)(150)))));
+            this.panel1.Controls.Add(this.LabelPoiskBK);
+            this.panel1.Controls.Add(this.StydentPoiskGryp);
+            this.panel1.Controls.Add(this.StydentPoiskBK);
+            this.panel1.Controls.Add(this.LabelPoiskKyrs);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.StydentPoiskFio);
+            this.panel1.Controls.Add(this.LabelPoiskFio);
+            this.panel1.Location = new System.Drawing.Point(490, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(205, 410);
+            this.panel1.TabIndex = 40;
+            // 
+            // LabelPoiskBK
+            // 
+            this.LabelPoiskBK.AutoSize = true;
+            this.LabelPoiskBK.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LabelPoiskBK.Location = new System.Drawing.Point(3, 91);
+            this.LabelPoiskBK.Name = "LabelPoiskBK";
+            this.LabelPoiskBK.Size = new System.Drawing.Size(87, 40);
+            this.LabelPoiskBK.TabIndex = 37;
+            this.LabelPoiskBK.Text = "Бюджет/\r\nКонтракт";
+            // 
+            // StydentPoiskGryp
+            // 
+            this.StydentPoiskGryp.FormattingEnabled = true;
+            this.StydentPoiskGryp.Location = new System.Drawing.Point(89, 64);
+            this.StydentPoiskGryp.Name = "StydentPoiskGryp";
+            this.StydentPoiskGryp.Size = new System.Drawing.Size(113, 21);
+            this.StydentPoiskGryp.TabIndex = 33;
+            // 
+            // StydentPoiskBK
+            // 
+            this.StydentPoiskBK.FormattingEnabled = true;
+            this.StydentPoiskBK.Items.AddRange(new object[] {
+            "Бюджет",
+            "Контракт"});
+            this.StydentPoiskBK.Location = new System.Drawing.Point(89, 91);
+            this.StydentPoiskBK.Name = "StydentPoiskBK";
+            this.StydentPoiskBK.Size = new System.Drawing.Size(113, 21);
+            this.StydentPoiskBK.TabIndex = 32;
+            // 
+            // LabelPoiskKyrs
+            // 
+            this.LabelPoiskKyrs.AutoSize = true;
+            this.LabelPoiskKyrs.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LabelPoiskKyrs.Location = new System.Drawing.Point(3, 65);
+            this.LabelPoiskKyrs.Name = "LabelPoiskKyrs";
+            this.LabelPoiskKyrs.Size = new System.Drawing.Size(65, 20);
+            this.LabelPoiskKyrs.TabIndex = 30;
+            this.LabelPoiskKyrs.Text = "Группа:";
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(142)))), ((int)(((byte)(140)))));
+            this.label1.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(0, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(205, 23);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Поиск:";
+            // 
+            // LabelPoiskFio
+            // 
+            this.LabelPoiskFio.AutoSize = true;
+            this.LabelPoiskFio.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LabelPoiskFio.Location = new System.Drawing.Point(3, 39);
+            this.LabelPoiskFio.Name = "LabelPoiskFio";
+            this.LabelPoiskFio.Size = new System.Drawing.Size(49, 20);
+            this.LabelPoiskFio.TabIndex = 26;
+            this.LabelPoiskFio.Text = "ФИО:";
             // 
             // StydentControl
             // 

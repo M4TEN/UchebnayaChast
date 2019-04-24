@@ -189,6 +189,7 @@
             this.KafedraPoisk.Name = "KafedraPoisk";
             this.KafedraPoisk.Size = new System.Drawing.Size(380, 20);
             this.KafedraPoisk.TabIndex = 14;
+            this.KafedraPoisk.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KafedraPoisk_KeyPress);
             // 
             // KafedraGrid
             // 
@@ -243,7 +244,6 @@
             this.Id.ReadOnly = true;
             this.Id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.Id.Visible = false;
-            this.Id.Width = 25;
             // 
             // K_name
             // 

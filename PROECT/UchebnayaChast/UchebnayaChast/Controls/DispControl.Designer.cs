@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DispControl));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.PanelFnc = new System.Windows.Forms.Panel();
             this.LabelRight = new System.Windows.Forms.Label();
             this.BtnFncChange = new System.Windows.Forms.Button();
@@ -53,6 +53,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.DispPoiskName = new System.Windows.Forms.TextBox();
             this.LabelPoiskName = new System.Windows.Forms.Label();
+            this.DispPoiskSem = new System.Windows.Forms.ComboBox();
+            this.LabelSem = new System.Windows.Forms.Label();
             this.PanelFnc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DispGrid)).BeginInit();
             this.panel1.SuspendLayout();
@@ -114,6 +116,7 @@
             this.BtnFncAdd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnFncAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnFncAdd.UseVisualStyleBackColor = false;
+            this.BtnFncAdd.Click += new System.EventHandler(this.BtnFncAdd_Click);
             // 
             // BtnFncDelete
             // 
@@ -146,6 +149,7 @@
             this.BtnFncDrop.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnFncDrop.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnFncDrop.UseVisualStyleBackColor = false;
+            this.BtnFncDrop.Click += new System.EventHandler(this.BtnFncDrop_Click);
             // 
             // BtnFncSearch
             // 
@@ -162,6 +166,7 @@
             this.BtnFncSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnFncSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnFncSearch.UseVisualStyleBackColor = false;
+            this.BtnFncSearch.Click += new System.EventHandler(this.BtnFncSearch_Click);
             // 
             // DispGrid
             // 
@@ -171,14 +176,14 @@
             this.DispGrid.AllowUserToResizeRows = false;
             this.DispGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(115)))));
             this.DispGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Comfortaa", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DispGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Comfortaa", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DispGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.DispGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DispGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
@@ -188,25 +193,25 @@
             this.D_lab,
             this.D_sem,
             this.D_type});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Comfortaa", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(152)))), ((int)(((byte)(150)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DispGrid.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Comfortaa", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(152)))), ((int)(((byte)(150)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DispGrid.DefaultCellStyle = dataGridViewCellStyle5;
             this.DispGrid.EnableHeadersVisualStyles = false;
             this.DispGrid.Location = new System.Drawing.Point(20, 20);
             this.DispGrid.Name = "DispGrid";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Comfortaa", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(152)))), ((int)(((byte)(150)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DispGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Comfortaa", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(152)))), ((int)(((byte)(150)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DispGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.DispGrid.RowHeadersVisible = false;
             this.DispGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DispGrid.Size = new System.Drawing.Size(450, 370);
@@ -277,6 +282,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(152)))), ((int)(((byte)(150)))));
+            this.panel1.Controls.Add(this.LabelSem);
+            this.panel1.Controls.Add(this.DispPoiskSem);
             this.panel1.Controls.Add(this.LabelPoiskType);
             this.panel1.Controls.Add(this.DispPoiskType);
             this.panel1.Controls.Add(this.label1);
@@ -290,10 +297,10 @@
             // LabelPoiskType
             // 
             this.LabelPoiskType.AutoSize = true;
-            this.LabelPoiskType.Font = new System.Drawing.Font("Comfortaa", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LabelPoiskType.Location = new System.Drawing.Point(3, 69);
+            this.LabelPoiskType.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LabelPoiskType.Location = new System.Drawing.Point(15, 102);
             this.LabelPoiskType.Name = "LabelPoiskType";
-            this.LabelPoiskType.Size = new System.Drawing.Size(84, 16);
+            this.LabelPoiskType.Size = new System.Drawing.Size(104, 20);
             this.LabelPoiskType.TabIndex = 37;
             this.LabelPoiskType.Text = "Оценивание:";
             // 
@@ -304,9 +311,9 @@
             "Экзамен",
             "Диференцированный зачёт",
             "Зачёт"});
-            this.DispPoiskType.Location = new System.Drawing.Point(89, 64);
+            this.DispPoiskType.Location = new System.Drawing.Point(19, 125);
             this.DispPoiskType.Name = "DispPoiskType";
-            this.DispPoiskType.Size = new System.Drawing.Size(113, 21);
+            this.DispPoiskType.Size = new System.Drawing.Size(167, 21);
             this.DispPoiskType.TabIndex = 33;
             // 
             // label1
@@ -322,20 +329,49 @@
             // DispPoiskName
             // 
             this.DispPoiskName.Font = new System.Drawing.Font("Comfortaa", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DispPoiskName.Location = new System.Drawing.Point(89, 37);
+            this.DispPoiskName.Location = new System.Drawing.Point(19, 62);
+            this.DispPoiskName.MaxLength = 40;
             this.DispPoiskName.Name = "DispPoiskName";
-            this.DispPoiskName.Size = new System.Drawing.Size(113, 21);
+            this.DispPoiskName.Size = new System.Drawing.Size(167, 21);
             this.DispPoiskName.TabIndex = 36;
+            this.DispPoiskName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DispPoiskName_KeyPress);
             // 
             // LabelPoiskName
             // 
             this.LabelPoiskName.AutoSize = true;
             this.LabelPoiskName.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LabelPoiskName.Location = new System.Drawing.Point(3, 39);
+            this.LabelPoiskName.Location = new System.Drawing.Point(15, 39);
             this.LabelPoiskName.Name = "LabelPoiskName";
             this.LabelPoiskName.Size = new System.Drawing.Size(80, 20);
             this.LabelPoiskName.TabIndex = 26;
             this.LabelPoiskName.Text = "Название:";
+            // 
+            // DispPoiskSem
+            // 
+            this.DispPoiskSem.FormattingEnabled = true;
+            this.DispPoiskSem.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"});
+            this.DispPoiskSem.Location = new System.Drawing.Point(19, 195);
+            this.DispPoiskSem.Name = "DispPoiskSem";
+            this.DispPoiskSem.Size = new System.Drawing.Size(53, 21);
+            this.DispPoiskSem.TabIndex = 38;
+            // 
+            // LabelSem
+            // 
+            this.LabelSem.AutoSize = true;
+            this.LabelSem.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LabelSem.Location = new System.Drawing.Point(15, 170);
+            this.LabelSem.Name = "LabelSem";
+            this.LabelSem.Size = new System.Drawing.Size(83, 20);
+            this.LabelSem.TabIndex = 39;
+            this.LabelSem.Text = "Семестр:";
             // 
             // DispControl
             // 
@@ -378,5 +414,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox DispPoiskName;
         private System.Windows.Forms.Label LabelPoiskName;
+        private System.Windows.Forms.Label LabelSem;
+        private System.Windows.Forms.ComboBox DispPoiskSem;
     }
 }

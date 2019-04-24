@@ -108,5 +108,14 @@ namespace UchebnayaChast
                 }
             }
         }
+
+        private void KafedraPoisk_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char l = e.KeyChar;
+            if ((l < 'А' || l > 'я') && l != '\b' && l != '.' && l != 32)
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

@@ -31,7 +31,7 @@
             this.PanelTop = new System.Windows.Forms.Panel();
             this.LabelTop = new System.Windows.Forms.Label();
             this.PanelMain = new System.Windows.Forms.Panel();
-            this.ADNomer = new System.Windows.Forms.MaskedTextBox();
+            this.ADNomer = new System.Windows.Forms.TextBox();
             this.ADName = new System.Windows.Forms.TextBox();
             this.LabelNomer = new System.Windows.Forms.Label();
             this.LabelName = new System.Windows.Forms.Label();
@@ -78,11 +78,11 @@
             // ADNomer
             // 
             this.ADNomer.Location = new System.Drawing.Point(183, 85);
-            this.ADNomer.Mask = "0000000000";
+            this.ADNomer.MaxLength = 10;
             this.ADNomer.Name = "ADNomer";
-            this.ADNomer.Size = new System.Drawing.Size(67, 20);
-            this.ADNomer.TabIndex = 13;
-            this.ADNomer.Click += new System.EventHandler(this.ADNomer_Click);
+            this.ADNomer.Size = new System.Drawing.Size(69, 20);
+            this.ADNomer.TabIndex = 14;
+            this.ADNomer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ADNomer_KeyPress);
             // 
             // ADName
             // 
@@ -91,6 +91,7 @@
             this.ADName.Name = "ADName";
             this.ADName.Size = new System.Drawing.Size(155, 20);
             this.ADName.TabIndex = 12;
+            this.ADName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ADName_KeyPress);
             // 
             // LabelNomer
             // 
@@ -137,9 +138,11 @@
             // 
             // FormAddChangeKafedra
             // 
+            this.AcceptButton = this.ADAdd;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(199)))), ((int)(((byte)(199)))));
+            this.CancelButton = this.ADCancel;
             this.ClientSize = new System.Drawing.Size(373, 266);
             this.Controls.Add(this.PanelMain);
             this.Controls.Add(this.PanelTop);
@@ -163,7 +166,7 @@
         private System.Windows.Forms.Label LabelName;
         private System.Windows.Forms.Button ADCancel;
         private System.Windows.Forms.Button ADAdd;
-        private System.Windows.Forms.MaskedTextBox ADNomer;
         private System.Windows.Forms.Label LabelTop;
+        private System.Windows.Forms.TextBox ADNomer;
     }
 }

@@ -35,8 +35,8 @@ namespace UchebnayaChast
         {
             List<Functional.TestValid> test = new List<Functional.TestValid>();
             test.Add(delegate () { if (ADName.Text.Length < 3) { Functional.Error("Слишком короткое название, думайте лучше!"); return true; } else return false; });
-            test.Add(delegate () { if (ADNomer.Text.Any(x=>!int.TryParse(x.ToString(),out int b))) { Functional.Error("Слишком короткий номер, ну что вы!"); return true; } else return false; });
-            //test.Add(delegate () { if ((ADNomer.TextLength) < 10) { Functional.Error("Слишком короткий номер, ну что вы!"); return true; } else return false; });
+            //test.Add(delegate () { if (ADNomer.Text.Any(x=>!int.TryParse(x.ToString(),out int b))) { Functional.Error("Слишком короткий номер, ну что вы!"); return true; } else return false; });
+            test.Add(delegate () { if ((ADNomer.TextLength) < 10) { Functional.Error("Слишком короткий номер, ну что вы!"); return true; } else return false; });
             if (Functional.CheckTest(test.ToArray()))
             {
                 if (id == 0)
@@ -56,6 +56,24 @@ namespace UchebnayaChast
         {
             ADNomer.Clear();
             ADNomer.SelectionStart = 0;
+        }
+
+        private void ADName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char l = e.KeyChar;
+            if ((l < 'А' || l > 'я') && l != '\b' && l != '.' && l != 32)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void ADNomer_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char number = e.KeyChar;
+            if (!Char.IsDigit(number) && number != 8) // цифры и клавиша BackSpace
+            {
+                e.Handled = true;
+            }
         }
     }
 }

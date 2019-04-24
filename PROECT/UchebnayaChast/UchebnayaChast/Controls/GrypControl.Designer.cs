@@ -41,19 +41,19 @@
             this.BtnFncSearch = new System.Windows.Forms.Button();
             this.LabelPoisk = new System.Windows.Forms.Label();
             this.GrypGrid = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sp_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.G_number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.G_kyrs = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.G_born = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.P_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LabelPoiskSpecly = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.GrypPoiskKlRyk = new System.Windows.Forms.TextBox();
+            this.LabelPoiskKlRyk = new System.Windows.Forms.Label();
             this.GrypPoiskSpecly = new System.Windows.Forms.ComboBox();
             this.GrypPoiskKyrs = new System.Windows.Forms.ComboBox();
             this.LabelPoiskKyrs = new System.Windows.Forms.Label();
-            this.P_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.G_born = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.G_kyrs = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.G_number = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sp_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GrypPoiskKlRyk = new System.Windows.Forms.ComboBox();
-            this.LabelPoiskKlRyk = new System.Windows.Forms.Label();
             this.PanelFnc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GrypGrid)).BeginInit();
             this.panel1.SuspendLayout();
@@ -102,6 +102,7 @@
             this.BtnFncChange.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnFncChange.UseVisualStyleBackColor = false;
             this.BtnFncChange.UseWaitCursor = true;
+            this.BtnFncChange.Click += new System.EventHandler(this.BtnFncChange_Click);
             // 
             // BtnFncAdd
             // 
@@ -119,6 +120,7 @@
             this.BtnFncAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnFncAdd.UseVisualStyleBackColor = false;
             this.BtnFncAdd.UseWaitCursor = true;
+            this.BtnFncAdd.Click += new System.EventHandler(this.BtnFncAdd_Click);
             // 
             // BtnFncDelete
             // 
@@ -136,6 +138,7 @@
             this.BtnFncDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnFncDelete.UseVisualStyleBackColor = false;
             this.BtnFncDelete.UseWaitCursor = true;
+            this.BtnFncDelete.Click += new System.EventHandler(this.BtnFncDelete_Click);
             // 
             // BtnFncDrop
             // 
@@ -153,6 +156,7 @@
             this.BtnFncDrop.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnFncDrop.UseVisualStyleBackColor = false;
             this.BtnFncDrop.UseWaitCursor = true;
+            this.BtnFncDrop.Click += new System.EventHandler(this.BtnFncDrop_Click);
             // 
             // BtnFncSearch
             // 
@@ -230,88 +234,22 @@
             this.GrypGrid.Size = new System.Drawing.Size(450, 370);
             this.GrypGrid.TabIndex = 21;
             // 
-            // LabelPoiskSpecly
+            // Id
             // 
-            this.LabelPoiskSpecly.AutoSize = true;
-            this.LabelPoiskSpecly.Font = new System.Drawing.Font("Comfortaa", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LabelPoiskSpecly.Location = new System.Drawing.Point(3, 39);
-            this.LabelPoiskSpecly.Name = "LabelPoiskSpecly";
-            this.LabelPoiskSpecly.Size = new System.Drawing.Size(70, 16);
-            this.LabelPoiskSpecly.TabIndex = 26;
-            this.LabelPoiskSpecly.Text = "Спец-сть:";
+            this.Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Id.Visible = false;
             // 
-            // panel1
+            // Sp_id
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(152)))), ((int)(((byte)(150)))));
-            this.panel1.Controls.Add(this.LabelPoiskKlRyk);
-            this.panel1.Controls.Add(this.GrypPoiskKlRyk);
-            this.panel1.Controls.Add(this.GrypPoiskSpecly);
-            this.panel1.Controls.Add(this.GrypPoiskKyrs);
-            this.panel1.Controls.Add(this.LabelPoiskKyrs);
-            this.panel1.Controls.Add(this.LabelPoisk);
-            this.panel1.Controls.Add(this.LabelPoiskSpecly);
-            this.panel1.Location = new System.Drawing.Point(490, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(205, 410);
-            this.panel1.TabIndex = 27;
-            // 
-            // GrypPoiskSpecly
-            // 
-            this.GrypPoiskSpecly.FormattingEnabled = true;
-            this.GrypPoiskSpecly.Location = new System.Drawing.Point(89, 38);
-            this.GrypPoiskSpecly.Name = "GrypPoiskSpecly";
-            this.GrypPoiskSpecly.Size = new System.Drawing.Size(113, 21);
-            this.GrypPoiskSpecly.TabIndex = 33;
-            // 
-            // GrypPoiskKyrs
-            // 
-            this.GrypPoiskKyrs.FormattingEnabled = true;
-            this.GrypPoiskKyrs.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4"});
-            this.GrypPoiskKyrs.Location = new System.Drawing.Point(89, 67);
-            this.GrypPoiskKyrs.Name = "GrypPoiskKyrs";
-            this.GrypPoiskKyrs.Size = new System.Drawing.Size(113, 21);
-            this.GrypPoiskKyrs.TabIndex = 32;
-            // 
-            // LabelPoiskKyrs
-            // 
-            this.LabelPoiskKyrs.AutoSize = true;
-            this.LabelPoiskKyrs.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LabelPoiskKyrs.Location = new System.Drawing.Point(3, 68);
-            this.LabelPoiskKyrs.Name = "LabelPoiskKyrs";
-            this.LabelPoiskKyrs.Size = new System.Drawing.Size(43, 20);
-            this.LabelPoiskKyrs.TabIndex = 30;
-            this.LabelPoiskKyrs.Text = "Курс\r\n";
-            // 
-            // P_id
-            // 
-            this.P_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.P_id.HeaderText = "Кл. рук.";
-            this.P_id.Name = "P_id";
-            this.P_id.ReadOnly = true;
-            this.P_id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.P_id.Width = 62;
-            // 
-            // G_born
-            // 
-            this.G_born.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.G_born.HeaderText = "Год";
-            this.G_born.Name = "G_born";
-            this.G_born.ReadOnly = true;
-            this.G_born.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.G_born.Width = 38;
-            // 
-            // G_kyrs
-            // 
-            this.G_kyrs.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.G_kyrs.HeaderText = "Курс";
-            this.G_kyrs.Name = "G_kyrs";
-            this.G_kyrs.ReadOnly = true;
-            this.G_kyrs.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.G_kyrs.Width = 44;
+            this.Sp_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Sp_id.HeaderText = "Специальность";
+            this.Sp_id.Name = "Sp_id";
+            this.Sp_id.ReadOnly = true;
+            this.Sp_id.Width = 136;
             // 
             // G_number
             // 
@@ -322,47 +260,106 @@
             this.G_number.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.G_number.Width = 29;
             // 
-            // Sp_id
+            // G_kyrs
             // 
-            this.Sp_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Sp_id.HeaderText = "Специальность";
-            this.Sp_id.Name = "Sp_id";
-            this.Sp_id.ReadOnly = true;
-            this.Sp_id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Sp_id.Width = 117;
+            this.G_kyrs.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.G_kyrs.HeaderText = "Курс";
+            this.G_kyrs.Name = "G_kyrs";
+            this.G_kyrs.ReadOnly = true;
+            this.G_kyrs.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.G_kyrs.Width = 44;
             // 
-            // Id
+            // G_born
             // 
-            this.Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Id.Visible = false;
-            this.Id.Width = 25;
+            this.G_born.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.G_born.HeaderText = "Год";
+            this.G_born.Name = "G_born";
+            this.G_born.ReadOnly = true;
+            this.G_born.Width = 57;
+            // 
+            // P_id
+            // 
+            this.P_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.P_id.HeaderText = "Кл. рук.";
+            this.P_id.Name = "P_id";
+            this.P_id.ReadOnly = true;
+            this.P_id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.P_id.Width = 62;
+            // 
+            // LabelPoiskSpecly
+            // 
+            this.LabelPoiskSpecly.AutoSize = true;
+            this.LabelPoiskSpecly.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LabelPoiskSpecly.Location = new System.Drawing.Point(4, 39);
+            this.LabelPoiskSpecly.Name = "LabelPoiskSpecly";
+            this.LabelPoiskSpecly.Size = new System.Drawing.Size(130, 20);
+            this.LabelPoiskSpecly.TabIndex = 26;
+            this.LabelPoiskSpecly.Text = "Специальность:";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(152)))), ((int)(((byte)(150)))));
+            this.panel1.Controls.Add(this.GrypPoiskKlRyk);
+            this.panel1.Controls.Add(this.LabelPoiskKlRyk);
+            this.panel1.Controls.Add(this.GrypPoiskSpecly);
+            this.panel1.Controls.Add(this.GrypPoiskKyrs);
+            this.panel1.Controls.Add(this.LabelPoiskKyrs);
+            this.panel1.Controls.Add(this.LabelPoisk);
+            this.panel1.Controls.Add(this.LabelPoiskSpecly);
+            this.panel1.Location = new System.Drawing.Point(490, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(205, 410);
+            this.panel1.TabIndex = 27;
             // 
             // GrypPoiskKlRyk
             // 
-            this.GrypPoiskKlRyk.FormattingEnabled = true;
-            this.GrypPoiskKlRyk.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4"});
-            this.GrypPoiskKlRyk.Location = new System.Drawing.Point(89, 99);
+            this.GrypPoiskKlRyk.Location = new System.Drawing.Point(8, 168);
+            this.GrypPoiskKlRyk.MaxLength = 50;
             this.GrypPoiskKlRyk.Name = "GrypPoiskKlRyk";
-            this.GrypPoiskKlRyk.Size = new System.Drawing.Size(113, 21);
-            this.GrypPoiskKlRyk.TabIndex = 34;
+            this.GrypPoiskKlRyk.Size = new System.Drawing.Size(113, 20);
+            this.GrypPoiskKlRyk.TabIndex = 36;
+            this.GrypPoiskKlRyk.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.GrypPoiskKlRyk_KeyPress);
             // 
             // LabelPoiskKlRyk
             // 
             this.LabelPoiskKlRyk.AutoSize = true;
             this.LabelPoiskKlRyk.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LabelPoiskKlRyk.Location = new System.Drawing.Point(3, 100);
+            this.LabelPoiskKlRyk.Location = new System.Drawing.Point(4, 145);
             this.LabelPoiskKlRyk.Name = "LabelPoiskKlRyk";
             this.LabelPoiskKlRyk.Size = new System.Drawing.Size(62, 20);
             this.LabelPoiskKlRyk.TabIndex = 35;
             this.LabelPoiskKlRyk.Text = "Кл. рук:";
+            // 
+            // GrypPoiskSpecly
+            // 
+            this.GrypPoiskSpecly.FormattingEnabled = true;
+            this.GrypPoiskSpecly.Location = new System.Drawing.Point(7, 62);
+            this.GrypPoiskSpecly.Name = "GrypPoiskSpecly";
+            this.GrypPoiskSpecly.Size = new System.Drawing.Size(195, 21);
+            this.GrypPoiskSpecly.TabIndex = 33;
+            // 
+            // GrypPoiskKyrs
+            // 
+            this.GrypPoiskKyrs.FormattingEnabled = true;
+            this.GrypPoiskKyrs.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.GrypPoiskKyrs.Location = new System.Drawing.Point(8, 113);
+            this.GrypPoiskKyrs.Name = "GrypPoiskKyrs";
+            this.GrypPoiskKyrs.Size = new System.Drawing.Size(42, 21);
+            this.GrypPoiskKyrs.TabIndex = 32;
+            // 
+            // LabelPoiskKyrs
+            // 
+            this.LabelPoiskKyrs.AutoSize = true;
+            this.LabelPoiskKyrs.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LabelPoiskKyrs.Location = new System.Drawing.Point(4, 90);
+            this.LabelPoiskKyrs.Name = "LabelPoiskKyrs";
+            this.LabelPoiskKyrs.Size = new System.Drawing.Size(43, 20);
+            this.LabelPoiskKyrs.TabIndex = 30;
+            this.LabelPoiskKyrs.Text = "Курс\r\n";
             // 
             // GrypControl
             // 
@@ -398,13 +395,13 @@
         private System.Windows.Forms.ComboBox GrypPoiskKyrs;
         private System.Windows.Forms.Label LabelPoiskKyrs;
         private System.Windows.Forms.ComboBox GrypPoiskSpecly;
+        private System.Windows.Forms.Label LabelPoiskKlRyk;
+        private System.Windows.Forms.TextBox GrypPoiskKlRyk;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sp_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn G_number;
         private System.Windows.Forms.DataGridViewTextBoxColumn G_kyrs;
         private System.Windows.Forms.DataGridViewTextBoxColumn G_born;
         private System.Windows.Forms.DataGridViewTextBoxColumn P_id;
-        private System.Windows.Forms.ComboBox GrypPoiskKlRyk;
-        private System.Windows.Forms.Label LabelPoiskKlRyk;
     }
 }

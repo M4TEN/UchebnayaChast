@@ -53,3 +53,7 @@ C:\Users\M4TEN\Documents\GitHub\UchebnayaChast\PROECT\UchebnayaChast\UchebnayaCh
 C:\Users\M4TEN\Documents\GitHub\UchebnayaChast\PROECT\UchebnayaChast\UchebnayaChast\obj\Debug\UchebnayaChast.FormAddChangeKafedra.resources
 C:\Users\M4TEN\Documents\GitHub\UchebnayaChast\PROECT\UchebnayaChast\UchebnayaChast\obj\Debug\UchebnayaChast.csprojAssemblyReference.cache
 C:\Users\M4TEN\Documents\GitHub\UchebnayaChast\PROECT\UchebnayaChast\UchebnayaChast\obj\Debug\UchebnayaChast.FormAddChange.FormAddChangePrepod.resources
+C:\Users\M4TEN\Documents\GitHub\UchebnayaChast\PROECT\UchebnayaChast\UchebnayaChast\obj\Debug\UchebnayaChast.FormAddChange.FormAddChangeGryp.resources
+C:\Users\M4TEN\Documents\GitHub\UchebnayaChast\PROECT\UchebnayaChast\UchebnayaChast\obj\Debug\UchebnayaChast.FormAddChange.FormAddChangeStydent.resources
+C:\Users\M4TEN\Documents\GitHub\UchebnayaChast\PROECT\UchebnayaChast\UchebnayaChast\obj\Debug\UchebnayaChast.FormAddChange.FormAddChangeDisp.resources
+C:\Users\M4TEN\Documents\GitHub\UchebnayaChast\PROECT\UchebnayaChast\UchebnayaChast\obj\Debug\UchebnayaChast.FormAddChange.FormAddChangeYspeh.resources

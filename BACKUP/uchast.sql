@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `uchast` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */;
-USE `uchast`;
 -- MySQL dump 10.13  Distrib 8.0.13, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: uchast
@@ -55,7 +53,6 @@ DROP TABLE IF EXISTS `gryp`;
  SET character_set_client = utf8mb4 ;
 CREATE TABLE `gryp` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
-  `G_otdel` varchar(50) NOT NULL,
   `Sp_id` int(11) NOT NULL,
   `G_number` int(1) NOT NULL,
   `G_kyrs` int(1) NOT NULL,
@@ -66,7 +63,7 @@ CREATE TABLE `gryp` (
   KEY `Pr_id_idx` (`P_id`),
   CONSTRAINT `Pr_id` FOREIGN KEY (`P_id`) REFERENCES `prepod` (`id`),
   CONSTRAINT `Sp_id` FOREIGN KEY (`Sp_id`) REFERENCES `specly` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=73 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=83 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -75,7 +72,7 @@ CREATE TABLE `gryp` (
 
 LOCK TABLES `gryp` WRITE;
 /*!40000 ALTER TABLE `gryp` DISABLE KEYS */;
-INSERT INTO `gryp` VALUES (1,'Программирование',1,1,1,18,NULL),(2,'Программирование',1,2,1,18,NULL),(3,'Программирование',1,3,1,18,NULL),(4,'Программирование',1,1,2,17,NULL),(5,'Программирование',1,2,2,17,NULL),(6,'Программирование',1,3,2,17,NULL),(7,'Программирование',1,1,3,16,NULL),(8,'Программирование',1,2,3,16,NULL),(9,'Программирование',1,3,3,16,NULL),(10,'Программирование',1,1,4,15,NULL),(11,'Программирование',1,2,4,15,NULL),(12,'Программирование',1,3,4,15,NULL),(13,'Компьютерная инженерия',2,1,1,18,NULL),(14,'Компьютерная инженерия',2,2,1,18,NULL),(15,'Компьютерная инженерия',2,3,1,18,NULL),(16,'Компьютерная инженерия',2,1,2,17,NULL),(17,'Компьютерная инженерия',2,2,2,17,NULL),(18,'Компьютерная инженерия',2,3,2,17,NULL),(19,'Компьютерная инженерия',2,1,3,16,NULL),(20,'Компьютерная инженерия',2,2,3,16,NULL),(21,'Компьютерная инженерия',2,3,3,16,NULL),(22,'Компьютерная инженерия',2,1,4,15,NULL),(23,'Компьютерная инженерия',2,2,4,15,NULL),(24,'Компьютерная инженерия',2,3,4,15,NULL),(25,'Радиотехника и телекомуникации',3,1,1,18,NULL),(26,'Радиотехника и телекомуникации',3,2,1,18,NULL),(27,'Радиотехника и телекомуникации',3,3,1,18,NULL),(28,'Радиотехника и телекомуникации',3,1,2,17,NULL),(29,'Радиотехника и телекомуникации',3,2,2,17,NULL),(30,'Радиотехника и телекомуникации',3,3,2,17,NULL),(31,'Радиотехника и телекомуникации',3,1,3,16,NULL),(32,'Радиотехника и телекомуникации',3,2,3,16,NULL),(33,'Радиотехника и телекомуникации',3,3,3,16,NULL),(34,'Радиотехника и телекомуникации',3,1,4,15,NULL),(35,'Радиотехника и телекомуникации',3,2,4,15,NULL),(36,'Радиотехника и телекомуникации',3,3,4,15,NULL),(37,'Машиностроение',4,1,1,18,NULL),(40,'Машиностроение',4,1,2,17,NULL),(43,'Машиностроение',4,1,3,16,NULL),(46,'Машиностроение',4,1,4,15,NULL),(49,'Механика',5,1,1,18,NULL),(52,'Механика',5,1,2,17,NULL),(55,'Механика',5,1,3,16,NULL),(58,'Механика',5,1,4,15,NULL),(61,'Электроника',6,1,1,18,NULL),(64,'Электроника',6,1,2,17,NULL),(67,'Электроника',6,1,3,16,NULL),(70,'Электроника',6,1,4,15,NULL);
+INSERT INTO `gryp` VALUES (1,1,1,1,8,1),(2,1,2,1,8,2),(3,1,3,1,8,3),(4,1,1,2,7,4),(5,1,2,2,7,5),(6,1,3,2,7,6),(7,1,1,3,6,7),(8,1,2,3,6,NULL),(9,1,3,3,6,NULL),(10,11,1,4,5,NULL),(11,11,2,4,5,NULL),(12,11,3,4,5,NULL),(13,2,1,1,8,NULL),(14,2,2,1,8,NULL),(15,2,3,1,8,NULL),(16,2,1,2,7,NULL),(17,2,2,2,7,NULL),(18,2,3,2,7,NULL),(19,2,1,3,6,NULL),(20,2,2,3,6,NULL),(21,2,3,3,6,NULL),(22,2,1,4,5,NULL),(23,2,2,4,5,NULL),(24,2,3,4,5,NULL),(25,3,1,1,8,NULL),(26,3,2,1,8,NULL),(27,3,3,1,8,NULL),(28,3,1,2,7,NULL),(29,3,2,2,7,NULL),(30,3,3,2,7,NULL),(31,3,1,3,6,NULL),(32,3,2,3,6,NULL),(33,3,3,3,6,NULL),(34,3,1,4,5,NULL),(35,3,2,4,5,NULL),(36,3,3,4,5,NULL),(37,4,1,1,8,NULL),(40,4,1,2,7,NULL),(43,4,1,3,6,NULL),(46,4,1,4,5,NULL),(49,5,1,1,8,NULL),(52,5,1,2,7,NULL),(55,5,1,3,6,NULL),(58,5,1,4,5,NULL),(61,6,1,1,8,NULL),(64,6,1,2,7,NULL),(67,6,1,3,6,NULL),(70,6,1,4,5,NULL);
 /*!40000 ALTER TABLE `gryp` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -88,10 +85,10 @@ DROP TABLE IF EXISTS `kafedra`;
  SET character_set_client = utf8mb4 ;
 CREATE TABLE `kafedra` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
-  `K_name` varchar(50) NOT NULL,
+  `K_name` varchar(100) NOT NULL,
   `K_nomer` varchar(10) NOT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -100,7 +97,7 @@ CREATE TABLE `kafedra` (
 
 LOCK TABLES `kafedra` WRITE;
 /*!40000 ALTER TABLE `kafedra` DISABLE KEYS */;
-INSERT INTO `kafedra` VALUES (1,'Программирование','0683830505'),(2,'Языки и литература','0573840567'),(3,'Математика','0572938600'),(4,'Физ. воспитание','0577728880'),(5,'Общественные науки','0683098999');
+INSERT INTO `kafedra` VALUES (1,'Информатики и программной инженерии','0683830505'),(2,'Языков и литературы','0572391920'),(3,'Математики и экономики','0578888888'),(4,'Физ. воспитания и защиты отчизны','0577728880'),(5,'Общественных дисциплин','0683098999'),(25,'Естественно-научных дисциплин','0581231231'),(26,'Компьютерных наук','0681230009'),(27,'Радиотехники и электроники','0671119923'),(28,'Технологии обработки металлов и общетехнических дисциплин','0681293920');
 /*!40000 ALTER TABLE `kafedra` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -119,7 +116,7 @@ CREATE TABLE `prepod` (
   PRIMARY KEY (`Id`),
   KEY `O_id_idx` (`K_id`),
   CONSTRAINT `K_id` FOREIGN KEY (`K_id`) REFERENCES `kafedra` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -147,7 +144,7 @@ CREATE TABLE `specly` (
   PRIMARY KEY (`Id`),
   KEY `Prepod_id_idx` (`P_id`),
   CONSTRAINT `Prepod_id` FOREIGN KEY (`P_id`) REFERENCES `prepod` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -156,7 +153,7 @@ CREATE TABLE `specly` (
 
 LOCK TABLES `specly` WRITE;
 /*!40000 ALTER TABLE `specly` DISABLE KEYS */;
-INSERT INTO `specly` VALUES (1,'Инженерия программного обеспечения','ПИ',1),(2,'Компьютерная инженерия','КИ',3),(3,'Телекомуникации и радиотехника','РТ',NULL),(4,'Отраслевое машиностроение','ОМ',7),(5,'Прикладная механика','ПМ',NULL),(6,'Электроника','ЕТ',NULL);
+INSERT INTO `specly` VALUES (1,'Инженерия программного обеспечения','ПИ',1),(2,'Компьютерная инженерия','КИ',3),(3,'Телекомуникации и радиотехника','РТ',NULL),(4,'Отраслевое машиностроение','ОМ',7),(5,'Прикладная механика','ПМ',8),(6,'Электроника','ЕТ',NULL),(11,'Программная разработка','ПР',1);
 /*!40000 ALTER TABLE `specly` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -181,7 +178,7 @@ CREATE TABLE `stydent` (
   PRIMARY KEY (`Id`),
   KEY `G_id_idx` (`G_id`),
   CONSTRAINT `G_id` FOREIGN KEY (`G_id`) REFERENCES `gryp` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -190,6 +187,7 @@ CREATE TABLE `stydent` (
 
 LOCK TABLES `stydent` WRITE;
 /*!40000 ALTER TABLE `stydent` DISABLE KEYS */;
+INSERT INTO `stydent` VALUES (1,9,'Церковный Илья Александрович','2001-03-02','Харьков','Салтовское Шоссе 260, 34','2016-09-01','0683830505',2181617,'бюджет'),(2,10,'Кулешов Дмитрий Сергеевич','2000-10-18','Харьков','Амосова 27, 41','2016-09-01','0660889850',2051617,'бюджет'),(3,9,'Довготько Вадим Вадимович','2001-04-18','Харьков','Героев Труда, 20Б, 32','2016-09-01','0671363060',1971617,'бюджет'),(4,9,'Цокота Илья Олегович','2000-10-09','Изюм','ул. Героев - Чернобыльцев, 2','2016-09-01','0990482560',2191617,'контракт');
 /*!40000 ALTER TABLE `stydent` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -206,7 +204,6 @@ CREATE TABLE `yspeh` (
   `P_id` int(11) NOT NULL,
   `D_id` int(11) NOT NULL,
   `Y_data` date NOT NULL,
-  `Y_type` enum('0','1','2') NOT NULL,
   `Y_ball` int(2) NOT NULL,
   PRIMARY KEY (`Id`),
   KEY `St_id_idx` (`St_id`),
@@ -215,7 +212,7 @@ CREATE TABLE `yspeh` (
   CONSTRAINT `D_id` FOREIGN KEY (`D_id`) REFERENCES `disp` (`id`),
   CONSTRAINT `P_id` FOREIGN KEY (`P_id`) REFERENCES `prepod` (`id`),
   CONSTRAINT `St_id` FOREIGN KEY (`St_id`) REFERENCES `stydent` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -224,6 +221,7 @@ CREATE TABLE `yspeh` (
 
 LOCK TABLES `yspeh` WRITE;
 /*!40000 ALTER TABLE `yspeh` DISABLE KEYS */;
+INSERT INTO `yspeh` VALUES (1,1,1,1,'2020-01-20',4),(2,2,2,2,'2020-01-20',3),(3,3,2,1,'2019-01-20',5);
 /*!40000 ALTER TABLE `yspeh` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -244,4 +242,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-04-14 15:22:09
+-- Dump completed on 2019-04-24 23:46:10

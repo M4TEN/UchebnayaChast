@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.PanelMain = new System.Windows.Forms.Panel();
+            this.ADComboKategory = new System.Windows.Forms.ComboBox();
             this.LabelKafedra = new System.Windows.Forms.Label();
             this.ADComboKafedra = new System.Windows.Forms.ComboBox();
             this.ADFio = new System.Windows.Forms.TextBox();
@@ -38,7 +39,6 @@
             this.ADAdd = new System.Windows.Forms.Button();
             this.PanelTop = new System.Windows.Forms.Panel();
             this.LabelTop = new System.Windows.Forms.Label();
-            this.ADComboKategory = new System.Windows.Forms.ComboBox();
             this.PanelMain.SuspendLayout();
             this.PanelTop.SuspendLayout();
             this.SuspendLayout();
@@ -58,6 +58,18 @@
             this.PanelMain.Name = "PanelMain";
             this.PanelMain.Size = new System.Drawing.Size(363, 226);
             this.PanelMain.TabIndex = 5;
+            // 
+            // ADComboKategory
+            // 
+            this.ADComboKategory.FormattingEnabled = true;
+            this.ADComboKategory.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3"});
+            this.ADComboKategory.Location = new System.Drawing.Point(183, 83);
+            this.ADComboKategory.Name = "ADComboKategory";
+            this.ADComboKategory.Size = new System.Drawing.Size(44, 21);
+            this.ADComboKategory.TabIndex = 16;
             // 
             // LabelKafedra
             // 
@@ -84,6 +96,7 @@
             this.ADFio.Name = "ADFio";
             this.ADFio.Size = new System.Drawing.Size(155, 20);
             this.ADFio.TabIndex = 12;
+            this.ADFio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ADFio_KeyPress);
             // 
             // LabelKategory
             // 
@@ -147,18 +160,6 @@
             this.LabelTop.Size = new System.Drawing.Size(244, 20);
             this.LabelTop.TabIndex = 0;
             this.LabelTop.Text = "Добавление/Изменение данных";
-            // 
-            // ADComboKategory
-            // 
-            this.ADComboKategory.FormattingEnabled = true;
-            this.ADComboKategory.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3"});
-            this.ADComboKategory.Location = new System.Drawing.Point(183, 83);
-            this.ADComboKategory.Name = "ADComboKategory";
-            this.ADComboKategory.Size = new System.Drawing.Size(44, 21);
-            this.ADComboKategory.TabIndex = 16;
             // 
             // FormAddChangePrepod
             // 

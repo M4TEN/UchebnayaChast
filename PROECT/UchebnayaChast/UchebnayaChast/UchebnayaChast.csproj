@@ -81,6 +81,18 @@
     <Compile Include="FormAddChange\FormAddChange.Designer.cs">
       <DependentUpon>FormAddChange.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAddChange\FormAddChangeDisp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddChange\FormAddChangeDisp.Designer.cs">
+      <DependentUpon>FormAddChangeDisp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddChange\FormAddChangeGryp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddChange\FormAddChangeGryp.Designer.cs">
+      <DependentUpon>FormAddChangeGryp.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAddChange\FormAddChangePrepod.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +104,18 @@
     </Compile>
     <Compile Include="FormAddChange\FormAddChangeSpecly.Designer.cs">
       <DependentUpon>FormAddChangeSpecly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddChange\FormAddChangeStydent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddChange\FormAddChangeStydent.Designer.cs">
+      <DependentUpon>FormAddChangeStydent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddChange\FormAddChangeYspeh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddChange\FormAddChangeYspeh.Designer.cs">
+      <DependentUpon>FormAddChangeYspeh.cs</DependentUpon>
     </Compile>
     <Compile Include="Functional.cs" />
     <Compile Include="Controls\GrypControl.cs">
@@ -161,11 +185,23 @@
     <EmbeddedResource Include="Controls\PrepodControl.resx">
       <DependentUpon>PrepodControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormAddChange\FormAddChangeDisp.resx">
+      <DependentUpon>FormAddChangeDisp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddChange\FormAddChangeGryp.resx">
+      <DependentUpon>FormAddChangeGryp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAddChange\FormAddChangePrepod.resx">
       <DependentUpon>FormAddChangePrepod.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAddChange\FormAddChangeSpecly.resx">
       <DependentUpon>FormAddChangeSpecly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddChange\FormAddChangeStydent.resx">
+      <DependentUpon>FormAddChangeStydent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddChange\FormAddChangeYspeh.resx">
+      <DependentUpon>FormAddChangeYspeh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UchebnayaChast.FormAddChange;
 
 namespace UchebnayaChast
 {
@@ -42,6 +43,22 @@ namespace UchebnayaChast
                 StydentPoiskGryp.Items.Add(l[i]);
             });
         }
+
+        protected void OpenForm(Form form, bool show = true, bool hide = false, bool close = false, bool dialog = true)
+        {
+            if (hide)
+                this.Hide();
+            if (dialog)
+                form.ShowDialog();
+            else
+            {
+                form.Show();
+                this.Hide();
+            }
+
+            if (show && hide) this.Show();
+        }
+
         public virtual void MainAction()
         {
 
@@ -68,7 +85,43 @@ namespace UchebnayaChast
             //PrepodSortirovka.SelectedIndex = 1;
             //PrepodSortirovka.SelectedIndex = 0;
             StydentPoiskFio.Text = "";
+            StydentPoiskBK.SelectedIndex = -1;
+            StydentPoiskGryp.SelectedIndex = -1;
             this.StydentGrid.Sort(this.StydentGrid.Columns["G_id"], ListSortDirection.Ascending);
+        }
+
+        private void StydentPoiskFio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char l = e.KeyChar;
+            if ((l < 'А' || l > 'я') && l != '\b' && l != '.' && l != 32)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void BtnFncSearch_Click(object sender, EventArgs e)
+        {
+            List<Functional.FiltrTag> tags = new List<Functional.FiltrTag>();
+            if (StydentPoiskFio.Text!="")
+                tags.Add(delegate (Dictionary<string, string> row) { if (row["St_fio"].ToLower().Replace(" ", "").Contains(StydentPoiskFio.Text.ToLower().Replace(" ", ""))) return false; else return true; });
+            if (StydentPoiskBK.SelectedIndex>-1)
+            tags.Add(delegate (Dictionary<string, string> row) { if (row["St_opl"].ToLower().Replace(" ", "").Contains(StydentPoiskBK.Text.ToLower().Replace(" ", ""))) return false; else return true; });
+            if (StydentPoiskGryp.SelectedIndex > -1)
+                tags.Add(delegate (Dictionary<string, string> row) { if (row["G_id"].ToLower().Replace(" ", "").Contains(StydentPoiskGryp.Text.ToLower().Replace(" ", ""))) return false; else return true; });
+            MainAction();
+            Functional.Filtres(tags.ToArray(), "Студента с такими критериями нет");
+            Functional.Print(ref StydentGrid);
+        }
+
+        private void BtnFncDrop_Click(object sender, EventArgs e)
+        {
+            Actions();
+        }
+
+        private void BtnFncAdd_Click(object sender, EventArgs e)
+        {
+            OpenForm(new FormAddChangeStydent());
+            Actions();
         }
     }
 }
