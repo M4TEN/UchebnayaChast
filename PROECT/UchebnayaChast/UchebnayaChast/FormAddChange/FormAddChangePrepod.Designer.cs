@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAddChangePrepod));
             this.PanelMain = new System.Windows.Forms.Panel();
             this.ADComboKategory = new System.Windows.Forms.ComboBox();
             this.LabelKafedra = new System.Windows.Forms.Label();
@@ -69,7 +70,7 @@
             this.ADComboKategory.Location = new System.Drawing.Point(183, 83);
             this.ADComboKategory.Name = "ADComboKategory";
             this.ADComboKategory.Size = new System.Drawing.Size(44, 21);
-            this.ADComboKategory.TabIndex = 16;
+            this.ADComboKategory.TabIndex = 1;
             // 
             // LabelKafedra
             // 
@@ -87,15 +88,16 @@
             this.ADComboKafedra.Location = new System.Drawing.Point(183, 117);
             this.ADComboKafedra.Name = "ADComboKafedra";
             this.ADComboKafedra.Size = new System.Drawing.Size(155, 21);
-            this.ADComboKafedra.TabIndex = 13;
+            this.ADComboKafedra.TabIndex = 2;
             this.ADComboKafedra.Text = "              ";
             // 
             // ADFio
             // 
             this.ADFio.Location = new System.Drawing.Point(183, 46);
+            this.ADFio.MaxLength = 50;
             this.ADFio.Name = "ADFio";
             this.ADFio.Size = new System.Drawing.Size(155, 20);
-            this.ADFio.TabIndex = 12;
+            this.ADFio.TabIndex = 0;
             this.ADFio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ADFio_KeyPress);
             // 
             // LabelKategory
@@ -122,10 +124,10 @@
             // 
             this.ADCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.ADCancel.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ADCancel.Location = new System.Drawing.Point(183, 175);
+            this.ADCancel.Location = new System.Drawing.Point(241, 175);
             this.ADCancel.Name = "ADCancel";
             this.ADCancel.Size = new System.Drawing.Size(97, 28);
-            this.ADCancel.TabIndex = 9;
+            this.ADCancel.TabIndex = 4;
             this.ADCancel.Text = "Отмена";
             this.ADCancel.UseVisualStyleBackColor = true;
             this.ADCancel.Click += new System.EventHandler(this.ADCancel_Click);
@@ -136,7 +138,7 @@
             this.ADAdd.Location = new System.Drawing.Point(36, 175);
             this.ADAdd.Name = "ADAdd";
             this.ADAdd.Size = new System.Drawing.Size(97, 28);
-            this.ADAdd.TabIndex = 8;
+            this.ADAdd.TabIndex = 3;
             this.ADAdd.Text = "Добавить";
             this.ADAdd.UseVisualStyleBackColor = true;
             this.ADAdd.Click += new System.EventHandler(this.ADAdd_Click);
@@ -172,6 +174,7 @@
             this.Controls.Add(this.PanelMain);
             this.Controls.Add(this.PanelTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormAddChangePrepod";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormAddChangePrepod";

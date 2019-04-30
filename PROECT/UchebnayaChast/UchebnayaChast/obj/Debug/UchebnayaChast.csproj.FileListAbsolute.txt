@@ -57,3 +57,13 @@ C:\Users\M4TEN\Documents\GitHub\UchebnayaChast\PROECT\UchebnayaChast\UchebnayaCh
 C:\Users\M4TEN\Documents\GitHub\UchebnayaChast\PROECT\UchebnayaChast\UchebnayaChast\obj\Debug\UchebnayaChast.FormAddChange.FormAddChangeStydent.resources
 C:\Users\M4TEN\Documents\GitHub\UchebnayaChast\PROECT\UchebnayaChast\UchebnayaChast\obj\Debug\UchebnayaChast.FormAddChange.FormAddChangeDisp.resources
 C:\Users\M4TEN\Documents\GitHub\UchebnayaChast\PROECT\UchebnayaChast\UchebnayaChast\obj\Debug\UchebnayaChast.FormAddChange.FormAddChangeYspeh.resources
+C:\Users\M4TEN\Documents\GitHub\UchebnayaChast\PROECT\UchebnayaChast\UchebnayaChast\obj\Debug\UchebnayaChast.FormAddChange.FormPrint.resources
+C:\Users\M4TEN\Documents\GitHub\UchebnayaChast\PROECT\UchebnayaChast\UchebnayaChast\obj\Debug\UchebnayaChast.FormAddChange.FormPrintStydent.resources
+C:\Users\M4TEN\Documents\GitHub\UchebnayaChast\PROECT\UchebnayaChast\UchebnayaChast\obj\Debug\UchebnayaChast.FormAddChange.FormPrintDisp.resources
+C:\Users\M4TEN\Documents\GitHub\UchebnayaChast\PROECT\UchebnayaChast\UchebnayaChast\obj\Debug\UchebnayaChast.FormAddChange.FormPrintGryp.resources
+C:\Users\M4TEN\Documents\GitHub\UchebnayaChast\PROECT\UchebnayaChast\UchebnayaChast\obj\Debug\UchebnayaChast.FormAddChange.FormPrintKafedra.resources
+C:\Users\M4TEN\Documents\GitHub\UchebnayaChast\PROECT\UchebnayaChast\UchebnayaChast\obj\Debug\UchebnayaChast.FormAddChange.FormPrintPrepod.resources
+C:\Users\M4TEN\Documents\GitHub\UchebnayaChast\PROECT\UchebnayaChast\UchebnayaChast\obj\Debug\UchebnayaChast.FormAddChange.FormPrintSpecly.resources
+C:\Users\M4TEN\Documents\GitHub\UchebnayaChast\PROECT\UchebnayaChast\UchebnayaChast\obj\Debug\UchebnayaChast.FormAddChange.FormPrintStydentKicked.resources
+C:\Users\M4TEN\Documents\GitHub\UchebnayaChast\PROECT\UchebnayaChast\UchebnayaChast\obj\Debug\UchebnayaChast.FormAddChange.FormAddChangeStydentKicked.resources
+C:\Users\M4TEN\Documents\GitHub\UchebnayaChast\PROECT\UchebnayaChast\UchebnayaChast\obj\Debug\UchebnayaChast.FormAddChange.FormPrintYspehKicked.resources

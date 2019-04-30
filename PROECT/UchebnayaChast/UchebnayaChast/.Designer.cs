@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.PanelTop = new System.Windows.Forms.Panel();
+            this.PanelVisible = new System.Windows.Forms.Panel();
             this.BtnLock = new System.Windows.Forms.Button();
             this.BtnExit = new System.Windows.Forms.Button();
             this.LabelName = new System.Windows.Forms.Label();
@@ -52,7 +53,6 @@
             this.PanelControlDisp = new UchebnayaChast.DispControl();
             this.PanelControlMainMenu = new UchebnayaChast.MainMenuControl();
             this.PanelControlKafedra = new UchebnayaChast.KafedraControl();
-            this.PanelVisible = new System.Windows.Forms.Panel();
             this.PanelTop.SuspendLayout();
             this.PanelLeft.SuspendLayout();
             this.SuspendLayout();
@@ -69,6 +69,13 @@
             this.PanelTop.Name = "PanelTop";
             this.PanelTop.Size = new System.Drawing.Size(1080, 40);
             this.PanelTop.TabIndex = 0;
+            // 
+            // PanelVisible
+            // 
+            this.PanelVisible.Location = new System.Drawing.Point(913, 0);
+            this.PanelVisible.Name = "PanelVisible";
+            this.PanelVisible.Size = new System.Drawing.Size(57, 40);
+            this.PanelVisible.TabIndex = 3;
             // 
             // BtnLock
             // 
@@ -332,13 +339,6 @@
             this.PanelControlKafedra.Size = new System.Drawing.Size(875, 410);
             this.PanelControlKafedra.TabIndex = 10;
             // 
-            // PanelVisible
-            // 
-            this.PanelVisible.Location = new System.Drawing.Point(913, 0);
-            this.PanelVisible.Name = "PanelVisible";
-            this.PanelVisible.Size = new System.Drawing.Size(57, 40);
-            this.PanelVisible.TabIndex = 3;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -390,7 +390,7 @@
         private GrypControl PanelControlGryp;
         private PrepodControl PanelControlPrepod;
         private SpeclyControl PanelControlSpecly;
-        private StydentControl PanelControlStydent;
+        public StydentControl PanelControlStydent;
         private System.Windows.Forms.Button BtnLock;
         private System.Windows.Forms.Panel PanelVisible;
     }

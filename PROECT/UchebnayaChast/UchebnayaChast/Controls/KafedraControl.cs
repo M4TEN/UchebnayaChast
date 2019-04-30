@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UchebnayaChast.FormAddChange;
 
 namespace UchebnayaChast
 {
@@ -36,13 +37,22 @@ namespace UchebnayaChast
 
         public virtual void MainAction()
         {
-            Functional.GetData(SpecialSqlController.Tables.kafedra);
+            Functional.GetData(SpecialSqlController.Tables.kafedra, delegate (ref List<Dictionary<string, string>> privet) {
+                foreach (var i in privet)
+                {
+                    i["K_prepodov"] = Functional.Controller.Query("select count(p.P_fio) from prepod p join kafedra k on p.K_id=k.Id where k.Id=" + i["Id"])[0][0].ToString();
+                    if ((i["P_id"] != null) && (i["P_id"].Length > 0))
+                        i["P_id"] = Functional.Controller.TakeRowWithNamesById(SpecialSqlController.Tables.prepod, int.Parse(i["P_id"]))["P_fio"];
+                }
+            });
+            
         }
 
         public virtual void Actions()
         {
             MainAction();
             Functional.Print(ref KafedraGrid);
+            LabelKolvo.Text = KafedraGrid.RowCount.ToString();
             //KafedraSortirovka.SelectedIndex = 1;
             //KafedraSortirovka.SelectedIndex = 0;
             KafedraPoisk.Text = "";
@@ -70,6 +80,8 @@ namespace UchebnayaChast
             Functional.Filtres(tags.ToArray(), "Кафедр(-ы) с такими критериями нет");
             //KafedraSortirovka.SelectedIndex = 0;
             Functional.Print(ref KafedraGrid);
+            this.KafedraGrid.Sort(this.KafedraGrid.Columns["K_name"], ListSortDirection.Ascending);
+            LabelKolvo.Text = KafedraGrid.RowCount.ToString();
         }
 
 
@@ -104,7 +116,7 @@ namespace UchebnayaChast
                 }
                 else
                 {
-                    Functional.Error("Вы не можете удалить эту хрень :)");
+                    Functional.Error("Вы не можете удалить данную кафедру, так как есть преподаватели, которые к ней относятся!");
                 }
             }
         }
@@ -116,6 +128,16 @@ namespace UchebnayaChast
             {
                 e.Handled = true;
             }
+        }
+
+        private void BtnPrint2_Click(object sender, EventArgs e)
+        {
+            OpenForm(new FormPrintKafedra(KafedraGrid, false));
+        }
+
+        private void BtnPrint_Click(object sender, EventArgs e)
+        {
+            OpenForm(new FormPrintKafedra(KafedraGrid));
         }
     }
 }

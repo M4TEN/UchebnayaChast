@@ -111,11 +111,71 @@
     <Compile Include="FormAddChange\FormAddChangeStydent.Designer.cs">
       <DependentUpon>FormAddChangeStydent.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAddChange\FormAddChangeStydentKicked.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddChange\FormAddChangeStydentKicked.Designer.cs">
+      <DependentUpon>FormAddChangeStydentKicked.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAddChange\FormAddChangeYspeh.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormAddChange\FormAddChangeYspeh.Designer.cs">
       <DependentUpon>FormAddChangeYspeh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddChange\FormPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddChange\FormPrint.Designer.cs">
+      <DependentUpon>FormPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddChange\FormPrintDisp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddChange\FormPrintDisp.Designer.cs">
+      <DependentUpon>FormPrintDisp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddChange\FormPrintGryp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddChange\FormPrintGryp.Designer.cs">
+      <DependentUpon>FormPrintGryp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddChange\FormPrintKafedra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddChange\FormPrintKafedra.Designer.cs">
+      <DependentUpon>FormPrintKafedra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddChange\FormPrintPrepod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddChange\FormPrintPrepod.Designer.cs">
+      <DependentUpon>FormPrintPrepod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddChange\FormPrintSpecly.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddChange\FormPrintSpecly.Designer.cs">
+      <DependentUpon>FormPrintSpecly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddChange\FormPrintStydent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddChange\FormPrintStydent.Designer.cs">
+      <DependentUpon>FormPrintStydent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddChange\FormPrintStydentKicked.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddChange\FormPrintStydentKicked.Designer.cs">
+      <DependentUpon>FormPrintStydentKicked.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddChange\FormPrintYspehKicked.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddChange\FormPrintYspehKicked.Designer.cs">
+      <DependentUpon>FormPrintYspehKicked.cs</DependentUpon>
     </Compile>
     <Compile Include="Functional.cs" />
     <Compile Include="Controls\GrypControl.cs">
@@ -200,8 +260,40 @@
     <EmbeddedResource Include="FormAddChange\FormAddChangeStydent.resx">
       <DependentUpon>FormAddChangeStydent.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormAddChange\FormAddChangeStydentKicked.resx">
+      <DependentUpon>FormAddChangeStydentKicked.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAddChange\FormAddChangeYspeh.resx">
       <DependentUpon>FormAddChangeYspeh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddChange\FormPrint.resx">
+      <DependentUpon>FormPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddChange\FormPrintDisp.resx">
+      <DependentUpon>FormPrintDisp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddChange\FormPrintGryp.resx">
+      <DependentUpon>FormPrintGryp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddChange\FormPrintKafedra.resx">
+      <DependentUpon>FormPrintKafedra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddChange\FormPrintPrepod.resx">
+      <DependentUpon>FormPrintPrepod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddChange\FormPrintSpecly.resx">
+      <DependentUpon>FormPrintSpecly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddChange\FormPrintStydent.resx">
+      <DependentUpon>FormPrintStydent.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddChange\FormPrintStydentKicked.resx">
+      <DependentUpon>FormPrintStydentKicked.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddChange\FormPrintYspehKicked.resx">
+      <DependentUpon>FormPrintYspehKicked.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -217,6 +309,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\StydentControl.resx">
       <DependentUpon>StydentControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\YspehControl.resx">
       <DependentUpon>YspehControl.cs</DependentUpon>

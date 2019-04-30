@@ -28,21 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAddChangeGryp));
             this.PanelMain = new System.Windows.Forms.Panel();
+            this.ADComboKlRyk = new System.Windows.Forms.ComboBox();
+            this.LabelKlRyk = new System.Windows.Forms.Label();
+            this.LabelBorn = new System.Windows.Forms.Label();
+            this.LabelKyrs = new System.Windows.Forms.Label();
+            this.ADComboBorn = new System.Windows.Forms.ComboBox();
+            this.ADComboKyrs = new System.Windows.Forms.ComboBox();
+            this.ADComboNumber = new System.Windows.Forms.ComboBox();
+            this.ADComboSpecly = new System.Windows.Forms.ComboBox();
             this.LabelNumber = new System.Windows.Forms.Label();
             this.LabelSpecly = new System.Windows.Forms.Label();
             this.ADCancel = new System.Windows.Forms.Button();
             this.ADAdd = new System.Windows.Forms.Button();
             this.PanelTop = new System.Windows.Forms.Panel();
             this.LabelTop = new System.Windows.Forms.Label();
-            this.ADComboSpecly = new System.Windows.Forms.ComboBox();
-            this.ADComboNumber = new System.Windows.Forms.ComboBox();
-            this.ADComboKyrs = new System.Windows.Forms.ComboBox();
-            this.ADComboBorn = new System.Windows.Forms.ComboBox();
-            this.LabelKyrs = new System.Windows.Forms.Label();
-            this.LabelBorn = new System.Windows.Forms.Label();
-            this.LabelKlRyk = new System.Windows.Forms.Label();
-            this.ADComboKlRyk = new System.Windows.Forms.ComboBox();
             this.PanelMain.SuspendLayout();
             this.PanelTop.SuspendLayout();
             this.SuspendLayout();
@@ -67,11 +68,101 @@
             this.PanelMain.Size = new System.Drawing.Size(363, 226);
             this.PanelMain.TabIndex = 3;
             // 
+            // ADComboKlRyk
+            // 
+            this.ADComboKlRyk.FormattingEnabled = true;
+            this.ADComboKlRyk.Location = new System.Drawing.Point(126, 135);
+            this.ADComboKlRyk.Name = "ADComboKlRyk";
+            this.ADComboKlRyk.Size = new System.Drawing.Size(220, 21);
+            this.ADComboKlRyk.TabIndex = 4;
+            // 
+            // LabelKlRyk
+            // 
+            this.LabelKlRyk.AutoSize = true;
+            this.LabelKlRyk.Font = new System.Drawing.Font("Comfortaa", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LabelKlRyk.Location = new System.Drawing.Point(17, 138);
+            this.LabelKlRyk.Name = "LabelKlRyk";
+            this.LabelKlRyk.Size = new System.Drawing.Size(56, 18);
+            this.LabelKlRyk.TabIndex = 39;
+            this.LabelKlRyk.Text = "Кл. рук.";
+            // 
+            // LabelBorn
+            // 
+            this.LabelBorn.AutoSize = true;
+            this.LabelBorn.Font = new System.Drawing.Font("Comfortaa", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LabelBorn.Location = new System.Drawing.Point(17, 110);
+            this.LabelBorn.Name = "LabelBorn";
+            this.LabelBorn.Size = new System.Drawing.Size(32, 18);
+            this.LabelBorn.TabIndex = 38;
+            this.LabelBorn.Text = "Год";
+            // 
+            // LabelKyrs
+            // 
+            this.LabelKyrs.AutoSize = true;
+            this.LabelKyrs.Font = new System.Drawing.Font("Comfortaa", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LabelKyrs.Location = new System.Drawing.Point(17, 60);
+            this.LabelKyrs.Name = "LabelKyrs";
+            this.LabelKyrs.Size = new System.Drawing.Size(38, 18);
+            this.LabelKyrs.TabIndex = 37;
+            this.LabelKyrs.Text = "Курс";
+            // 
+            // ADComboBorn
+            // 
+            this.ADComboBorn.FormattingEnabled = true;
+            this.ADComboBorn.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"});
+            this.ADComboBorn.Location = new System.Drawing.Point(126, 108);
+            this.ADComboBorn.Name = "ADComboBorn";
+            this.ADComboBorn.Size = new System.Drawing.Size(39, 21);
+            this.ADComboBorn.TabIndex = 3;
+            // 
+            // ADComboKyrs
+            // 
+            this.ADComboKyrs.FormattingEnabled = true;
+            this.ADComboKyrs.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.ADComboKyrs.Location = new System.Drawing.Point(126, 57);
+            this.ADComboKyrs.Name = "ADComboKyrs";
+            this.ADComboKyrs.Size = new System.Drawing.Size(39, 21);
+            this.ADComboKyrs.TabIndex = 2;
+            // 
+            // ADComboNumber
+            // 
+            this.ADComboNumber.FormattingEnabled = true;
+            this.ADComboNumber.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3"});
+            this.ADComboNumber.Location = new System.Drawing.Point(126, 83);
+            this.ADComboNumber.Name = "ADComboNumber";
+            this.ADComboNumber.Size = new System.Drawing.Size(39, 21);
+            this.ADComboNumber.TabIndex = 1;
+            // 
+            // ADComboSpecly
+            // 
+            this.ADComboSpecly.FormattingEnabled = true;
+            this.ADComboSpecly.Location = new System.Drawing.Point(126, 29);
+            this.ADComboSpecly.Name = "ADComboSpecly";
+            this.ADComboSpecly.Size = new System.Drawing.Size(62, 21);
+            this.ADComboSpecly.TabIndex = 0;
+            // 
             // LabelNumber
             // 
             this.LabelNumber.AutoSize = true;
             this.LabelNumber.Font = new System.Drawing.Font("Comfortaa", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LabelNumber.Location = new System.Drawing.Point(7, 59);
+            this.LabelNumber.Location = new System.Drawing.Point(17, 86);
             this.LabelNumber.Name = "LabelNumber";
             this.LabelNumber.Size = new System.Drawing.Size(23, 18);
             this.LabelNumber.TabIndex = 11;
@@ -81,20 +172,20 @@
             // 
             this.LabelSpecly.AutoSize = true;
             this.LabelSpecly.Font = new System.Drawing.Font("Comfortaa", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LabelSpecly.Location = new System.Drawing.Point(9, 29);
+            this.LabelSpecly.Location = new System.Drawing.Point(17, 29);
             this.LabelSpecly.Name = "LabelSpecly";
-            this.LabelSpecly.Size = new System.Drawing.Size(111, 18);
+            this.LabelSpecly.Size = new System.Drawing.Size(46, 18);
             this.LabelSpecly.TabIndex = 10;
-            this.LabelSpecly.Text = "Специальность";
+            this.LabelSpecly.Text = "Шифр";
             // 
             // ADCancel
             // 
             this.ADCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.ADCancel.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ADCancel.Location = new System.Drawing.Point(183, 188);
+            this.ADCancel.Location = new System.Drawing.Point(249, 188);
             this.ADCancel.Name = "ADCancel";
             this.ADCancel.Size = new System.Drawing.Size(97, 28);
-            this.ADCancel.TabIndex = 9;
+            this.ADCancel.TabIndex = 6;
             this.ADCancel.Text = "Отмена";
             this.ADCancel.UseVisualStyleBackColor = true;
             this.ADCancel.Click += new System.EventHandler(this.ADCancel_Click);
@@ -102,10 +193,10 @@
             // ADAdd
             // 
             this.ADAdd.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ADAdd.Location = new System.Drawing.Point(36, 188);
+            this.ADAdd.Location = new System.Drawing.Point(12, 188);
             this.ADAdd.Name = "ADAdd";
             this.ADAdd.Size = new System.Drawing.Size(97, 28);
-            this.ADAdd.TabIndex = 8;
+            this.ADAdd.TabIndex = 5;
             this.ADAdd.Text = "Добавить";
             this.ADAdd.UseVisualStyleBackColor = true;
             this.ADAdd.Click += new System.EventHandler(this.ADAdd_Click);
@@ -130,96 +221,6 @@
             this.LabelTop.TabIndex = 0;
             this.LabelTop.Text = "Добавление/Изменение данных";
             // 
-            // ADComboSpecly
-            // 
-            this.ADComboSpecly.FormattingEnabled = true;
-            this.ADComboSpecly.Location = new System.Drawing.Point(126, 29);
-            this.ADComboSpecly.Name = "ADComboSpecly";
-            this.ADComboSpecly.Size = new System.Drawing.Size(220, 21);
-            this.ADComboSpecly.TabIndex = 33;
-            // 
-            // ADComboNumber
-            // 
-            this.ADComboNumber.FormattingEnabled = true;
-            this.ADComboNumber.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3"});
-            this.ADComboNumber.Location = new System.Drawing.Point(126, 56);
-            this.ADComboNumber.Name = "ADComboNumber";
-            this.ADComboNumber.Size = new System.Drawing.Size(39, 21);
-            this.ADComboNumber.TabIndex = 34;
-            // 
-            // ADComboKyrs
-            // 
-            this.ADComboKyrs.FormattingEnabled = true;
-            this.ADComboKyrs.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4"});
-            this.ADComboKyrs.Location = new System.Drawing.Point(126, 83);
-            this.ADComboKyrs.Name = "ADComboKyrs";
-            this.ADComboKyrs.Size = new System.Drawing.Size(39, 21);
-            this.ADComboKyrs.TabIndex = 35;
-            // 
-            // ADComboBorn
-            // 
-            this.ADComboBorn.FormattingEnabled = true;
-            this.ADComboBorn.Items.AddRange(new object[] {
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9"});
-            this.ADComboBorn.Location = new System.Drawing.Point(126, 108);
-            this.ADComboBorn.Name = "ADComboBorn";
-            this.ADComboBorn.Size = new System.Drawing.Size(39, 21);
-            this.ADComboBorn.TabIndex = 36;
-            // 
-            // LabelKyrs
-            // 
-            this.LabelKyrs.AutoSize = true;
-            this.LabelKyrs.Font = new System.Drawing.Font("Comfortaa", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LabelKyrs.Location = new System.Drawing.Point(9, 86);
-            this.LabelKyrs.Name = "LabelKyrs";
-            this.LabelKyrs.Size = new System.Drawing.Size(38, 18);
-            this.LabelKyrs.TabIndex = 37;
-            this.LabelKyrs.Text = "Курс";
-            // 
-            // LabelBorn
-            // 
-            this.LabelBorn.AutoSize = true;
-            this.LabelBorn.Font = new System.Drawing.Font("Comfortaa", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LabelBorn.Location = new System.Drawing.Point(9, 110);
-            this.LabelBorn.Name = "LabelBorn";
-            this.LabelBorn.Size = new System.Drawing.Size(32, 18);
-            this.LabelBorn.TabIndex = 38;
-            this.LabelBorn.Text = "Год";
-            // 
-            // LabelKlRyk
-            // 
-            this.LabelKlRyk.AutoSize = true;
-            this.LabelKlRyk.Font = new System.Drawing.Font("Comfortaa", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LabelKlRyk.Location = new System.Drawing.Point(9, 138);
-            this.LabelKlRyk.Name = "LabelKlRyk";
-            this.LabelKlRyk.Size = new System.Drawing.Size(56, 18);
-            this.LabelKlRyk.TabIndex = 39;
-            this.LabelKlRyk.Text = "Кл. рук.";
-            // 
-            // ADComboKlRyk
-            // 
-            this.ADComboKlRyk.FormattingEnabled = true;
-            this.ADComboKlRyk.Location = new System.Drawing.Point(126, 135);
-            this.ADComboKlRyk.Name = "ADComboKlRyk";
-            this.ADComboKlRyk.Size = new System.Drawing.Size(220, 21);
-            this.ADComboKlRyk.TabIndex = 40;
-            // 
             // FormAddChangeGryp
             // 
             this.AcceptButton = this.ADAdd;
@@ -231,6 +232,7 @@
             this.Controls.Add(this.PanelMain);
             this.Controls.Add(this.PanelTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormAddChangeGryp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.PanelMain.ResumeLayout(false);

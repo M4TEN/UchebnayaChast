@@ -45,10 +45,10 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.PanelScrit = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PanelMain.SuspendLayout();
             this.panel1.SuspendLayout();
             this.PanelTop.SuspendLayout();
@@ -57,8 +57,8 @@
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.PanelScrit.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelMain
@@ -94,6 +94,7 @@
             // TXTPass
             // 
             this.TXTPass.Location = new System.Drawing.Point(66, 3);
+            this.TXTPass.MaxLength = 10;
             this.TXTPass.Name = "TXTPass";
             this.TXTPass.PasswordChar = '*';
             this.TXTPass.Size = new System.Drawing.Size(155, 20);
@@ -222,26 +223,6 @@
             this.PanelScrit.TabIndex = 9;
             this.PanelScrit.Visible = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(199)))), ((int)(((byte)(199)))));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(20, 40);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(270, 270);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label5.Font = new System.Drawing.Font("Comfortaa", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(20, 320);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(269, 24);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Харьковский Радиотехнический Колледж";
-            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(64)))));
@@ -261,6 +242,26 @@
             this.label6.Size = new System.Drawing.Size(253, 20);
             this.label6.TabIndex = 0;
             this.label6.Text = "Здесь могла быть ваша реклама";
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label5.Font = new System.Drawing.Font("Comfortaa", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(20, 320);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(269, 24);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Харьковский Радиотехнический Колледж";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(199)))), ((int)(((byte)(199)))));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(20, 40);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(270, 270);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // MainMenuControl
             // 
@@ -287,9 +288,9 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.PanelScrit.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

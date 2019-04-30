@@ -12,7 +12,7 @@ namespace UchebnayaChast
 {
     public partial class MainMenuControl : UserControl
     {
-        string passWord = "";
+        string passWord = "admin";
 
         public Action<bool> mainButtonEnable; // Поле для хранения делегата - сделаем его публичным
         private void MainButtonEnable(bool buttonEnable) // Метод для удобства
@@ -24,7 +24,7 @@ namespace UchebnayaChast
 
             this.Load += delegate
             {
-                passWord = "";
+                passWord = "admin";
             };
             BtnEnter.Click += delegate
             {

@@ -14,10 +14,18 @@ namespace UchebnayaChast
     {
 
         int id;
+        List<string> saveindexes;
+
+        string KName;
 
         public FormAddChangeKafedra()
         {
             InitializeComponent();
+            ADCombo.DropDownStyle = ComboBoxStyle.DropDownList;
+            saveindexes = Functional.Controller.GetColumn(SpecialSqlController.Tables.prepod, "Id", "(select count(`Id`) from kafedra k where k.P_id=prepod.Id)=0", false);
+            ADCombo.Items.AddRange(Functional.Controller.GetColumn(SpecialSqlController.Tables.prepod, "P_fio", "(select count(`Id`) from kafedra k where k.P_id=prepod.Id)=0", false).ToArray());
+            ADCombo.Sorted = true;
+
         }
 
 
@@ -29,6 +37,21 @@ namespace UchebnayaChast
             ADAdd.Text = "Изменить";
             this.Text = "Изменить кафедру";
             id = int.Parse(privet["Id"]);
+            ADCombo.DropDownStyle = ComboBoxStyle.DropDownList;
+            ADCombo.Items.AddRange(Functional.Controller.GetColumn(SpecialSqlController.Tables.prepod, "P_fio", "(select count(`Id`) from kafedra k where k.P_id=prepod.Id)=0", false).ToArray());
+            saveindexes = Functional.Controller.GetColumn(SpecialSqlController.Tables.prepod, "Id", "(select count(`Id`) from kafedra k where k.P_id=prepod.Id)=0", false);
+            if (!string.IsNullOrEmpty(privet["P_id"]))
+            {
+                saveindexes.Add(privet["P_id"]);
+                ADCombo.Items.Add(Functional.Controller.TakeRowWithNamesById(SpecialSqlController.Tables.prepod, int.Parse(privet["P_id"]))["P_fio"]);
+                string s = ((Functional.Controller.Query(("select  p.P_fio from prepod p join kafedra k on k.P_id=p.Id where k.Id=" + privet["Id"] + " limit 1;")))[0][0]);
+
+                //ADCombo.SelectedIndex = saveindexes.IndexOf(saveindexes.First(x => x == privet["P_id"]));
+                ADCombo.Sorted = true;
+                ADCombo.Text = s;
+            }
+
+            KName = ADName.Text; 
         }
 
         private void ADAdd_Click(object sender, EventArgs e)
@@ -37,12 +60,24 @@ namespace UchebnayaChast
             test.Add(delegate () { if (ADName.Text.Length < 3) { Functional.Error("Слишком короткое название, думайте лучше!"); return true; } else return false; });
             //test.Add(delegate () { if (ADNomer.Text.Any(x=>!int.TryParse(x.ToString(),out int b))) { Functional.Error("Слишком короткий номер, ну что вы!"); return true; } else return false; });
             test.Add(delegate () { if ((ADNomer.TextLength) < 10) { Functional.Error("Слишком короткий номер, ну что вы!"); return true; } else return false; });
+            test.Add(delegate () { if (ADCombo.SelectedIndex < 0) { Functional.Error("Выберите заведующего!"); return true; } else return false; });
+            if (ADName.Text != "")
+            if ((id == 0))
+                    test.Add(delegate () { if (Functional.Controller.TakeRow(SpecialSqlController.Tables.kafedra, "K_name='" + ADName.Text + "'").Count != 0) { Functional.Error("Такая кафедра уже есть!"); return true; } else { return false; } });
+            else
+                if (KName != ADName.Text)
+                    test.Add(delegate () { if (Functional.Controller.TakeRow(SpecialSqlController.Tables.kafedra, "K_name='" + ADName.Text + "'").Count != 0) { Functional.Error("Такая кафедра уже есть!"); return true; } else { return false; } });
+
+            //string prepodavatel = Functional.Controller.Query("select p.Id from prepod p where p.P_fio='"+ADCombo.Text+"'")[0][0];
+
             if (Functional.CheckTest(test.ToArray()))
             {
+                string prepodavatel = Functional.Controller.Query("select p.Id from prepod p where p.P_fio='" + ADCombo.Text + "'")[0][0];
+
                 if (id == 0)
-                    Functional.Controller.InsertIn(SpecialSqlController.Tables.kafedra, new List<string> { ADName.Text, ADNomer.Text });
+                    Functional.Controller.InsertIn(SpecialSqlController.Tables.kafedra, new List<string> { ADName.Text, ADNomer.Text, prepodavatel });
                 else
-                    Functional.Controller.UpdateIn(SpecialSqlController.Tables.kafedra, new List<string> { ADName.Text, ADNomer.Text }, id.ToString());
+                    Functional.Controller.UpdateIn(SpecialSqlController.Tables.kafedra, new List<string> { ADName.Text, ADNomer.Text, prepodavatel }, id.ToString());
                 this.Close();
             }
         }

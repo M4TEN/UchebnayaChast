@@ -28,9 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAddChangeKafedra));
             this.PanelTop = new System.Windows.Forms.Panel();
             this.LabelTop = new System.Windows.Forms.Label();
             this.PanelMain = new System.Windows.Forms.Panel();
+            this.LabelZav = new System.Windows.Forms.Label();
+            this.ADCombo = new System.Windows.Forms.ComboBox();
             this.ADNomer = new System.Windows.Forms.TextBox();
             this.ADName = new System.Windows.Forms.TextBox();
             this.LabelNomer = new System.Windows.Forms.Label();
@@ -64,6 +67,8 @@
             // PanelMain
             // 
             this.PanelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.PanelMain.Controls.Add(this.LabelZav);
+            this.PanelMain.Controls.Add(this.ADCombo);
             this.PanelMain.Controls.Add(this.ADNomer);
             this.PanelMain.Controls.Add(this.ADName);
             this.PanelMain.Controls.Add(this.LabelNomer);
@@ -75,13 +80,32 @@
             this.PanelMain.Size = new System.Drawing.Size(363, 226);
             this.PanelMain.TabIndex = 1;
             // 
+            // LabelZav
+            // 
+            this.LabelZav.AutoSize = true;
+            this.LabelZav.Font = new System.Drawing.Font("Comfortaa", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LabelZav.Location = new System.Drawing.Point(33, 142);
+            this.LabelZav.Name = "LabelZav";
+            this.LabelZav.Size = new System.Drawing.Size(91, 18);
+            this.LabelZav.TabIndex = 17;
+            this.LabelZav.Text = "Заведующий";
+            // 
+            // ADCombo
+            // 
+            this.ADCombo.FormattingEnabled = true;
+            this.ADCombo.Location = new System.Drawing.Point(183, 139);
+            this.ADCombo.Name = "ADCombo";
+            this.ADCombo.Size = new System.Drawing.Size(155, 21);
+            this.ADCombo.TabIndex = 2;
+            this.ADCombo.Text = "              ";
+            // 
             // ADNomer
             // 
             this.ADNomer.Location = new System.Drawing.Point(183, 85);
             this.ADNomer.MaxLength = 10;
             this.ADNomer.Name = "ADNomer";
             this.ADNomer.Size = new System.Drawing.Size(69, 20);
-            this.ADNomer.TabIndex = 14;
+            this.ADNomer.TabIndex = 1;
             this.ADNomer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ADNomer_KeyPress);
             // 
             // ADName
@@ -90,7 +114,7 @@
             this.ADName.MaxLength = 100;
             this.ADName.Name = "ADName";
             this.ADName.Size = new System.Drawing.Size(155, 20);
-            this.ADName.TabIndex = 12;
+            this.ADName.TabIndex = 0;
             this.ADName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ADName_KeyPress);
             // 
             // LabelNomer
@@ -117,10 +141,10 @@
             // 
             this.ADCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.ADCancel.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ADCancel.Location = new System.Drawing.Point(183, 144);
+            this.ADCancel.Location = new System.Drawing.Point(183, 181);
             this.ADCancel.Name = "ADCancel";
             this.ADCancel.Size = new System.Drawing.Size(97, 28);
-            this.ADCancel.TabIndex = 9;
+            this.ADCancel.TabIndex = 4;
             this.ADCancel.Text = "Отмена";
             this.ADCancel.UseVisualStyleBackColor = true;
             this.ADCancel.Click += new System.EventHandler(this.ADCancel_Click);
@@ -128,10 +152,10 @@
             // ADAdd
             // 
             this.ADAdd.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ADAdd.Location = new System.Drawing.Point(36, 144);
+            this.ADAdd.Location = new System.Drawing.Point(36, 181);
             this.ADAdd.Name = "ADAdd";
             this.ADAdd.Size = new System.Drawing.Size(97, 28);
-            this.ADAdd.TabIndex = 8;
+            this.ADAdd.TabIndex = 3;
             this.ADAdd.Text = "Добавить";
             this.ADAdd.UseVisualStyleBackColor = true;
             this.ADAdd.Click += new System.EventHandler(this.ADAdd_Click);
@@ -147,6 +171,7 @@
             this.Controls.Add(this.PanelMain);
             this.Controls.Add(this.PanelTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormAddChangeKafedra";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.PanelTop.ResumeLayout(false);
@@ -168,5 +193,7 @@
         private System.Windows.Forms.Button ADAdd;
         private System.Windows.Forms.Label LabelTop;
         private System.Windows.Forms.TextBox ADNomer;
+        private System.Windows.Forms.Label LabelZav;
+        private System.Windows.Forms.ComboBox ADCombo;
     }
 }

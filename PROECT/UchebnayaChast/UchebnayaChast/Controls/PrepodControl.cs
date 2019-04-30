@@ -34,6 +34,11 @@ namespace UchebnayaChast
 
             if (show && hide) this.Show();
         }
+        //public virtual void Sortirovochka() { }
+        public virtual void Sortirovochka()
+        {
+            this.PrepodGrid.Sort(this.PrepodGrid.Columns["P_fio"], ListSortDirection.Ascending);
+        }
 
         public virtual void MainAction()
         {
@@ -56,6 +61,31 @@ namespace UchebnayaChast
             //PrepodSortirovka.SelectedIndex = 0;
             PrepodPoisk.Text = "";
             this.PrepodGrid.Sort(this.PrepodGrid.Columns["P_fio"], ListSortDirection.Ascending);
+            PrepodCheck();
+        }
+
+        public virtual void PrepodCheck()
+        {
+            int[] mas = new int[8] { 0, 0, 0, 0, 0, 0, 0, 0 };
+            for (int i = 0; i < PrepodGrid.RowCount; i++)
+            {
+                switch (PrepodGrid["P_kategory", i].Value.ToString())
+                {
+                    case "1":
+                        mas[0]++;
+                        break;
+                    case "2":
+                        mas[1]++;
+                        break;
+                    case "3":
+                        mas[2]++;
+                        break;
+                }
+            }
+            LabelKolvoVsego.Text = PrepodGrid.RowCount.ToString();
+            LabelKolvo1.Text = (mas[0]).ToString();
+            LabelKolvo2.Text = (mas[1]).ToString();
+            LabelKolvo3.Text = (mas[2]).ToString();
         }
 
         //private void PrepodSortirovka_SelectedIndexChanged(object sender, EventArgs e)
@@ -82,6 +112,8 @@ namespace UchebnayaChast
             Functional.Filtres(tags.ToArray(), "Преподавателя с такими критериями нет");
             //PrepodSortirovka.SelectedIndex = 0;
             Functional.Print(ref PrepodGrid);
+            this.PrepodGrid.Sort(this.PrepodGrid.Columns["P_fio"], ListSortDirection.Ascending);
+            PrepodCheck();
         }
 
         private void BtnFncDrop_Click(object sender, EventArgs e)
@@ -101,12 +133,33 @@ namespace UchebnayaChast
             {
                 if (Functional.Controller.GetAllFrom(SpecialSqlController.Tables.gryp, "`P_id`=" + Functional.GetId(PrepodGrid)).Count == 0)
                 {
-                    Functional.Delete(PrepodGrid, SpecialSqlController.Tables.prepod);
-                    Actions();
+                    if (Functional.Controller.GetAllFrom(SpecialSqlController.Tables.kafedra, "`P_id`=" + Functional.GetId(PrepodGrid)).Count == 0)
+                    {
+                        if (Functional.Controller.GetAllFrom(SpecialSqlController.Tables.specly, "`P_id`=" + Functional.GetId(PrepodGrid)).Count == 0)
+                        {
+                            if (Functional.Controller.GetAllFrom(SpecialSqlController.Tables.yspeh, "`P_id`=" + Functional.GetId(PrepodGrid)).Count == 0)
+                            {
+                                Functional.Delete(PrepodGrid, SpecialSqlController.Tables.prepod);
+                                Actions();
+                            }
+                            else
+                            {
+                                Functional.Error("Вы не можете удалить преподавателя, так как есть успеваемость с его участием! \n Удалите эту успеваемость \n Либо передайте успеваемость дисциплины другому преподавателю");
+                            }
+                        }
+                        else
+                        {
+                            Functional.Error("Вы не можете удалить преподавателя, так как есть специальности с его кураторством! \n Поменяйте куратора данной специальности \n Либо удалите данную специальность");
+                        }
+                    }
+                    else
+                    {
+                        Functional.Error("Вы не можете удалить преподавателя, так как есть кафедры с его кураторством! \n Поменяйте куратора данной кафедры \n Либо удалите данную кафедру");
+                    }
                 }
                 else
                 {
-                    Functional.Error("Вы не можете удалить преподавателя, так как есть группы с его кураторством!");
+                    Functional.Error("Вы не можете удалить преподавателя, так как есть группы с его кураторством! \n Поменяйте классного руководителя \n Либо распустите группу полностью");
                 }
             }
         }
@@ -127,6 +180,16 @@ namespace UchebnayaChast
             {
                 e.Handled = true;
             }
+        }
+
+        private void BtnPrint2_Click(object sender, EventArgs e)
+        {
+            OpenForm(new FormPrintPrepod(PrepodGrid, false));
+        }
+
+        private void BtnPrint_Click(object sender, EventArgs e)
+        {
+            OpenForm(new FormPrintPrepod(PrepodGrid));
         }
     }
 }

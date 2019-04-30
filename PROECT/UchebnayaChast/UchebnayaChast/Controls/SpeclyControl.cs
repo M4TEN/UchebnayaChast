@@ -40,16 +40,20 @@ namespace UchebnayaChast
             Functional.GetData(SpecialSqlController.Tables.specly, delegate(ref List<Dictionary<string,string>> privet) {
                 foreach(var i in privet)
                 {
+                    i["Sp_stydentov"]= Functional.Controller.Query("select count(st.Id) from (specly sp join gryp g on g.Sp_id=sp.Id) join stydent st on st.G_id=g.Id where sp.Id=" + i["Id"]+" and st.St_status=1")[0][0].ToString();
                     if ((i["P_id"]!=null)&&(i["P_id"].Length>0))
                     i["P_id"] = Functional.Controller.TakeRowWithNamesById(SpecialSqlController.Tables.prepod, int.Parse(i["P_id"]))["P_fio"];
                 }
             });
         }
 
+
+
         public virtual void Actions()
         {
             MainAction();
             Functional.Print(ref SpeclyGrid);
+            LabelKolvo.Text = SpeclyGrid.RowCount.ToString();
             //SpeclySortirovka.SelectedIndex = 1;
             //SpeclySortirovka.SelectedIndex = 0;
             SpeclyPoisk.Text = "";
@@ -80,6 +84,8 @@ namespace UchebnayaChast
             Functional.Filtres(tags.ToArray(), "Специальности с такими критериями нет");
             //SpeclySortirovka.SelectedIndex = 0;
             Functional.Print(ref SpeclyGrid);
+            this.SpeclyGrid.Sort(this.SpeclyGrid.Columns["Sp_name"], ListSortDirection.Ascending);
+            LabelKolvo.Text = SpeclyGrid.RowCount.ToString();
         }
 
         private void BtnFncDrop_Click(object sender, EventArgs e)
@@ -125,6 +131,16 @@ namespace UchebnayaChast
             {
                 e.Handled = true;
             }
+        }
+
+        private void BtnPrint2_Click(object sender, EventArgs e)
+        {
+            OpenForm(new FormPrintSpecly(SpeclyGrid, false));
+        }
+
+        private void BtnPrint_Click(object sender, EventArgs e)
+        {
+            OpenForm(new FormPrintSpecly(SpeclyGrid));
         }
     }
 }

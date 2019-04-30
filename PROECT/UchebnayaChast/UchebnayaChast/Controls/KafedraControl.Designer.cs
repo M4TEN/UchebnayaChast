@@ -40,14 +40,23 @@
             this.BtnFncDrop = new System.Windows.Forms.Button();
             this.BtnFncSearch = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnPrint2 = new System.Windows.Forms.Button();
+            this.BtnPrint = new System.Windows.Forms.Button();
+            this.LabelKolvo = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.LabelPoiskName = new System.Windows.Forms.Label();
             this.LabelPoisk = new System.Windows.Forms.Label();
             this.KafedraPoisk = new System.Windows.Forms.TextBox();
             this.KafedraGrid = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.K_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.K_nomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.P_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.K_prepodov = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PanelFnc.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.KafedraGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -138,7 +147,7 @@
             this.BtnFncDrop.Name = "BtnFncDrop";
             this.BtnFncDrop.Size = new System.Drawing.Size(150, 40);
             this.BtnFncDrop.TabIndex = 1;
-            this.BtnFncDrop.Text = "   Сбросить";
+            this.BtnFncDrop.Text = "   Обновить";
             this.BtnFncDrop.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnFncDrop.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnFncDrop.UseVisualStyleBackColor = false;
@@ -164,6 +173,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel2.Controls.Add(this.panel1);
             this.panel2.Controls.Add(this.LabelPoisk);
             this.panel2.Controls.Add(this.KafedraPoisk);
             this.panel2.Controls.Add(this.KafedraGrid);
@@ -173,11 +183,85 @@
             this.panel2.Size = new System.Drawing.Size(875, 410);
             this.panel2.TabIndex = 10;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(152)))), ((int)(((byte)(150)))));
+            this.panel1.Controls.Add(this.BtnPrint2);
+            this.panel1.Controls.Add(this.BtnPrint);
+            this.panel1.Controls.Add(this.LabelKolvo);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.LabelPoiskName);
+            this.panel1.Location = new System.Drawing.Point(505, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(205, 410);
+            this.panel1.TabIndex = 42;
+            // 
+            // BtnPrint2
+            // 
+            this.BtnPrint2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(152)))), ((int)(((byte)(150)))));
+            this.BtnPrint2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(142)))), ((int)(((byte)(140)))));
+            this.BtnPrint2.FlatAppearance.BorderSize = 3;
+            this.BtnPrint2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnPrint2.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BtnPrint2.Location = new System.Drawing.Point(4, 276);
+            this.BtnPrint2.Name = "BtnPrint2";
+            this.BtnPrint2.Size = new System.Drawing.Size(195, 60);
+            this.BtnPrint2.TabIndex = 42;
+            this.BtnPrint2.Text = "Отобразить выделенные данные таблицы\r\n";
+            this.BtnPrint2.UseVisualStyleBackColor = false;
+            this.BtnPrint2.Click += new System.EventHandler(this.BtnPrint2_Click);
+            // 
+            // BtnPrint
+            // 
+            this.BtnPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(152)))), ((int)(((byte)(150)))));
+            this.BtnPrint.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(142)))), ((int)(((byte)(140)))));
+            this.BtnPrint.FlatAppearance.BorderSize = 3;
+            this.BtnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnPrint.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BtnPrint.Location = new System.Drawing.Point(4, 342);
+            this.BtnPrint.Name = "BtnPrint";
+            this.BtnPrint.Size = new System.Drawing.Size(195, 60);
+            this.BtnPrint.TabIndex = 41;
+            this.BtnPrint.Text = "Отобразить данные таблицы\r\n";
+            this.BtnPrint.UseVisualStyleBackColor = false;
+            this.BtnPrint.Click += new System.EventHandler(this.BtnPrint_Click);
+            // 
+            // LabelKolvo
+            // 
+            this.LabelKolvo.AutoSize = true;
+            this.LabelKolvo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(142)))), ((int)(((byte)(140)))));
+            this.LabelKolvo.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LabelKolvo.Location = new System.Drawing.Point(155, 45);
+            this.LabelKolvo.Name = "LabelKolvo";
+            this.LabelKolvo.Size = new System.Drawing.Size(17, 20);
+            this.LabelKolvo.TabIndex = 39;
+            this.LabelKolvo.Text = "0";
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(142)))), ((int)(((byte)(140)))));
+            this.label1.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(0, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(205, 23);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Статус:";
+            // 
+            // LabelPoiskName
+            // 
+            this.LabelPoiskName.AutoSize = true;
+            this.LabelPoiskName.Font = new System.Drawing.Font("Comfortaa", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LabelPoiskName.Location = new System.Drawing.Point(3, 45);
+            this.LabelPoiskName.Name = "LabelPoiskName";
+            this.LabelPoiskName.Size = new System.Drawing.Size(146, 18);
+            this.LabelPoiskName.TabIndex = 26;
+            this.LabelPoiskName.Text = "Количество кафедр:";
+            // 
             // LabelPoisk
             // 
             this.LabelPoisk.AutoSize = true;
             this.LabelPoisk.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LabelPoisk.Location = new System.Drawing.Point(16, 10);
+            this.LabelPoisk.Location = new System.Drawing.Point(3, 10);
             this.LabelPoisk.Name = "LabelPoisk";
             this.LabelPoisk.Size = new System.Drawing.Size(55, 20);
             this.LabelPoisk.TabIndex = 15;
@@ -185,9 +269,10 @@
             // 
             // KafedraPoisk
             // 
-            this.KafedraPoisk.Location = new System.Drawing.Point(90, 10);
+            this.KafedraPoisk.Location = new System.Drawing.Point(64, 9);
+            this.KafedraPoisk.MaxLength = 100;
             this.KafedraPoisk.Name = "KafedraPoisk";
-            this.KafedraPoisk.Size = new System.Drawing.Size(380, 20);
+            this.KafedraPoisk.Size = new System.Drawing.Size(435, 20);
             this.KafedraPoisk.TabIndex = 14;
             this.KafedraPoisk.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KafedraPoisk_KeyPress);
             // 
@@ -211,7 +296,9 @@
             this.KafedraGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
             this.K_name,
-            this.K_nomer});
+            this.K_nomer,
+            this.P_id,
+            this.K_prepodov});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Comfortaa", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -221,7 +308,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.KafedraGrid.DefaultCellStyle = dataGridViewCellStyle2;
             this.KafedraGrid.EnableHeadersVisualStyles = false;
-            this.KafedraGrid.Location = new System.Drawing.Point(20, 37);
+            this.KafedraGrid.Location = new System.Drawing.Point(5, 35);
             this.KafedraGrid.Name = "KafedraGrid";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
@@ -233,7 +320,7 @@
             this.KafedraGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.KafedraGrid.RowHeadersVisible = false;
             this.KafedraGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.KafedraGrid.Size = new System.Drawing.Size(450, 344);
+            this.KafedraGrid.Size = new System.Drawing.Size(495, 370);
             this.KafedraGrid.TabIndex = 9;
             // 
             // Id
@@ -262,6 +349,24 @@
             this.K_nomer.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.K_nomer.Width = 56;
             // 
+            // P_id
+            // 
+            this.P_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.P_id.HeaderText = "Заведующий";
+            this.P_id.Name = "P_id";
+            this.P_id.ReadOnly = true;
+            this.P_id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.P_id.Width = 97;
+            // 
+            // K_prepodov
+            // 
+            this.K_prepodov.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.K_prepodov.HeaderText = "Преподов";
+            this.K_prepodov.Name = "K_prepodov";
+            this.K_prepodov.ReadOnly = true;
+            this.K_prepodov.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.K_prepodov.Width = 77;
+            // 
             // KafedraControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -272,6 +377,8 @@
             this.PanelFnc.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.KafedraGrid)).EndInit();
             this.ResumeLayout(false);
 
@@ -290,8 +397,16 @@
         private System.Windows.Forms.DataGridView KafedraGrid;
         private System.Windows.Forms.Label LabelPoisk;
         private System.Windows.Forms.TextBox KafedraPoisk;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button BtnPrint2;
+        private System.Windows.Forms.Button BtnPrint;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LabelPoiskName;
+        private System.Windows.Forms.Label LabelKolvo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn K_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn K_nomer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn P_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn K_prepodov;
     }
 }

@@ -24,6 +24,7 @@ namespace UchebnayaChast
             PanelControlMainMenu.BringToFront();
         }
 
+
         public void ButtonEnable(bool b)
         {
             BtnMainHome.Enabled = b;
@@ -50,6 +51,7 @@ namespace UchebnayaChast
             PanelScroll.Height = BtnMainStydent.Height;
             PanelScroll.Top = BtnMainStydent.Top;
             PanelControlStydent.BringToFront();
+
         }
 
         private void BtnMainHome_Click(object sender, EventArgs e)

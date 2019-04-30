@@ -46,8 +46,22 @@
             this.P_fio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.P_kategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.K_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.LabelKolvoVsego = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.LabelKolvo3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.LabelKolvo2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.LabelKolvo1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.BtnPrint2 = new System.Windows.Forms.Button();
+            this.BtnPrint = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.PanelFnc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PrepodGrid)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // PanelFnc
@@ -137,7 +151,7 @@
             this.BtnFncDrop.Name = "BtnFncDrop";
             this.BtnFncDrop.Size = new System.Drawing.Size(150, 40);
             this.BtnFncDrop.TabIndex = 1;
-            this.BtnFncDrop.Text = "   Сбросить";
+            this.BtnFncDrop.Text = "   Обновить";
             this.BtnFncDrop.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnFncDrop.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnFncDrop.UseVisualStyleBackColor = false;
@@ -164,7 +178,7 @@
             // 
             this.LabelPoisk.AutoSize = true;
             this.LabelPoisk.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LabelPoisk.Location = new System.Drawing.Point(16, 17);
+            this.LabelPoisk.Location = new System.Drawing.Point(3, 9);
             this.LabelPoisk.Name = "LabelPoisk";
             this.LabelPoisk.Size = new System.Drawing.Size(55, 20);
             this.LabelPoisk.TabIndex = 23;
@@ -173,9 +187,10 @@
             // PrepodPoisk
             // 
             this.PrepodPoisk.Font = new System.Drawing.Font("Comfortaa", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.PrepodPoisk.Location = new System.Drawing.Point(77, 16);
+            this.PrepodPoisk.Location = new System.Drawing.Point(64, 9);
+            this.PrepodPoisk.MaxLength = 50;
             this.PrepodPoisk.Name = "PrepodPoisk";
-            this.PrepodPoisk.Size = new System.Drawing.Size(393, 21);
+            this.PrepodPoisk.Size = new System.Drawing.Size(435, 21);
             this.PrepodPoisk.TabIndex = 22;
             this.PrepodPoisk.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PrepodPoisk_KeyPress);
             // 
@@ -210,7 +225,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.PrepodGrid.DefaultCellStyle = dataGridViewCellStyle2;
             this.PrepodGrid.EnableHeadersVisualStyles = false;
-            this.PrepodGrid.Location = new System.Drawing.Point(20, 41);
+            this.PrepodGrid.Location = new System.Drawing.Point(5, 35);
             this.PrepodGrid.Name = "PrepodGrid";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
@@ -222,7 +237,7 @@
             this.PrepodGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.PrepodGrid.RowHeadersVisible = false;
             this.PrepodGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.PrepodGrid.Size = new System.Drawing.Size(450, 347);
+            this.PrepodGrid.Size = new System.Drawing.Size(495, 370);
             this.PrepodGrid.TabIndex = 21;
             // 
             // Id
@@ -257,14 +272,168 @@
             this.K_id.HeaderText = "Кафедра";
             this.K_id.Name = "K_id";
             this.K_id.ReadOnly = true;
-            this.K_id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             this.K_id.Width = 93;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(152)))), ((int)(((byte)(150)))));
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.LabelKolvoVsego);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.LabelKolvo3);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.LabelKolvo2);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.LabelKolvo1);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.BtnPrint2);
+            this.panel1.Controls.Add(this.BtnPrint);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(505, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(205, 410);
+            this.panel1.TabIndex = 42;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Comfortaa", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(74, 178);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(47, 18);
+            this.label5.TabIndex = 69;
+            this.label5.Text = "Всего:";
+            // 
+            // LabelKolvoVsego
+            // 
+            this.LabelKolvoVsego.AutoSize = true;
+            this.LabelKolvoVsego.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(142)))), ((int)(((byte)(140)))));
+            this.LabelKolvoVsego.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LabelKolvoVsego.Location = new System.Drawing.Point(156, 177);
+            this.LabelKolvoVsego.Name = "LabelKolvoVsego";
+            this.LabelKolvoVsego.Size = new System.Drawing.Size(17, 20);
+            this.LabelKolvoVsego.TabIndex = 68;
+            this.LabelKolvoVsego.Text = "0";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Comfortaa", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.Location = new System.Drawing.Point(14, 143);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(107, 18);
+            this.label6.TabIndex = 67;
+            this.label6.Text = "3-й категории:";
+            // 
+            // LabelKolvo3
+            // 
+            this.LabelKolvo3.AutoSize = true;
+            this.LabelKolvo3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(142)))), ((int)(((byte)(140)))));
+            this.LabelKolvo3.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LabelKolvo3.Location = new System.Drawing.Point(156, 143);
+            this.LabelKolvo3.Name = "LabelKolvo3";
+            this.LabelKolvo3.Size = new System.Drawing.Size(17, 20);
+            this.LabelKolvo3.TabIndex = 66;
+            this.LabelKolvo3.Text = "0";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Comfortaa", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(14, 111);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(107, 18);
+            this.label4.TabIndex = 65;
+            this.label4.Text = "2-й категории:";
+            // 
+            // LabelKolvo2
+            // 
+            this.LabelKolvo2.AutoSize = true;
+            this.LabelKolvo2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(142)))), ((int)(((byte)(140)))));
+            this.LabelKolvo2.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LabelKolvo2.Location = new System.Drawing.Point(156, 111);
+            this.LabelKolvo2.Name = "LabelKolvo2";
+            this.LabelKolvo2.Size = new System.Drawing.Size(17, 20);
+            this.LabelKolvo2.TabIndex = 64;
+            this.LabelKolvo2.Text = "0";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Comfortaa", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(17, 80);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(104, 18);
+            this.label3.TabIndex = 63;
+            this.label3.Text = "1-й категории:";
+            // 
+            // LabelKolvo1
+            // 
+            this.LabelKolvo1.AutoSize = true;
+            this.LabelKolvo1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(142)))), ((int)(((byte)(140)))));
+            this.LabelKolvo1.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LabelKolvo1.Location = new System.Drawing.Point(156, 80);
+            this.LabelKolvo1.Name = "LabelKolvo1";
+            this.LabelKolvo1.Size = new System.Drawing.Size(17, 20);
+            this.LabelKolvo1.TabIndex = 62;
+            this.LabelKolvo1.Text = "0";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Comfortaa", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(3, 39);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(125, 36);
+            this.label2.TabIndex = 61;
+            this.label2.Text = "Количество\r\nпреподавателей:";
+            // 
+            // BtnPrint2
+            // 
+            this.BtnPrint2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(152)))), ((int)(((byte)(150)))));
+            this.BtnPrint2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(142)))), ((int)(((byte)(140)))));
+            this.BtnPrint2.FlatAppearance.BorderSize = 3;
+            this.BtnPrint2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnPrint2.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BtnPrint2.Location = new System.Drawing.Point(4, 276);
+            this.BtnPrint2.Name = "BtnPrint2";
+            this.BtnPrint2.Size = new System.Drawing.Size(195, 60);
+            this.BtnPrint2.TabIndex = 42;
+            this.BtnPrint2.Text = "Отобразить выделенные данные таблицы\r\n";
+            this.BtnPrint2.UseVisualStyleBackColor = false;
+            this.BtnPrint2.Click += new System.EventHandler(this.BtnPrint2_Click);
+            // 
+            // BtnPrint
+            // 
+            this.BtnPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(152)))), ((int)(((byte)(150)))));
+            this.BtnPrint.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(142)))), ((int)(((byte)(140)))));
+            this.BtnPrint.FlatAppearance.BorderSize = 3;
+            this.BtnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnPrint.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BtnPrint.Location = new System.Drawing.Point(4, 342);
+            this.BtnPrint.Name = "BtnPrint";
+            this.BtnPrint.Size = new System.Drawing.Size(195, 60);
+            this.BtnPrint.TabIndex = 41;
+            this.BtnPrint.Text = "Отобразить данные таблицы\r\n";
+            this.BtnPrint.UseVisualStyleBackColor = false;
+            this.BtnPrint.Click += new System.EventHandler(this.BtnPrint_Click);
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(142)))), ((int)(((byte)(140)))));
+            this.label1.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(0, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(205, 23);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Статус:";
             // 
             // PrepodControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.LabelPoisk);
             this.Controls.Add(this.PrepodPoisk);
             this.Controls.Add(this.PrepodGrid);
@@ -273,6 +442,8 @@
             this.Size = new System.Drawing.Size(875, 410);
             this.PanelFnc.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PrepodGrid)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -294,5 +465,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn P_fio;
         private System.Windows.Forms.DataGridViewTextBoxColumn P_kategory;
         private System.Windows.Forms.DataGridViewTextBoxColumn K_id;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button BtnPrint2;
+        private System.Windows.Forms.Button BtnPrint;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label LabelKolvoVsego;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label LabelKolvo3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label LabelKolvo2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label LabelKolvo1;
+        private System.Windows.Forms.Label label2;
     }
 }

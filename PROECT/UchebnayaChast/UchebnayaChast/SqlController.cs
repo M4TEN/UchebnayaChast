@@ -13,7 +13,7 @@ namespace UchebnayaChast
 
         public   SqlController()
         {
-            string connectionString = "Server=127.0.0.1;Database=uchast;port=3306;User Id=root;password=1370";
+            string connectionString = "Server=127.0.0.1;Database=uchast;port=3306;User Id=root;password=1370;Convert Zero Datetime=True";
             SetDbConnection(connectionString);
         }
 

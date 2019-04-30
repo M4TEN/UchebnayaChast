@@ -28,9 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAddChangeDisp));
             this.PanelMain = new System.Windows.Forms.Panel();
+            this.ADLab = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ADNorm = new System.Windows.Forms.TextBox();
+            this.ADComboSem = new System.Windows.Forms.ComboBox();
             this.LabelZav = new System.Windows.Forms.Label();
             this.ADShifr = new System.Windows.Forms.TextBox();
+            this.ADComboType = new System.Windows.Forms.ComboBox();
             this.ADName = new System.Windows.Forms.TextBox();
             this.LabelShifr = new System.Windows.Forms.Label();
             this.LabelName = new System.Windows.Forms.Label();
@@ -38,13 +46,6 @@
             this.ADAdd = new System.Windows.Forms.Button();
             this.PanelTop = new System.Windows.Forms.Panel();
             this.LabelTop = new System.Windows.Forms.Label();
-            this.ADComboType = new System.Windows.Forms.ComboBox();
-            this.ADComboSem = new System.Windows.Forms.ComboBox();
-            this.ADNorm = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.ADLab = new System.Windows.Forms.TextBox();
             this.PanelMain.SuspendLayout();
             this.PanelTop.SuspendLayout();
             this.SuspendLayout();
@@ -68,8 +69,74 @@
             this.PanelMain.Controls.Add(this.ADAdd);
             this.PanelMain.Location = new System.Drawing.Point(5, 35);
             this.PanelMain.Name = "PanelMain";
-            this.PanelMain.Size = new System.Drawing.Size(510, 230);
+            this.PanelMain.Size = new System.Drawing.Size(420, 230);
             this.PanelMain.TabIndex = 5;
+            // 
+            // ADLab
+            // 
+            this.ADLab.Location = new System.Drawing.Point(118, 135);
+            this.ADLab.MaxLength = 3;
+            this.ADLab.Name = "ADLab";
+            this.ADLab.Size = new System.Drawing.Size(30, 20);
+            this.ADLab.TabIndex = 5;
+            this.ADLab.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ADLab_KeyPress);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Comfortaa", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(115, 114);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(80, 18);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Кол-во лаб";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Comfortaa", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(226, 114);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(89, 18);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Оценивание";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Comfortaa", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(164, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(69, 18);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Семестр";
+            // 
+            // ADNorm
+            // 
+            this.ADNorm.Location = new System.Drawing.Point(12, 135);
+            this.ADNorm.MaxLength = 3;
+            this.ADNorm.Name = "ADNorm";
+            this.ADNorm.Size = new System.Drawing.Size(30, 20);
+            this.ADNorm.TabIndex = 4;
+            this.ADNorm.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ADNorm_KeyPress);
+            // 
+            // ADComboSem
+            // 
+            this.ADComboSem.FormattingEnabled = true;
+            this.ADComboSem.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"});
+            this.ADComboSem.Location = new System.Drawing.Point(239, 20);
+            this.ADComboSem.Name = "ADComboSem";
+            this.ADComboSem.Size = new System.Drawing.Size(49, 21);
+            this.ADComboSem.TabIndex = 2;
+            this.ADComboSem.Text = "              ";
             // 
             // LabelZav
             // 
@@ -87,16 +154,29 @@
             this.ADShifr.MaxLength = 3;
             this.ADShifr.Name = "ADShifr";
             this.ADShifr.Size = new System.Drawing.Size(30, 20);
-            this.ADShifr.TabIndex = 14;
+            this.ADShifr.TabIndex = 1;
             this.ADShifr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ADShifr_KeyPress);
+            // 
+            // ADComboType
+            // 
+            this.ADComboType.FormattingEnabled = true;
+            this.ADComboType.Items.AddRange(new object[] {
+            "Экзамен",
+            "Дифференцированный зачёт",
+            "Зачёт"});
+            this.ADComboType.Location = new System.Drawing.Point(229, 134);
+            this.ADComboType.Name = "ADComboType";
+            this.ADComboType.Size = new System.Drawing.Size(179, 21);
+            this.ADComboType.TabIndex = 6;
+            this.ADComboType.Text = "              ";
             // 
             // ADName
             // 
             this.ADName.Location = new System.Drawing.Point(118, 62);
-            this.ADName.MaxLength = 50;
+            this.ADName.MaxLength = 40;
             this.ADName.Name = "ADName";
             this.ADName.Size = new System.Drawing.Size(170, 20);
-            this.ADName.TabIndex = 12;
+            this.ADName.TabIndex = 3;
             this.ADName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ADName_KeyPress);
             // 
             // LabelShifr
@@ -123,10 +203,10 @@
             // 
             this.ADCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.ADCancel.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ADCancel.Location = new System.Drawing.Point(395, 194);
+            this.ADCancel.Location = new System.Drawing.Point(311, 194);
             this.ADCancel.Name = "ADCancel";
             this.ADCancel.Size = new System.Drawing.Size(97, 28);
-            this.ADCancel.TabIndex = 9;
+            this.ADCancel.TabIndex = 8;
             this.ADCancel.Text = "Отмена";
             this.ADCancel.UseVisualStyleBackColor = true;
             // 
@@ -136,9 +216,10 @@
             this.ADAdd.Location = new System.Drawing.Point(12, 194);
             this.ADAdd.Name = "ADAdd";
             this.ADAdd.Size = new System.Drawing.Size(97, 28);
-            this.ADAdd.TabIndex = 8;
+            this.ADAdd.TabIndex = 7;
             this.ADAdd.Text = "Добавить";
             this.ADAdd.UseVisualStyleBackColor = true;
+            this.ADAdd.Click += new System.EventHandler(this.ADAdd_Click);
             // 
             // PanelTop
             // 
@@ -147,7 +228,7 @@
             this.PanelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelTop.Location = new System.Drawing.Point(0, 0);
             this.PanelTop.Name = "PanelTop";
-            this.PanelTop.Size = new System.Drawing.Size(520, 30);
+            this.PanelTop.Size = new System.Drawing.Size(430, 30);
             this.PanelTop.TabIndex = 4;
             // 
             // LabelTop
@@ -160,94 +241,17 @@
             this.LabelTop.TabIndex = 0;
             this.LabelTop.Text = "Добавление/Изменение данных";
             // 
-            // ADComboType
-            // 
-            this.ADComboType.FormattingEnabled = true;
-            this.ADComboType.Items.AddRange(new object[] {
-            "Экзамен",
-            "Диференцированный зачёт",
-            "Зачёт"});
-            this.ADComboType.Location = new System.Drawing.Point(313, 114);
-            this.ADComboType.Name = "ADComboType";
-            this.ADComboType.Size = new System.Drawing.Size(179, 21);
-            this.ADComboType.TabIndex = 13;
-            this.ADComboType.Text = "              ";
-            // 
-            // ADComboSem
-            // 
-            this.ADComboSem.FormattingEnabled = true;
-            this.ADComboSem.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8"});
-            this.ADComboSem.Location = new System.Drawing.Point(443, 19);
-            this.ADComboSem.Name = "ADComboSem";
-            this.ADComboSem.Size = new System.Drawing.Size(49, 21);
-            this.ADComboSem.TabIndex = 16;
-            this.ADComboSem.Text = "              ";
-            // 
-            // ADNorm
-            // 
-            this.ADNorm.Location = new System.Drawing.Point(118, 112);
-            this.ADNorm.MaxLength = 3;
-            this.ADNorm.Name = "ADNorm";
-            this.ADNorm.Size = new System.Drawing.Size(30, 20);
-            this.ADNorm.TabIndex = 17;
-            this.ADNorm.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ADNorm_KeyPress);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Comfortaa", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(310, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 18);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Семестр";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Comfortaa", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(310, 93);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 18);
-            this.label2.TabIndex = 19;
-            this.label2.Text = "Оценивание";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Comfortaa", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(9, 153);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 18);
-            this.label3.TabIndex = 20;
-            this.label3.Text = "Кол-во лаб";
-            // 
-            // ADLab
-            // 
-            this.ADLab.Location = new System.Drawing.Point(118, 151);
-            this.ADLab.MaxLength = 3;
-            this.ADLab.Name = "ADLab";
-            this.ADLab.Size = new System.Drawing.Size(30, 20);
-            this.ADLab.TabIndex = 21;
-            this.ADLab.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ADLab_KeyPress);
-            // 
             // FormAddChangeDisp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(199)))), ((int)(((byte)(199)))));
-            this.ClientSize = new System.Drawing.Size(520, 270);
+            this.CancelButton = this.ADCancel;
+            this.ClientSize = new System.Drawing.Size(430, 270);
             this.Controls.Add(this.PanelMain);
             this.Controls.Add(this.PanelTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormAddChangeDisp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.PanelMain.ResumeLayout(false);

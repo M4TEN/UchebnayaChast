@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAddChangeSpecly));
             this.PanelTop = new System.Windows.Forms.Panel();
             this.LabelTop = new System.Windows.Forms.Label();
             this.PanelMain = new System.Windows.Forms.Panel();
@@ -95,7 +96,7 @@
             this.ADShifr.MaxLength = 2;
             this.ADShifr.Name = "ADShifr";
             this.ADShifr.Size = new System.Drawing.Size(30, 20);
-            this.ADShifr.TabIndex = 14;
+            this.ADShifr.TabIndex = 1;
             this.ADShifr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ADShifr_KeyPress);
             // 
             // ADCombo
@@ -104,7 +105,7 @@
             this.ADCombo.Location = new System.Drawing.Point(183, 127);
             this.ADCombo.Name = "ADCombo";
             this.ADCombo.Size = new System.Drawing.Size(155, 21);
-            this.ADCombo.TabIndex = 13;
+            this.ADCombo.TabIndex = 2;
             this.ADCombo.Text = "              ";
             // 
             // ADName
@@ -113,7 +114,7 @@
             this.ADName.MaxLength = 50;
             this.ADName.Name = "ADName";
             this.ADName.Size = new System.Drawing.Size(155, 20);
-            this.ADName.TabIndex = 12;
+            this.ADName.TabIndex = 0;
             this.ADName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ADName_KeyPress);
             // 
             // LabelShifr
@@ -140,10 +141,10 @@
             // 
             this.ADCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.ADCancel.Font = new System.Drawing.Font("Comfortaa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ADCancel.Location = new System.Drawing.Point(183, 175);
+            this.ADCancel.Location = new System.Drawing.Point(241, 175);
             this.ADCancel.Name = "ADCancel";
             this.ADCancel.Size = new System.Drawing.Size(97, 28);
-            this.ADCancel.TabIndex = 9;
+            this.ADCancel.TabIndex = 4;
             this.ADCancel.Text = "Отмена";
             this.ADCancel.UseVisualStyleBackColor = true;
             this.ADCancel.Click += new System.EventHandler(this.ADCancel_Click);
@@ -154,7 +155,7 @@
             this.ADAdd.Location = new System.Drawing.Point(36, 175);
             this.ADAdd.Name = "ADAdd";
             this.ADAdd.Size = new System.Drawing.Size(97, 28);
-            this.ADAdd.TabIndex = 8;
+            this.ADAdd.TabIndex = 3;
             this.ADAdd.Text = "Добавить";
             this.ADAdd.UseVisualStyleBackColor = true;
             this.ADAdd.Click += new System.EventHandler(this.ADAdd_Click);
@@ -170,6 +171,7 @@
             this.Controls.Add(this.PanelMain);
             this.Controls.Add(this.PanelTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormAddChangeSpecly";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormAddChangeSpecly";
